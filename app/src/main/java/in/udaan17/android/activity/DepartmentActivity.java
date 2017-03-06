@@ -2,6 +2,7 @@ package in.udaan17.android.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -38,6 +39,12 @@ public class DepartmentActivity extends AppCompatActivity implements ListItemCli
             departmentRecyclerView.setAdapter(departmentAdapter);
             departmentRecyclerView.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.VERTICAL, false));
             departmentAdapter.setItemClickCallBack(this);
+
+            ActionBar actionBar = this.getSupportActionBar();
+
+            if (actionBar != null) {
+                actionBar.setTitle("Tech Events: Departments");
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
