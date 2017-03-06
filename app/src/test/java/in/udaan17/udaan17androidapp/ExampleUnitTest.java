@@ -1,4 +1,4 @@
-package udaan17.in.udaan17androidapp;
+package in.udaan17.udaan17androidapp;
 
 import org.junit.Test;
 

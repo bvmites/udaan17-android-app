@@ -3,6 +3,11 @@
 
     <string name="title_activity_splash">Udaan-17</string>
 
+    <!-- Activity Passing Keys -->
+    <string name="activity_key_position">position</string>
+    <string name="activity_key_title_name">title-name</string>
+    <string name="activity_key_event_data">event-data</string>
+
     <!-- Shared Preference Keys -->
 
     <string name="prefs_file_name" translatable="false">Udaan17Preferences</string>
@@ -16,6 +21,11 @@
 
     <string name="api_endpoint_timestamp" translatable="false">https://raw.githubusercontent.com/Team-Udaan/udaan16-android-app/master/mock-api/timestamp.json</string>
     <string name="api_endpoint_info" translatable="false">https://raw.githubusercontent.com/Team-Udaan/udaan16-android-app/master/mock-api/event-data.json</string>
+
+
+    <!-- Animation Keys -->
+
+    <integer name="swing_anim_time">600</integer>
 
 
 </resources>

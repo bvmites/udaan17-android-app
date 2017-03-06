@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "udaan17.in.udaan17androidapp"
+        applicationId "in.udaan17.android"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1

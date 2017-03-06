@@ -1,4 +1,4 @@
-package udaan17.in.udaan17androidapp;
+package in.udaan17.udaan17androidapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
