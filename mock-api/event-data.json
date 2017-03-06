@@ -1,0 +1,1816 @@
+{
+  "nonTech": [
+    {
+      "name": "Treasure Hunt",
+      "participants": "2",
+      "eventDescription": "",
+      "fees": "40",
+      "managers": [
+        {
+          "name": "Daksh Naik",
+          "mobile": "8460636972"
+        },
+        {
+          "name": "Jatan Patel",
+          "mobile": "9714677556"
+        },
+        {
+          "name": "Ravi Ghodasara",
+          "mobile": "8866588563"
+        }
+      ],
+      "rounds": [
+        "Elimination Round",
+        "Selfie le lein re - Take a selfie with the person after solving the clue",
+        "Surprise"
+      ]
+    },
+    {
+      "name": "My Gang",
+      "participants": "3",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Tirth Lad",
+          "mobile": "9408935856"
+        },
+        {
+          "name": "Smit Patel",
+          "mobile": "8733827085"
+        }
+      ],
+      "description": "Get your Gang together & let's see how much you know each other.",
+      "rounds": [
+        "In this round all members will be given forms which they have to fill it up individually. The form would consist of primary details of their group; like their favorite hanging spot, favorite food place, etc. Judgement would be done on the basis of number of similar answers in all the 3 forms.",
+        "The selected team will be given the name of a product, they'll have to prepare the Advertisement for the product given in the allotted time. Uniqueness of the Ad. will be the deciding factor.",
+        "The selected teams will be given a prop, using that prop they will have to make a Dubsmash video and upload it on Youtube and Facebook in the given time period. Based on the number of likes and views judgement will be done."
+      ]
+    },
+    {
+      "name": "The Vela",
+      "participants": "2",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Ritu Chaudhary",
+          "mobile": "9173573779"
+        },
+        {
+          "name": "Mitesh Malaiya",
+          "mobile": "7567467727"
+        }
+      ],
+      "description": "Wanna check how much you know about VVN/Anand?? Than let's do some velagiri..!",
+      "rounds": [
+        "A quiz based on \"Know your city\". Questions in the quiz would be related to Anand/VVN.",
+        "It is a Bathroom singing round. The participants have to sing as long as they can, certain acts would be allotted which they have to do it while singing. Once they stop, they are out. How you sing is not important here but how long you sing is important. Time will be a major factor for judging in this round.",
+        "It will be a surprise round based on Physical, co-ordination and Strategical tasks."
+      ]
+    },
+    {
+      "name": "The Cocktail",
+      "participants": "1",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Zenith Patel",
+          "mobile": "9978730018"
+        },
+        {
+          "name": "Krunal Patel",
+          "mobile": "9638968564"
+        }
+      ],
+      "description": "Friends, GOT, BBT, Suits, Blacklist, etc etc..!!",
+      "rounds": [
+        "Its a quiz round. Questions would be related to few of the TV series like FRIENDS, GOT, BBT, BLACKLIST, SUITS, ARROW, etc..",
+        "Its a Dumb-charades round. All the participants would be assigned a partner. Now the game would follow in a team of 2. One team member will be given a character from the TV series and will have to enact the same, the other team member will have to identify that character.",
+        "Two teams will be combined to form a single team. Each participant will be given a character which he/she has to enact and a common situation will be given to the team. All participants will enact their character and judging will be done on the basis of their similarity to the original character."
+      ]
+    },
+    {
+      "name": "LAN",
+      "participants": "3",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Shakil Mansuri",
+          "mobile": "8866343512"
+        },
+        {
+          "name": "Ruchit Goswami",
+          "mobile": "8866515194"
+        },
+        {
+          "name": "Jaydeep Gabani",
+          "mobile": "9724527898"
+        },
+        {
+          "name": "Drashti Rajpura",
+          "mobile": "9687358377"
+        }
+      ],
+      "description": "NFS, CS, FIFA!! The game, Mrs Hudson, is On!!",
+      "round2Description": "",
+      "round3Description": "",
+      "rounds": [],
+      "round1Description": ""
+    },
+    {
+      "name": "Connect the Dots",
+      "participants": "1",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Darshan Dadhaniya",
+          "mobile": "9033972324"
+        },
+        {
+          "name": "Om Mehta",
+          "mobile": "9408268313"
+        }
+      ],
+      "description": "Trust the dots, everything is intentional.",
+      "rounds": [
+        "Candidates have to find connected images from three different places using the given clue.",
+        "Person will be taken to a place outside BVM where they will be given an amount of rupees to get back to college with maximum money.",
+        "In this LUDO game is played. Three photos will be given during game, they have to identified persons\nask the set of question, and find odd one out from answers."
+      ]
+    },
+    {
+      "name": "Bid the best",
+      "participants": "2",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Yesha Shah",
+          "mobile": "9428847596"
+        },
+        {
+          "name": "Manan Trivedi",
+          "mobile": "8124997462"
+        },
+        {
+          "name": "Prakshat Shah",
+          "mobile": "8866340047"
+        }
+      ],
+      "description": "Jack of all trades, Master of none.",
+      "rounds": [
+        "Quiz based on general knowledge, aptitude, and common sense.",
+        "Story making by using photos.",
+        "Bidding on pictures and making ad using those pictures."
+      ]
+    },
+    {
+      "name": "Partners in Crime",
+      "participants": "2",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Jinny Hadiya",
+          "mobile": "8866104063"
+        },
+        {
+          "name": "Bhavesh Vadhiya",
+          "mobile": "9662227250"
+        }
+      ],
+      "description": "Partners in crime, passion in rhymes!",
+      "rounds": [
+        "Elimination round based on puzzle, matches, rectifying errors, etc",
+        "Clue to pathway leads to crossword which leads to logical questions.",
+        "Break the prison"
+      ]
+    },
+    {
+      "name": "Wallstreet",
+      "participants": "1",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Harshil Parekh",
+          "mobile": "9429946757"
+        },
+        {
+          "name": "Harshit Sanghvi",
+          "mobile": "8905015808"
+        },
+        {
+          "name": "Dixit Panchal",
+          "mobile": "8866222569"
+        },
+        {
+          "name": "Jonti Savani",
+          "mobile": "7405633307"
+        }
+      ],
+      "description": "Be the wolf and win the Oscar..!!",
+      "round2Description": "",
+      "round3Description": "",
+      "rounds": [
+        "It is a virtual online stock exchange game wherein participants will be provided with virtual money. They can use that money for trading the stocks. The event will be kept online for 2 days. The participant with the highest amount will be the winner."
+      ]
+    },
+    {
+      "name": "Far away fast",
+      "participants": "1",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Milind Bhoya",
+          "mobile": "9099232427"
+        },
+        {
+          "name": "Dharamveer Mahida",
+          "mobile": "9825966453"
+        }
+      ],
+      "description": "Solve the clues!",
+      "rounds": [
+        "Quiz which contains logical questions, brain teasers, and questions based on logos and general knowledge.",
+        "Participants will have to take selfies at specified places in the college campus.",
+        "Solve clues and find the final place in the campus."
+      ]
+    },
+    {
+      "name": "Let us be Friends",
+      "participants": "1",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Rohan Makwana",
+          "mobile": "9173741168"
+        },
+        {
+          "name": "Ankit Kumbharana",
+          "mobile": "8401184322"
+        },
+        {
+          "name": "Mrunal Prajapati",
+          "mobile": "8866764380"
+        }
+      ],
+      "description": "Find a Friend and Join the Trend!",
+      "rounds": [
+        "Participants will be paired, given time to get to know each other. They will then have to fill a form which has questions about each other.",
+        "One team member will have to guide the other on a specific path.",
+        "Surprise Round."
+      ]
+    },
+    {
+      "name": "SOTY",
+      "participants": "2/3",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Dipen Patel",
+          "mobile": "9662563422"
+        },
+        {
+          "name": "Umang Gajjar",
+          "mobile": "8460060262"
+        },
+        {
+          "name": "Tushar Mistry",
+          "mobile": "9913958474"
+        },
+        {
+          "name": "Shubham Shah",
+          "mobile": "9033389337"
+        }
+      ],
+      "description": "Explore the college and show that you are the only one!",
+      "rounds": [
+        "Logical quiz (written) will be given to one team member while the remaining team members will be given two physical tasks.",
+        "The selected teams will  given three tasks: Eating, Running, Cycling.",
+        "Surprise Round."
+      ]
+    },
+    {
+      "name": "Valar Morghulis",
+      "participants": "2",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Savan Patel",
+          "mobile": "7048636156"
+        },
+        {
+          "name": "Vishal Chaudhari",
+          "mobile": "8128997019"
+        },
+        {
+          "name": "Ravi Prajapati",
+          "mobile": "9409474870"
+        }
+      ],
+      "description": "Conquer the Iron Throne!",
+      "rounds": [
+        "Quiz Based on Game Of Thrones.",
+        "Audio-Visual quiz.",
+        "Teams will be sorted into different Houses and they will then have to prove their worth by conquering the Iron Throne"
+      ]
+    },
+    {
+      "name": "Cricket Fantasy",
+      "participants": "2",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Pushpraj Zala",
+          "mobile": "8460670742"
+        },
+        {
+          "name": "Kishan Patel",
+          "mobile": "8980048103"
+        },
+        {
+          "name": "Mayur Kaila",
+          "mobile": "9723515607"
+        }
+      ],
+      "description": "Bid for the best",
+      "rounds": [
+        "Round 1 will consist of two parts.\n- Part 1: Participants will have to submit their Fantasy Team of 5 players from the teams who are playing their first semi-final of ICC T20 World Cup 2016. This must be done before the semifinal begins. Participants will receive points according to the real-life performance of the players in their team. They will also have to select a captain whose performance points will be doubled\nPart 2: A quiz based on cricket will be taken",
+        "Shortlisted teams will then have to submit an 11 player fantasy team by selecting players both the teams playing 2nd semifinal.\nTeams will receive points according to the rules established before\n",
+        "Finalists will be given a fixed budget and they will have to for a team by biding from a given list of players. Your team must consist of:\n\t\tAt least 4 Batsmen\n\t\tAt least 1 All Rounder\n\t\t1 Wicketkeeper\n\t\tAt least 2 Bowlers\n"
+      ]
+    },
+    {
+      "name": "Tackeshi's castle",
+      "participants": "2",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Sagar Rana",
+          "mobile": "8866797724"
+        },
+        {
+          "name": "Viral Agaria",
+          "mobile": "8401843752"
+        },
+        {
+          "name": "Deep Modi",
+          "mobile": "8866344693"
+        }
+      ],
+      "description": "Survival of the fittest",
+      "rounds": [
+        "We will give one ball and two balloons to each team. They have to take that ball at specified place with the help of balloons.",
+        "Surprise round",
+        "surprise round and they have to perform a task"
+      ]
+    },
+    {
+      "name": "Mind Mystery",
+      "participants": "2",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Maru Chintan",
+          "mobile": "7600063064"
+        },
+        {
+          "name": "Jaydeep Vachhani",
+          "mobile": "8866633989"
+        },
+        {
+          "name": "Jaydeep Vaghela",
+          "mobile": "9727026048"
+        }
+      ],
+      "description": "Connect the dots",
+      "rounds": [
+        "Spell-bee:-\n             8 pronunciations will be given to each group and time limit 2 minutes.(10)points will be awarded to each correct answer.\n",
+        "Video Graphy:-\nOnly one question will be asked after one video. Time limit to give the answer is 2 minute. Correct answer 20 awarded, Wrong answer 10 deducted.\n",
+        "Clue round:-\n Three clues will be given with varying difficulty level"
+      ]
+    },
+    {
+      "name": "Finding Funny",
+      "participants": "1",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Patel Chintan",
+          "mobile": "8155954590"
+        },
+        {
+          "name": "Chauhan Shailesh",
+          "mobile": "7567910345"
+        },
+        {
+          "name": "Geet Vadher",
+          "mobile": "9574427142"
+        }
+      ],
+      "description": "Run for fun",
+      "rounds": [
+        "A list of 25 to 30 items, which are to be collected by the participants.",
+        "They have to take a selfie with the specified things, person ,etc",
+        "We will give a map of BVM in a different way and they have to solve that and perform specified task."
+      ]
+    },
+    {
+      "name": "SSB",
+      "participants": "1",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Vaibhav Savani",
+          "mobile": "7405139514"
+        },
+        {
+          "name": "Keval Italiya",
+          "mobile": "7600889014"
+        }
+      ],
+      "description": "want be an officer? Be ready cadets. There is a chance for you.",
+      "rounds": [
+        "Quiz based on mental ability and PPDT (Picture Perception and Discussion Test).",
+        "Group tasks on set-up provided by the organizers.",
+        "Conference interview in front of panel of 7 to 8 jury members."
+      ]
+    },
+    {
+      "name": "Youth Parliament",
+      "participants": "1",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Kedar Dave",
+          "mobile": "8141717770"
+        },
+        {
+          "name": "Harivadan",
+          "mobile": "8866921694"
+        }
+      ],
+      "description": "Let's be leaders of tomorrow. Parliament style debate will be conducted.",
+      "rounds": [
+        "Participants will be divided in 3 groups (Ruling party, Opposition party, Decision Making party) and parliamentary style debate has to be done and bill is to be passed in parliament.",
+        " Debate between both winning parties for and against the topic (for both)."
+      ],
+      "round3Description": ""
+    },
+    {
+      "name": "Crazy cricket",
+      "participants": "4",
+      "fees": "40",
+      "managers": [
+        {
+          "name": "Jay Narodiya",
+          "mobile": "9925118951"
+        },
+        {
+          "name": "Jigesh Gajera",
+          "mobile": "9624670766"
+        },
+        {
+          "name": "Uday Bhatu",
+          "mobile": "9998574567"
+        },
+        {
+          "name": "Jayraj Senjaliya",
+          "mobile": "8469244370"
+        }
+      ],
+      "description": "Cricket full of funny, weird amazing brain storming rules.\nCricket with weird amazing rules like gully cricket will be played. \n4 players/team and overs: 4\n",
+      "round2Description": "",
+      "round3Description": "",
+      "rounds": [],
+      "round1Description": ""
+    },
+    {
+      "name": "Win it in minute",
+      "participants": "2 or 3",
+      "fees": "10/person",
+      "managers": [
+        {
+          "name": "Divya Sonagara",
+          "mobile": "8460862215"
+        },
+        {
+          "name": "Anand Limbad",
+          "mobile": "7405588942"
+        },
+        {
+          "name": "Poorvam Gautam",
+          "mobile": "7405588942"
+        }
+      ],
+      "description": "Not everything can be achieved in a minute except few. Can you?\nInteresting tasks are to be completed by the participants in one minute.",
+      "round2Description": "",
+      "round3Description": "",
+      "rounds": [],
+      "round1Description": ""
+    },
+    {
+      "name": "Aryabhatta",
+      "participants": "2",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Kajol Shah",
+          "mobile": "8401625135"
+        },
+        {
+          "name": "Vishwa Sejpal",
+          "mobile": "8487910111"
+        }
+      ],
+      "description": "Discover the Aryabhatta within you. Come play!",
+      "rounds": [
+        "Quiz based on Mathematics, General Mathematical Knowledge, General Knowledge.",
+        "Participants will have to answer mathematical questions while performing any given activity.",
+        "Surprise."
+      ]
+    },
+    {
+      "name": "Triothalon",
+      "participants": "2",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Shubha Pandey",
+          "mobile": "7600542500"
+        },
+        {
+          "name": "Shloka Naudiyal",
+          "mobile": "8140633763"
+        }
+      ],
+      "description": "Two makes company. Three makes a winning team!",
+      "rounds": [
+        "Quiz based on Logical Reasoning and Verbal Ability.",
+        "Clue Hunt which includes performing various tasks at the location pointed by the clue.",
+        "Surprise."
+      ]
+    },
+    {
+      "name": "Guru",
+      "participants": "2",
+      "fees": "40",
+      "managers": [
+        {
+          "name": "Parth Panchal",
+          "mobile": "8734804028"
+        },
+        {
+          "name": "Aamir Mansuri",
+          "mobile": "8460370274"
+        }
+      ],
+      "description": "Become a marketing virtuoso. Be the Boss. Be the Guru.",
+      "rounds": [
+        "Team will have to perform odd jobs (washing cars, polishing shoes, etc) and the team with the maximum profit will move to the next round.",
+        "Participants will bid on the ongoing events and points will be awarded if their bid wins the event. The teams with maximum winning points will move on to next round.",
+        "Participants will be given a product and they will have to market the product to the panel of a jury as representatives of a company selling the given product."
+      ]
+    },
+    {
+      "name": "Roadies",
+      "participants": "1",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Abhishek Singh",
+          "mobile": "8866642890"
+        },
+        {
+          "name": "Hitesh Makwana",
+          "mobile": "9724180650"
+        },
+        {
+          "name": "Shrey Anjaria",
+          "mobile": "9638851178"
+        }
+      ],
+      "description": "Is this a Highway to Hell or the Stairway to Heaven?",
+      "rounds": [
+        "Participants will have to complete a given task and Team Captains will be chosen according to their performances.",
+        "Teams will have to complete a given task.",
+        "Group Discussions will be conducted among the teams and finalists for Personal Interview round will be shortlisted based on their performance."
+      ]
+    },
+    {
+      "name": "The Dark Secret",
+      "participants": "2",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Dhruvaj Suryavanshi",
+          "mobile": "7405845812"
+        },
+        {
+          "name": "Tamoghna Chattopadhyay",
+          "mobile": "9409029845"
+        }
+      ],
+      "description": "Can you rise above the evil plot?",
+      "rounds": [
+        "Each team will be given a certain amount of virtual money and a clue which will lead them to a place. Each place has two tasks. Teams will have to buy the tasks and complete it. You can only buy ONE task. You can attempt the task only ONCE. Qualifying teams will move to the next round.",
+        "Team will be divided into two parts. One team member will solve clues in the campus. The other team member will have to solve a clue inside a classroom. The final combined answer of both the clues will point to the final task.",
+        "All the qualifying teams will have to complete the given task and unveil the dark secret."
+      ]
+    },
+    {
+      "name": "Sherlock Reloaded",
+      "participants": "2",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Pratik Vaswani",
+          "mobile": "8460383484"
+        },
+        {
+          "name": "Palash Gandhi",
+          "mobile": "9737017419"
+        },
+        {
+          "name": "Urmi Shah",
+          "mobile": "9725023115"
+        }
+      ],
+      "description": "Did You Miss Me? Did You Miss Me?",
+      "rounds": [
+        "Quiz based on Sherlock Holmes.",
+        "Crime Scene Investigation. Participants will have to rack their brains and find out the criminal mastermind using their acute logic and sharp observation."
+      ],
+      "round3Description": ""
+    }
+  ],
+  "cultural": [
+    {
+      "name": "View Finder",
+      "participants": "1",
+      "fees": "30",
+      "managers": [
+        {
+          "name": "Niraj Parmar",
+          "mobile": "7600687989"
+        },
+        {
+          "name": "Subham Chauhan",
+          "mobile": "9537985865"
+        }
+      ],
+      "description": "A typical Indian Bollywood singing game",
+      "rounds": [
+        "These are the topics on which you have to submit photos on viewfinder16@gmail.com.\n\tTopics are:\n\t\t1. Black and white.\n\t\t2. Fire\n\t\t3. Happiness",
+        "You have to submit photos that you will take in two days of Udaan'16. Topic will be given"
+      ],
+      "round3Description": ""
+    },
+    {
+      "name": "Antakshari",
+      "participants": "2",
+      "fees": "40",
+      "managers": [
+        {
+          "name": "Kruti Patel",
+          "mobile": "9825854130"
+        },
+        {
+          "name": "Kushan Bhatt",
+          "mobile": "9426623530"
+        }
+      ],
+      "description": "A typical Indian Bollywood singing game",
+      "rounds": [
+        "Elimination",
+        "Normal",
+        "Surprise"
+      ]
+    },
+    {
+      "name": "Bolly mix bolly",
+      "participants": "2",
+      "fees": "40",
+      "managers": [
+        {
+          "name": "Aparna Khare",
+          "mobile": "9408721804"
+        },
+        {
+          "name": "Kruti Doshi",
+          "mobile": "8460031003"
+        },
+        {
+          "name": "Dhvani Katkoria",
+          "mobile": "8734955569"
+        }
+      ],
+      "description": "It is kind of a Bollywood quiz. ",
+      "rounds": [
+        "Written Test",
+        "On Stage quizzing ",
+        "Surprise"
+      ]
+    },
+    {
+      "name": "Bakers & Sellers",
+      "participants": "4",
+      "fees": "40",
+      "managers": [
+        {
+          "name": "Azmeen Bhabhrawala",
+          "mobile": "9409114903"
+        },
+        {
+          "name": "Disha Shah",
+          "mobile": "9909894697"
+        }
+      ],
+      "description": "Cook with given ingredients and sell for maximum profit",
+      "rounds": [
+        "prepare a dish from given ingredients.",
+        "sell it to get highest revenue ."
+      ],
+      "round3Description": ""
+    },
+    {
+      "name": "Final cut",
+      "participants": "5",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Varun Dave",
+          "mobile": "7567848323"
+        }
+      ],
+      "description": "Short Film Making competition ",
+      "round2Description": "",
+      "round3Description": "",
+      "rounds": [
+        "Screening and Interview"
+      ]
+    },
+    {
+      "name": "Scene-e-magic",
+      "participants": "4",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Varun Dave",
+          "mobile": "7567848323"
+        }
+      ],
+      "description": "Participants have to dub the given video without any vulgar content",
+      "rounds": [
+        "Prepare one out of the given videos.",
+        "Random selection of video from round, about 45 minute will be given."
+      ],
+      "round3Description": ""
+    },
+    {
+      "name": "Tansing",
+      "participants": "1",
+      "fees": "20",
+      "managers": [
+        {
+          "name": "Tirth Jani",
+          "mobile": "8866172363"
+        },
+        {
+          "name": "Prachi Jhala",
+          "mobile": "9978718283"
+        }
+      ],
+      "description": "Showcase your talent in singing",
+      "rounds": [
+        "Participants need to send an audio and a video file as their audition(genre: Bollywood/Western/Classical). Selected participants will be contacted via email. Time limit 2-3 minutes.",
+        "Live performance of shortlisted participants with one accompanist or karaoke.",
+        "Surprise round."
+      ]
+    }
+  ],
+  "tech": [
+    {
+      "alias": "Mech",
+      "coHeads": [
+        {
+          "name": "Prashant Goti",
+          "mobile": "9825189691"
+        },
+        {
+          "name": "Anurag Raulji",
+          "mobile": "8460109955"
+        }
+      ],
+      "name": "Machinists",
+      "events": [
+        {
+          "name": "The Thrust",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Akshay Karmur",
+              "mobile": "9601670626"
+            },
+            {
+              "name": "Pujit Sarvaiya",
+              "mobile": "9409081166"
+            }
+          ],
+          "description": "Every action has a reaction!",
+          "rounds": [
+            "Elimination round based on the distance covered by car.",
+            "This round is based on the distance covered by car on a track/path with obstacles and also the design explanation of the model by the participants."
+          ]
+        },
+        {
+          "name": "Sharp Shooter",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Nikunj Gajera",
+              "mobile": "9904358419"
+            },
+            {
+              "name": "Nirav Bhatt",
+              "mobile": "9979892529"
+            }
+          ],
+          "description": "Show the pistol power!",
+          "rounds": [
+            "The participants will have to shoot a pyramid made from plastic glasses.",
+            "The participants will have to shoot a circular target board.",
+            "The participants will have to shoot a moving target."
+          ]
+        },
+        {
+          "name": "Mechchase",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Mehul Zare",
+              "mobile": "9426744821"
+            },
+            {
+              "name": "Mohit Raina",
+              "mobile": "8758131184"
+            },
+            {
+              "name": "Rajdeepsinh Ravalji",
+              "mobile": "9429645614"
+            }
+          ],
+          "description": "Mechanical Treasure Hunt!",
+          "rounds": [
+            "Open Book Exam: The subject will be Elements of Mechanical Engineering. (Elements of Mechanical Engineering Book is compulsory.)",
+            "Selected teams will have to solve a riddle which gives them the next clue.",
+            "Treasure hunt: The particpants will be given a pictorial puzzle of different places from the campus. They will have to re-arrange the pieces of the puzzle, identify the location and reach their before their competitors do!"
+          ]
+        },
+        {
+          "name": "Hydrobounze",
+          "participants": "2",
+          "fees": "40",
+          "managers": [
+            {
+              "name": "Paras Ramani",
+              "mobile": "8238827292"
+            },
+            {
+              "name": "Milan Kachhadiya",
+              "mobile": "9925893405"
+            },
+            {
+              "name": "Kapil Tala",
+              "mobile": "8980359729"
+            }
+          ],
+          "description": "Sail in water with your brain!",
+          "rounds": [
+            "Quiz related to Fluid Mechanics.",
+            "Participants will have to prepare a Boat from the material provided by us and check its performance."
+          ],
+          "round3Description": ""
+        },
+        {
+          "name": "CAD Mania",
+          "participants": "1",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Nitin Nathani",
+              "mobile": "9558860072"
+            },
+            {
+              "name": "Kavan Shah",
+              "mobile": "8980138211"
+            },
+            {
+              "name": "Deep Bhanushali",
+              "mobile": "7874653726"
+            }
+          ],
+          "description": "Learn, Practice and Master.",
+          "rounds": [
+            "The first session will comprise of an expert talk on CAD.\n",
+            "The participants will be given time to practice. (1 to 1.5 Hours)",
+            "Students will be given models to prepare through the knowledge acquired from the previous sessions."
+          ]
+        },
+        {
+          "name": "Auto Techno",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Ravi Kasodariya",
+              "mobile": "8128327932"
+            },
+            {
+              "name": "M. Adib Havaldar",
+              "mobile": "7600058892"
+            }
+          ],
+          "description": "Ignite the Henry Ford within you!",
+          "rounds": [
+            "Automobile Quiz.",
+            "Car Comparison.",
+            "An automobile problem will be given to the participants and they will have to present their solutions."
+          ]
+        },
+        {
+          "name": "Cavador",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Mayur Karamta",
+              "mobile": "9429580444"
+            },
+            {
+              "name": "Akshay Patel",
+              "mobile": "9427915417"
+            },
+            {
+              "name": "Dixit Kansagara",
+              "mobile": "8460822274"
+            }
+          ],
+          "description": "Fight your opponent's crane!\n\nMaterials:\n1. Ice-Cream sticks (maximum 100).\n2. Injection (maximum 6).\n3. Connecting joints (wooden block, butt, screw)\n4. Double Sided Tape.\nNote: Use of Electrical or Mechanical parts is NOT allowed.\n\nRobot Specifications:\n1. The Robot Arm should move in four directions: Up, Down, Left, Right.\n2. Dimensions of the Robot:\n        Base: Maximum 25 cm * 25 cm\n        Height: 40 to 45 cm\n3. Base MUST be made from Ice-Cream sticks.\n\nGeneral Rules:\n1. Teams will be disqualified if motion(s) in any direction (Left, Right, Up, Down) are restricted.\n2. Fights will be in a One to One manner.\n3. Teams will be disqualified if they don't stay inside the confined boundaries.\n4. Maximum time for a single fight is 150 seconds. If there is no clear winner, then both the teams will be disqualified.",
+          "round2Description": "",
+          "round3Description": "",
+          "rounds": [],
+          "round1Description": ""
+        }
+      ],
+      "heads": [
+        {
+          "name": "Krunal Sangani",
+          "mobile": "9724272248"
+        },
+        {
+          "name": "Apoorva Parikh",
+          "mobile": "9429665481"
+        }
+      ]
+    },
+    {
+      "alias": "Civil",
+      "coHeads": [
+        {
+          "name": "Vatsal Jariwala",
+          "mobile": "7383048150"
+        },
+        {
+          "name": "Niyati Kanani",
+          "mobile": "9033594044"
+        }
+      ],
+      "name": "SkyScrapers",
+      "events": [
+        {
+          "name": "Bob The Builder",
+          "participants": "Max 3",
+          "fees": "60",
+          "managers": [
+            {
+              "name": "Utsavi Pachhigar",
+              "mobile": "8980508325"
+            },
+            {
+              "name": "Deven Gajjar",
+              "mobile": "8460862215"
+            },
+            {
+              "name": "Anand Limbad",
+              "mobile": "9725039877"
+            }
+          ],
+          "description": "It's not only how much load you can bear, keeping balance is also important.\n\nParticipants will have to build a crane mechanism in 3 hours using popsicle sticks. Thread will be provided for lifting weight. All materials will be provided. The crane which lifts the maximum amount of weight will be the winner.",
+          "round2Description": "",
+          "round3Description": "",
+          "rounds": [],
+          "round1Description": ""
+        },
+        {
+          "name": "Soil-a-Arch",
+          "participants": "2 or 3 ",
+          "fees": "60",
+          "managers": [
+            {
+              "name": "Deep Bhalani",
+              "mobile": "9998140702"
+            },
+            {
+              "name": "Amit Ratnani",
+              "mobile": "7600120963"
+            },
+            {
+              "name": "Pratik Patel",
+              "mobile": "7698767656"
+            }
+          ],
+          "description": "Shape your idea with clay.\nParticipants will have to build a soil arch using clay bricks. Bricks are to be made from the clay provided on the first day. On next day, arch is to be built using those bricks. Weights will be kept on the arch for testing purposes and the team which has the highest arch and bears the most waight wins.",
+          "round2Description": "",
+          "round3Description": "",
+          "rounds": [],
+          "round1Description": ""
+        },
+        {
+          "name": "Real estate",
+          "participants": "2 or 3 ",
+          "fees": "40",
+          "managers": [
+            {
+              "name": "Nayan Gohil",
+              "mobile": "9638453007"
+            },
+            {
+              "name": "Jenish Kamani",
+              "mobile": "9099025018"
+            }
+          ],
+          "description": "Whole lot of common sense and civil engineering knowledge will lead you towards higher profit in real estate.",
+          "rounds": [
+            "Business quiz related to conditions, situations, future changes risks, etc. Related to civil engineering.",
+            "Teams will be provided with virtual money, using which they are supposed to bid on the different properties shown on map (provided by management) and then different projects will be given like highway proposal, new bridge construction, legal documentation, etc."
+          ],
+          "round3Description": ""
+        },
+        {
+          "name": "Ignited Minds",
+          "participants": "1 or 2 ",
+          "fees": "30/person",
+          "managers": [
+            {
+              "name": "Nikhil Chaudhri",
+              "mobile": "7600032638"
+            },
+            {
+              "name": "Ankush Pandita",
+              "mobile": "9723757348"
+            }
+          ],
+          "description": "Theory to practically. Here CPI is of no concern. How good you are at concept will be checked",
+          "rounds": [
+            "Quiz which contains logical and conceptual questions related to civil basic engineering.",
+            "Picture Perception: Famous civil structures will be shown with hints. Teams will have to name the structures.",
+            "Real life problems will be given to the participants and they will have to present an economically feasible and effective solution to the jury."
+          ]
+        },
+        {
+          "name": "Kabelzubia(Bridge)",
+          "participants": "2 or 3 ",
+          "fees": "60",
+          "managers": [
+            {
+              "name": "Kartik Sarkhejia",
+              "mobile": "9429932136"
+            },
+            {
+              "name": "Hiren Patel",
+              "mobile": "9714383891"
+            },
+            {
+              "name": "Umang Jadav",
+              "mobile": "9662838425"
+            }
+          ],
+          "description": "With candy stick and rope, make a bridge of hope.\nParticipants will have to build a cable bridge using popsicle sticks and thread. All required materials and dimensions will be provided. The team which produces a bridge which is able to bear the maximum load will be the winner. Time given to the participants would be 3 hours",
+          "round2Description": "",
+          "round3Description": "",
+          "rounds": [],
+          "round1Description": ""
+        },
+        {
+          "name": "Civil Hunt",
+          "participants": "2,3",
+          "fees": "30",
+          "managers": [
+            {
+              "name": "Malhar Kothari",
+              "mobile": "8866713273"
+            },
+            {
+              "name": "Mehal Kotadiya",
+              "mobile": "9586938034"
+            },
+            {
+              "name": "Khushbu Gohel",
+              "mobile": "9586594389"
+            }
+          ],
+          "description": "To achieve your goal direction is needed; knowledge is important & implementation is must",
+          "rounds": [
+            "Quiz based on general knowledge of famous civil structures and basic surveying.",
+            "Participants will have to solve clues with the help of surveying instruments.",
+            "Simple geometric shapes will be given to the team and they will have to draw the same on the ground on a larger scale using surveying instruments."
+          ]
+        }
+      ],
+      "heads": [
+        {
+          "name": "Malav Desai",
+          "mobile": "9429789983"
+        },
+        {
+          "name": "Khanjan Kanani",
+          "mobile": "9426519319"
+        }
+      ]
+    },
+    {
+      "alias": "CPIT",
+      "coHeads": [
+        {
+          "name": "Maunil Swadas",
+          "mobile": "9427592587"
+        },
+        {
+          "name": "Hit Patel",
+          "mobile": "9033661622"
+        },
+        {
+          "name": "Meet Shah",
+          "mobile": "8460727493"
+        }
+      ],
+      "name": "KeyCoders",
+      "events": [
+        {
+          "name": "OS Revolution",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Urja Solanki",
+              "mobile": "9712119272"
+            },
+            {
+              "name": "Jitendra Solanki",
+              "mobile": "8866433354"
+            }
+          ],
+          "description": "Know how your PC works!!",
+          "rounds": [
+            "Quiz on general knowledge of operating system.(ex. Name latest android OS)",
+            "open book surprise round."
+          ],
+          "round3Description": ""
+        },
+        {
+          "name": "Huntware",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Dipen Kadecha",
+              "mobile": "8866144550"
+            },
+            {
+              "name": "Archana Chavda",
+              "mobile": "787474476"
+            },
+            {
+              "name": "Abhishek Mehta",
+              "mobile": "8866093093"
+            }
+          ],
+          "description": "Equal parts, swagger and smart!!",
+          "rounds": [
+            "Hardware Quiz",
+            "Treasure Hunt",
+            "Surprise Round"
+          ]
+        },
+        {
+          "name": "<TAGS>",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Mayank Mittal",
+              "mobile": "9428234766"
+            },
+            {
+              "name": "Vinita Vaswani",
+              "mobile": "9537394281"
+            }
+          ],
+          "description": "Bid your tags or pack your bags.",
+          "rounds": [
+            "Treasure hunt on html/CSS/JavaScript.",
+            "One has to draw picture and team members have to identify the word from picture.",
+            "bidding on tags and web developing."
+          ]
+        },
+        {
+          "name": "Ultimate Coding Challenge",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Yash Sonani",
+              "mobile": "9725599099"
+            },
+            {
+              "name": "Shrey Vyas",
+              "mobile": "9429570707"
+            },
+            {
+              "name": "Jay Thacker",
+              "mobile": "8401607277 "
+            }
+          ],
+          "description": "Buzz,Code,Distract",
+          "rounds": [
+            "Buzzer round on C and C++.",
+            "Two members will be given two different programs to solve independently. One encryption program needs to be solved by both the team members together.",
+            "Programming at places with distractions."
+          ]
+        },
+        {
+          "name": "Office Suite",
+          "participants": "1",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Usha Shah",
+              "mobile": "9725086562"
+            },
+            {
+              "name": "Riddhi Dave",
+              "mobile": "9408723115"
+            }
+          ],
+          "description": "Be like Bill",
+          "rounds": [
+            "Quiz based on Microsoft Windows.",
+            "Teams will have to debate on technical topics given to them.",
+            "Tasks based on Windows Office would be given.\nCreate a newsletter in Word.\nCreate a poster in PowerPoint.\nCreate an Excel sheet on the given data.\n"
+          ]
+        },
+        {
+          "name": "Battle Code",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Pinal Meruliya",
+              "mobile": "9624170530"
+            },
+            {
+              "name": "Kunal Thanki",
+              "mobile": "9510104059"
+            }
+          ],
+          "description": "Your troops are ready for battle",
+          "rounds": [
+            "Quiz related to programming languages, current affairs and the world of computer.",
+            "Teams will have to code a simple program on monitor screens and keyboards which are rotated by 180 degrees.",
+            "10-15 blocks of code will be given to participants, they have to use those blocks or logic of those blocks and the team to come up with a logical piece of code within minimum time"
+          ]
+        },
+        {
+          "name": "BAT",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Dhwani Bhansali",
+              "mobile": "9429916848"
+            },
+            {
+              "name": "Parth Upadhyay",
+              "mobile": "9898319279"
+            }
+          ],
+          "description": "I am not a geek, I am Technocrat!!",
+          "rounds": [
+            "there will be technical quiz based on C/C++, basics of IT/CP, crossword, aptitude",
+            "Program will be given in any programming language, participants have to convert it in C/C++ by understanding the logic.",
+            "One member will be given definition and other will play snake & ladder."
+          ]
+        }
+      ],
+      "heads": [
+        {
+          "name": "Meet Anadkat",
+          "mobile": "9429569075"
+        },
+        {
+          "name": "Mohit Sanghvi",
+          "mobile": "9067034501"
+        },
+        {
+          "name": "Rudrik Soni",
+          "mobile": "8460394107"
+        },
+        {
+          "name": "Arvind Iyer",
+          "mobile": "9687181987"
+        }
+      ]
+    },
+    {
+      "alias": "ETEL",
+      "coHeads": [
+        {
+          "name": "Ankur Busa",
+          "mobile": "9725926075"
+        },
+        {
+          "name": "Prachi Jhala",
+          "mobile": "9978718283"
+        },
+        {
+          "name": "Harshwardhan Patel",
+          "mobile": "7405922499"
+        },
+        {
+          "name": "Jay Jataniya",
+          "mobile": "9033560213"
+        }
+      ],
+      "name": "Embeddrones",
+      "events": [
+        {
+          "name": "Bot Ball",
+          "participants": "2",
+          "fees": "40",
+          "managers": [
+            {
+              "name": "Siddhraj Gogre",
+              "mobile": "7874536826"
+            },
+            {
+              "name": "Kishan Avasthi",
+              "mobile": "8980536577"
+            },
+            {
+              "name": "Sarfaraj Noor",
+              "mobile": "8469642999"
+            },
+            {
+              "name": "Sagar Tank",
+              "mobile": "9712035211"
+            }
+          ],
+          "description": "Let the Bot do the Talk!",
+          "rounds": [
+            "Teams will have to make goals in pits and the team which finishes first will move on to the next round.",
+            "Teams will be competing against each other with a number of obstacles on the field. The objective of this round is to get the maximum number of goals.",
+            "Surprise Round."
+          ]
+        },
+        {
+          "name": "Imperial Race",
+          "participants": "3",
+          "fees": "90",
+          "managers": [
+            {
+              "name": "Mahak Kothari",
+              "mobile": "9909364004"
+            },
+            {
+              "name": "Mohit Agarwal",
+              "mobile": "9574707352"
+            },
+            {
+              "name": "Harsh Dholakiya",
+              "mobile": "9409576082"
+            },
+            {
+              "name": "Parth Sarvaiya",
+              "mobile": "8141328438"
+            },
+            {
+              "name": "Vivek Tank",
+              "mobile": "9586513968"
+            }
+          ],
+          "description": "Battle among the bests! Race On!",
+          "rounds": [
+            "Hurdle race. Based on the point table, the teams will qualify for the next round.",
+            "Crossing the maze. 4 teams compete in the maze. The team which finishes first, will be eligible for the next round.",
+            "Conquering enemy territories. The teams will have to collect flags on a defined course to reach the enemy territory."
+          ]
+        },
+        {
+          "name": "Crack The Nut",
+          "participants": "2",
+          "fees": "40",
+          "managers": [
+            {
+              "name": "Surajkant Singh",
+              "mobile": "8460677521"
+            },
+            {
+              "name": "Bhavin Mangukiya",
+              "mobile": "9925262247"
+            },
+            {
+              "name": "Pariniti Doshi",
+              "mobile": "9428129998"
+            }
+          ],
+          "description": "Scarcity engenders ingenuity!",
+          "rounds": [
+            "Technical Quiz.",
+            "Technical Debate between two teams on a given topic. Preparation time will be given. Use of Internet is allowed for research.",
+            "Hypothetical problem cases will be given. Participants will have to come up with a solution within the given time. Use of internet is not allowed for research."
+          ]
+        },
+        {
+          "name": "Crazy Code",
+          "participants": "2",
+          "fees": "30",
+          "managers": [
+            {
+              "name": "Anveshka Maurya",
+              "mobile": "8460112353"
+            },
+            {
+              "name": "Abhishek Rathod",
+              "mobile": "9067080905"
+            },
+            {
+              "name": "Sambridhi Singh",
+              "mobile": "9898571156"
+            }
+          ],
+          "description": "Unleash the decoder within you!",
+          "rounds": [
+            "One member gets the code and has to convey it in a given form using laser pointers. The other person, being the receiver decodes the received message. The time taken to decode the message will be noted down and the teams will be short- listed accordingly.",
+            "The teams will be given incomplete circuits and the missing components will be placed at different locations. By following the solution of these clues, the circuit will be completed with missing components and the top 5 teams will move to the final rounds. The deciding factor will be time.",
+            "Surprise."
+          ]
+        },
+        {
+          "name": "Code-e-Tronics",
+          "participants": "2",
+          "fees": "60",
+          "managers": [
+            {
+              "name": "Nirav Kalathiya",
+              "mobile": "7874732932"
+            },
+            {
+              "name": "Umesh Baria",
+              "mobile": "9725825915"
+            },
+            {
+              "name": "Sneha Kakadiya",
+              "mobile": "9726275505"
+            }
+          ],
+          "description": "Programs are fun. So is cryptography. They shouldn't be combined. Or they become a mystery!",
+          "rounds": [
+            "Quiz based on C language and Arduino programming.",
+            "Arduino based coding.",
+            "Students have to simulate an Arduino program using Proteus."
+          ]
+        },
+        {
+          "name": "Electro Charades",
+          "participants": "2",
+          "fees": "30 (15 Wildcard Entry)",
+          "managers": [
+            {
+              "name": "Krishna Kariya",
+              "mobile": "9904602211"
+            },
+            {
+              "name": "Aditya Lakkad",
+              "mobile": "9510852002"
+            },
+            {
+              "name": "Kaushal Patel",
+              "mobile": "9601290193"
+            }
+          ],
+          "description": "Interpret the technical language!",
+          "rounds": [
+            "Participants would guess the name of the component or circuits shown on the screen. A total of approximately 30 pictures will be shown. Each picture will be shown for 10 seconds.",
+            "Based on a technical treasure hunt, the participants would solve a crossword puzzle (Across+Down).",
+            "Technical Dumb Charades + Wildcard Entry(payable on the day of the event)"
+          ]
+        },
+        {
+          "name": "Wall-E-Tronics",
+          "participants": "2",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Charanraj Shetty",
+              "mobile": "9662736954"
+            },
+            {
+              "name": "Vaibhav Jariwala",
+              "mobile": "8866528494"
+            },
+            {
+              "name": "Aeshwarya Jain",
+              "mobile": "9662598809"
+            }
+          ],
+          "description": "Battle of the technical minds!",
+          "rounds": [
+            "Both participants will individually solve a crossword puzzle and their average scores will be calculated for further shortlisting.",
+            "Each team will have to answer at least 1 question from the 10 set of different questions of varying difficulty levels. There are points which will be given to the team for each correctly answered question.",
+            "Using creativity, they have to purchase components with the points they obtained and implement a circuit using the purchased components."
+          ]
+        }
+      ],
+      "heads": [
+        {
+          "name": "Sidhant Ghadse",
+          "mobile": "9687348141"
+        },
+        {
+          "name": "Jigar Pankhaniya",
+          "mobile": "9033413795"
+        },
+        {
+          "name": "Jigar Joshi",
+          "mobile": "9426818768"
+        },
+        {
+          "name": "Niral Prajapati",
+          "mobile": "8460459726"
+        }
+      ]
+    },
+    {
+      "alias": "Prod",
+      "coHeads": [
+        {
+          "name": "Krushal Kakadiya",
+          "mobile": "8690777933"
+        },
+        {
+          "name": "Dhruvit Kardani",
+          "mobile": "9638392707"
+        }
+      ],
+      "name": "FabFacturers",
+      "events": [
+        {
+          "name": "Techflight",
+          "participants": "2",
+          "fees": "50",
+          "managers": [
+            {
+              "name": "Manan Joshi",
+              "mobile": "9662549148"
+            },
+            {
+              "name": "Pinal Rana",
+              "mobile": "9662411693"
+            },
+            {
+              "name": "Vraj Patel",
+              "mobile": "9978998929"
+            }
+          ],
+          "description": "Ornithopter- Learn, Make & Let it fly high.",
+          "rounds": [
+            "The participating team will be shown a demo of making an Ornithopter. Each team will then make an Ornithopter in the allotted time and judging will based on the time of flight and distance covered (material will be provided)"
+          ]
+        },
+        {
+          "name": "Pro-mech Hunting",
+          "participants": "2",
+          "fees": "30",
+          "managers": [
+            {
+              "name": "Neel Prajapati",
+              "mobile": "9099614787"
+            },
+            {
+              "name": "Prabhav Joshi",
+              "mobile": "7405589552"
+            }
+          ],
+          "description": "First Answer, then find a Clue & lastly present the Case.",
+          "rounds": [
+            "It is a screening round, a quiz based on EME, MOS, EG, general knowledge, aptitude, verbal ability, etc.",
+            "There will be a Treasure Hunt, clues would be Tech and Non-Tech both. The answers they'll get from the clues will have questions for case study in the final round.",
+            "Participants have to prepare a case study based on clues received in the second round. They will have to present it in the form of detailed representation on the provided sheets to the jury. Jury will then declare the final winner."
+          ]
+        },
+        {
+          "name": "Reverse Engineering",
+          "participants": "2",
+          "fees": "30",
+          "managers": [
+            {
+              "name": "Isha Modi",
+              "mobile": "8128261647"
+            },
+            {
+              "name": "Vishal Lapsiwala",
+              "mobile": "9712138577"
+            }
+          ],
+          "description": "Be the Phunsukh Wangdu (3 idiots). Re-assemble it & see what's left out.",
+          "rounds": [
+            "A quiz based on concepts of Reverse Engineering.",
+            "A working toy will be shown to the selected teams. After some time the same toy will be given to the teams in a dissembled form. Their task would be to assemble the toy without any component being left out. A certain time period will be fixed for the task."
+          ],
+          "round3Description": ""
+        },
+        {
+          "name": "The Psycho Physicist",
+          "participants": "2",
+          "fees": "40",
+          "managers": [
+            {
+              "name": "Murtuza Boriwala",
+              "mobile": "9427834082"
+            },
+            {
+              "name": "Karan Kamani",
+              "mobile": "9426638903"
+            },
+            {
+              "name": "Bhavik Patoliya",
+              "mobile": "7600586522"
+            }
+          ],
+          "description": "Get back to the class of Physics and then go on \"ON THE GO MACHINE\".",
+          "rounds": [
+            "The teams will have to analyze a problem based on principles of physics and will have to predict the reason and justify their answers as per their analysis.",
+            "It is based on Goldberg Mechanism. They will have to use the given props and have to create an \"ON THE GO MACHINE\"  type mechanism. "
+          ],
+          "round3Description": ""
+        }
+      ],
+      "heads": [
+        {
+          "name": "Yusuf Kapasi",
+          "mobile": "9601399952"
+        },
+        {
+          "name": "Rutvik Brahmbhatt",
+          "mobile": "7600866589"
+        }
+      ]
+    },
+    {
+      "alias": "EE",
+      "coHeads": [
+        {
+          "name": "Bhatt Harsh",
+          "mobile": "8460678411"
+        },
+        {
+          "name": "Viral Bhimani",
+          "mobile": "8671921333"
+        }
+      ],
+      "name": "Resonizers",
+      "events": [
+        {
+          "name": "Crack It",
+          "participants": "2(Mix)",
+          "fees": "40",
+          "managers": [
+            {
+              "name": "Krunal Jajal",
+              "mobile": "9428661026"
+            },
+            {
+              "name": "Vatsal Jethva",
+              "mobile": "9687720766"
+            },
+            {
+              "name": " Kushagra Shah",
+              "mobile": "9998216831"
+            }
+          ],
+          "description": "Diffuse the bomb and steal the diamond",
+          "rounds": [
+            "Participants will have to study a circuit provided to them and then answer questions besed on it.",
+            "Teams will have to defuse a bomb which is in form of digital circuit.",
+            "participants will have to stealing the diamond by clearing the Security System"
+          ]
+        },
+        {
+          "name": "Power Rangers",
+          "participants": "1",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Sagar Vala",
+              "mobile": "9099253225"
+            },
+            {
+              "name": "Jinesh Thakkar",
+              "mobile": "9033875080"
+            }
+          ],
+          "description": "Prepare yourself for producing energy.",
+          "rounds": [
+            "Quiz with basic questions related to power plants.",
+            "Teams will have to identify the various equipments of the power plant shown in the presentation.",
+            "Endorse yourself and debate with the rest of your power plant."
+          ]
+        },
+        {
+          "name": "The Machinist",
+          "participants": "1",
+          "fees": "20",
+          "managers": [
+            {
+              "name": "Kamal Vaghasiya",
+              "mobile": "9687152247"
+            },
+            {
+              "name": "Jenis Jasani",
+              "mobile": "9558615556"
+            }
+          ],
+          "description": "Be a master and rule the machine.",
+          "rounds": [
+            "Quiz with questions related to electrical machines",
+            "Viva on basic problems of electrical machines.",
+            "Performance of test in electrical laboratories."
+          ]
+        },
+        {
+          "name": "Wireman",
+          "participants": "2",
+          "fees": "30",
+          "managers": [
+            {
+              "name": "Mehul Surani",
+              "mobile": "9998044886"
+            },
+            {
+              "name": "Bhavik Lathiya",
+              "mobile": "9998922864"
+            }
+          ],
+          "description": "Illuminate your house by wiring skills.",
+          "rounds": [
+            "Quiz related to basics of electrical engineering.",
+            "Equivalent resistance will be given and participants will have to make a circuit which has total resistance given to them. They will also have to identify the resistance of a resister by using colour codes.",
+            "Teams will have to design a detailed wiring system of a house on a drawing sheet."
+          ]
+        },
+        {
+          "name": "Twisted Electrica",
+          "participants": "2",
+          "fees": "40",
+          "managers": [
+            {
+              "name": "Shalin Gandhi",
+              "mobile": "9427178331"
+            },
+            {
+              "name": "Karthik Kanzariya",
+              "mobile": "9275043789"
+            }
+          ],
+          "description": "Be the pirates of electrica.",
+          "rounds": [
+            "Teams will have to complete a crossword based on Electrical and Basic Electronics questions.",
+            "Treasure hunt",
+            "Based on the points obtained in the first two rounds,teams will be given virtual money. The money will be used to buy components for making a mini-project and then selling it to the jury."
+          ]
+        }
+      ],
+      "heads": [
+        {
+          "name": "Mayank Kava",
+          "mobile": "9998707091"
+        },
+        {
+          "name": "Bhavik Parekh",
+          "mobile": "9426068048"
+        }
+      ]
+    }
+  ]
+}
