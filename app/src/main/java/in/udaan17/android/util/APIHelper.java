@@ -25,7 +25,7 @@ public final class APIHelper {
     public static void fetchData(Context context, Response.Listener<JSONObject> responseListener, Response.ErrorListener errorListener) {
 
         String dataUrl = APIHelper.baseUrl + APIHelper.api_endpoint_info;
-
+    
         JsonObjectRequest dataRequest = new JsonObjectRequest(Request.Method.GET, dataUrl, new JSONObject(), responseListener, errorListener);
 
         VolleySingleton.getinstance(context).addToRequestQueue(dataRequest);

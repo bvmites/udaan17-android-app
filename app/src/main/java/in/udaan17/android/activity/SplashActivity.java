@@ -20,65 +20,46 @@ import me.wangyuwei.particleview.ParticleView;
 
 public class SplashActivity extends AppCompatActivity implements Response.Listener<JSONArray>, Response.ErrorListener {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_splash);
 
-        ActionBar actionBar = this.getSupportActionBar();
-        if (actionBar != null)
-            actionBar.setTitle(this.getString(R.string.title_activity_splash));
-
-        this.initializeElements();
+    ActionBar actionBar = this.getSupportActionBar();
+    if (actionBar != null) {
+      actionBar.setTitle(this.getString(R.string.title_activity_splash));
     }
+  }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+  @Override
+  protected void onStart() {
+    super.onStart();
 
-        if (Helper.hasNetworkConnection(this)) {
-
-            APIHelper.fetchData(this, new Response.Listener<JSONObject>() {
-                @Override
-                public void onResponse(JSONObject response) {
-                    try {
-                        SharedPreferences sharedPreferences = SplashActivity.this.getSharedPreferences(SplashActivity.this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
-                        sharedPreferences.edit().putString(SplashActivity.this.getString(R.string.prefs_data_json), response.toString()).apply();
-                        APIHelper.fetchDeveloperData(SplashActivity.this, SplashActivity.this, SplashActivity.this);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-
-                }
-            });
-
-
-            //                   } else {
-            //                       SplashActivity.this.startMainActivity();
-            //                   }
-            //               } catch (JSONException e) {
-            //                  e.printStackTrace();
-            //               }
-            //           }
-            //       }, new Response.ErrorListener() {
-            //           @Override
-            //           public void onErrorResponse(VolleyError error) {
-            //               Log.e("Timestamp request error", String.valueOf(error.networkResponse));
-            //           }
-            //       });
-
-            //       VolleySingleton.getinstance(this).addToRequestQueue(timeStampRequest);
-        } else if (!this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE).contains("data_json")) {
-            Helper.showNetworkAlertPopup(this);
-        } else {
-            MainActivity.startActivity(this);
+    if (Helper.hasNetworkConnection(this)) {
+      APIHelper.fetchData(this, new Response.Listener<JSONObject>() {
+        @Override
+        public void onResponse(JSONObject response) {
+          try {
+            SharedPreferences sharedPreferences = SplashActivity.this.getSharedPreferences(SplashActivity.this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
+            sharedPreferences.edit().putString(SplashActivity.this.getString(R.string.prefs_data_json), response.toString()).apply();
+            APIHelper.fetchDeveloperData(SplashActivity.this, SplashActivity.this, SplashActivity.this);
+          } catch (Exception e) {
+            e.printStackTrace();
+          }
         }
+      }, new Response.ErrorListener() {
+        @Override
+        public void onErrorResponse(VolleyError error) {
 
+        }
+      });
+    } else if (!this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE).contains("data_json")) {
+      Helper.showNetworkAlertPopup(this);
+    } else {
+      MainActivity.startActivity(this);
     }
+
+  }
 
     private void initializeElements() {
         ParticleView particleView = (ParticleView) this.findViewById(R.id.activity_splash_particle_view);
@@ -86,16 +67,15 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
 
     }
 
-    @Override
-    public void onErrorResponse(VolleyError error) {
-        Log.e("DEVELOPER_FETCH_ERROR", error.networkResponse.toString());
-    }
+  @Override
+  public void onErrorResponse(VolleyError error) {
+    Log.e("DEVELOPER_FETCH_ERROR", error.networkResponse.toString());
+  }
 
-    @Override
-    public void onResponse(JSONArray response) {
-        SharedPreferences sharedPreferences = this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
-        sharedPreferences.edit().putString(this.getString(R.string.prefs_developer_data_json), response.toString()).apply();
-
-        MainActivity.startActivity(this);
-    }
+  @Override
+  public void onResponse(JSONArray response) {
+    SharedPreferences sharedPreferences = this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
+    sharedPreferences.edit().putString(this.getString(R.string.prefs_developer_data_json), response.toString()).apply();
+    MainActivity.startActivity(this);
+  }
 }
