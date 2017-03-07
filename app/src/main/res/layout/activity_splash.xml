@@ -1,40 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
     tools:context="in.udaan17.android.activity.SplashActivity">
 
-    <ProgressBar
-        android:id="@+id/progress_bar_splash_screen"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/udaan_image_splash_screen"
-        app:layout_constraintVertical_bias="0.507" />
+    <me.wangyuwei.particleview.ParticleView
+        android:id="@+id/activity_splash_particle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:pv_background_color="@color/colorPrimary"
+        app:pv_host_text="Udaan"
+        app:pv_host_text_anim_time="1000"
+        app:pv_host_text_size="48sp"
+        app:pv_particle_text="17"
+        app:pv_particle_text_size="40sp"
+        app:pv_spread_anim_time="100"
+        app:pv_text_anim_time="1000"
+        app:pv_text_color="@android:color/white" />
 
-    <android.support.v7.widget.AppCompatImageView
-        android:id="@+id/udaan_image_splash_screen"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13"
-        app:srcCompat="@mipmap/ic_launcher" />
+    <!--<ProgressBar-->
+    <!--android:id="@+id/progress_bar_splash_screen"-->
+    <!--style="?android:attr/progressBarStyle"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.503"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/udaan_image_splash_screen"-->
+    <!--app:layout_constraintVertical_bias="0.507"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginEnd="8dp" />-->
 
-</android.support.constraint.ConstraintLayout>
+    <!--<android.support.v7.widget.AppCompatImageView-->
+    <!--android:id="@+id/udaan_image_splash_screen"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:layout_constraintVertical_bias="0.13"-->
+    <!--app:srcCompat="@mipmap/ic_launcher"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginEnd="8dp" />-->
+
+</android.support.v7.widget.LinearLayoutCompat>

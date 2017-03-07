@@ -16,24 +16,25 @@ import org.json.JSONObject;
 import in.udaan17.android.R;
 import in.udaan17.android.util.APIHelper;
 import in.udaan17.android.util.Helper;
+import me.wangyuwei.particleview.ParticleView;
 
 public class SplashActivity extends AppCompatActivity implements Response.Listener<JSONArray>, Response.ErrorListener {
-  
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_splash);
-    
+
     ActionBar actionBar = this.getSupportActionBar();
     if (actionBar != null) {
       actionBar.setTitle(this.getString(R.string.title_activity_splash));
     }
   }
-  
+
   @Override
   protected void onStart() {
     super.onStart();
-    
+
     if (Helper.hasNetworkConnection(this)) {
       APIHelper.fetchData(this, new Response.Listener<JSONObject>() {
         @Override
@@ -49,7 +50,7 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
       }, new Response.ErrorListener() {
         @Override
         public void onErrorResponse(VolleyError error) {
-          
+
         }
       });
     } else if (!this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE).contains("data_json")) {
@@ -57,14 +58,20 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
     } else {
       MainActivity.startActivity(this);
     }
-    
+
   }
-  
+
+    private void initializeElements() {
+        ParticleView particleView = (ParticleView) this.findViewById(R.id.activity_splash_particle_view);
+        particleView.startAnim();
+
+    }
+
   @Override
   public void onErrorResponse(VolleyError error) {
     Log.e("DEVELOPER_FETCH_ERROR", error.networkResponse.toString());
   }
-  
+
   @Override
   public void onResponse(JSONArray response) {
     SharedPreferences sharedPreferences = this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);

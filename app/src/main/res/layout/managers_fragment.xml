@@ -4,6 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Heads"
+        android:textSize="30sp" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/manager_heads_recycler_view"
         android:layout_width="match_parent"
@@ -13,6 +19,12 @@
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
         android:layout_height="10dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CoHeads"
+        android:textSize="30sp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/manager_coheads_recycler_view"
