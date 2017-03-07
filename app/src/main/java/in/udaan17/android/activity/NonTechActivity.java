@@ -1,6 +1,7 @@
 package in.udaan17.android.activity;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -38,6 +39,13 @@ public class NonTechActivity extends AppCompatActivity implements ListItemClickC
             nonTechRecyclerView.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.VERTICAL, false));
 
             nonTechAdapter.setItemClickCallBack(this);
+
+            ActionBar actionBar = this.getSupportActionBar();
+
+            if (actionBar != null) {
+                actionBar.setTitle("Non-Tech Events");
+                actionBar.setDisplayHomeAsUpEnabled(true);
+            }
 
         } catch (JSONException e) {
             e.printStackTrace();

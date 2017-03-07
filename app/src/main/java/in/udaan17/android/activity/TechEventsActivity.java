@@ -36,6 +36,7 @@ public class TechEventsActivity extends AppCompatActivity {
 
         if (actionBar != null) {
             actionBar.setTitle(activityTitle);
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
     }
 }

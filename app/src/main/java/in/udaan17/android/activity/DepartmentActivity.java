@@ -30,6 +30,7 @@ public class DepartmentActivity extends AppCompatActivity implements ListItemCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_department);
 
+
         try {
             departmentList = DataSingleton.getInstance(this).getDepartmentsList();
 
@@ -44,6 +45,7 @@ public class DepartmentActivity extends AppCompatActivity implements ListItemCli
 
             if (actionBar != null) {
                 actionBar.setTitle("Tech Events: Departments");
+                actionBar.setDisplayHomeAsUpEnabled(true);
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -61,4 +63,14 @@ public class DepartmentActivity extends AppCompatActivity implements ListItemCli
 
         startActivity(eventIntent);
     }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()){
+//            case android.R.id.home:
+//                this.onBackPressed();
+//                return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }
