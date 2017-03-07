@@ -1,5 +1,7 @@
 package in.udaan17.android.fragment;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -59,8 +61,22 @@ public class ManagerFragment extends Fragment implements ListItemClickCallBack {
             headsRecyclerView.setLayoutManager(new GridLayoutManager(this.getContext(), 1, LinearLayoutManager.VERTICAL, false));
             coHeadsRecyclerView.setLayoutManager(new GridLayoutManager(this.getContext(), 1, LinearLayoutManager.VERTICAL, false));
 
-            headsAdapter.setItemClickCallBack(this);
-            coHeadsAdapter.setItemClickCallBack(this);
+            headsAdapter.setItemClickCallBack(new ListItemClickCallBack() {
+                @Override
+                public void onItemClick(int position, int viewId) {
+                    Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                    callIntent.setData(Uri.parse("tel:" + ManagerFragment.this.headsList.get(position).getContactInfo()));
+                    ManagerFragment.this.startActivity(callIntent);
+                }
+            });
+            coHeadsAdapter.setItemClickCallBack(new ListItemClickCallBack() {
+                @Override
+                public void onItemClick(int position, int viewId) {
+                    Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                    callIntent.setData(Uri.parse("tel:" + ManagerFragment.this.coHeadsList.get(position).getContactInfo()));
+                    ManagerFragment.this.startActivity(callIntent);
+                }
+            });
 
         } catch (JSONException e) {
             e.printStackTrace();
