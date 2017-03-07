@@ -40,8 +40,8 @@ public class SplashActivity extends AppCompatActivity {
         super.onStart();
 
         if (Helper.hasNetworkConnection(this)) {
-            String timeStampUrl = this.getString(R.string.api_endpoint_timestamp);
-            JsonObjectRequest timeStampRequest = new JsonObjectRequest(Request.Method.GET, timeStampUrl, new Response.Listener<JSONObject>() {
+            //String timeStampUrl = this.getString(R.string.api_endpoint_timestamp);
+            /*JsonObjectRequest timeStampRequest = new JsonObjectRequest(Request.Method.GET, timeStampUrl, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {
                     try {
@@ -50,7 +50,7 @@ public class SplashActivity extends AppCompatActivity {
 
                         if (sharedPreferences.getFloat(SplashActivity.this.getString(R.string.prefs_last_modified), 0) < lastModified) {
                             sharedPreferences.edit().putFloat(SplashActivity.this.getString(R.string.prefs_last_modified), lastModified).apply();
-
+    */
                             String dataUrl = SplashActivity.this.getString(R.string.api_endpoint_info);
 
                             JsonObjectRequest dataRequest = new JsonObjectRequest(Request.Method.GET, dataUrl, new Response.Listener<JSONObject>() {
@@ -65,21 +65,21 @@ public class SplashActivity extends AppCompatActivity {
                                 }
                             });
                             VolleySingleton.getinstance(SplashActivity.this).addToRequestQueue(dataRequest);
-                        } else {
-                            SplashActivity.this.startMainActivity();
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.e("Timestamp request error", String.valueOf(error.networkResponse));
-                }
-            });
+            //                   } else {
+            //                       SplashActivity.this.startMainActivity();
+            //                   }
+            //               } catch (JSONException e) {
+            //                  e.printStackTrace();
+            //               }
+            //           }
+            //       }, new Response.ErrorListener() {
+            //           @Override
+            //           public void onErrorResponse(VolleyError error) {
+            //               Log.e("Timestamp request error", String.valueOf(error.networkResponse));
+            //           }
+            //       });
 
-            VolleySingleton.getinstance(this).addToRequestQueue(timeStampRequest);
+            //       VolleySingleton.getinstance(this).addToRequestQueue(timeStampRequest);
         } else if (!this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE).contains("data_json")) {
             Helper.showNetworkAlertPopup(this);
         } else {

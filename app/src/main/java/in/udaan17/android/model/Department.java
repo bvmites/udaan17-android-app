@@ -24,7 +24,7 @@ public class Department {
     @SerializedName("events")
     private List<Event> events;
 
-    @SerializedName("branchHeads")
+    @SerializedName("heads")
     private List<Manager> branchHeads;
 
     @SerializedName("coheads")

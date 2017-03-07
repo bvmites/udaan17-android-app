@@ -19,16 +19,15 @@ import in.udaan17.android.util.Helper;
 import in.udaan17.android.util.listeners.ListItemClickCallBack;
 
 /**
- * Created by pranshu on 6/3/17.
+ * Created by pranshu on 7/3/17.
  */
 
-public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> {
-
+public class CulturalAdapter extends RecyclerView.Adapter<CulturalAdapter.ViewHolder> {
     private Context context;
     private ListItemClickCallBack itemClickCallBack;
     private List<Event> eventList;
 
-    public EventAdapter(List<Event> eventList, Context context) {
+    public CulturalAdapter(List<Event> eventList, Context context) {
         this.context = context;
         this.eventList = eventList;
     }
@@ -44,7 +43,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         int colorPosition = position % Helper.colors.length;
 
         holder.container.setCardBackgroundColor(ContextCompat.getColor(context, Helper.colors[colorPosition]));
-        holder.eventTitle.setText(eventList.get(position).getEventName());
+        holder.departmentTitle.setText(eventList.get(position).getEventName());
     }
 
     @Override
@@ -58,13 +57,13 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        public CardView container;
-        public AppCompatTextView eventTitle;
+        private CardView container;
+        private AppCompatTextView departmentTitle;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            container = (CardView) itemView.findViewById(R.id.event_list_item_card);
-            eventTitle = (AppCompatTextView) itemView.findViewById(R.id.event_list_view_title);
+            container = (CardView) itemView.findViewById(R.id.department_list_item_card);
+            departmentTitle = (AppCompatTextView) itemView.findViewById(R.id.department_list_view_title);
 
             container.setOnClickListener(this);
 
