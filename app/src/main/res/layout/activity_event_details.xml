@@ -52,7 +52,8 @@
 
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="500dp"
             android:orientation="vertical">
 
             <android.support.design.widget.TabLayout
@@ -67,11 +68,12 @@
             <android.support.v4.view.ViewPager
                 android:id="@+id/event_details.view_pager"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
-                android:layout_marginTop="0dp" />
+                android:layout_marginTop="0dp"
+                android:layout_weight="1" />
         </android.support.v7.widget.LinearLayoutCompat>
     </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>
