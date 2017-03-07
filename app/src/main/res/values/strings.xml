@@ -16,8 +16,6 @@
     <string name="prefs_data_json" translatable="false">data_json</string>
     <string name="prefs_developer_data_json" translatable="false">developer_data_json</string>
 
-    <!-- API KEYS -->
-
     <!-- translatable=false does not let android translate the string if we are supporting multiple languages -->
     <string name="api_endpoint_timestamp" translatable="false">https://raw.githubusercontent.com/Team-Udaan/udaan16-android-app/master/mock-api/timestamp.json</string>
     <string name="api_endpoint_info" translatable="false">https://raw.githubusercontent.com/Team-Udaan/udaan16-android-app/master/mock-api/event-data.json</string>
@@ -26,4 +24,6 @@
 
     <!-- Animation Keys -->
     <integer name="swing_anim_time">600</integer>
+
+    <string name="symbol_rupee">\u20b9</string>
 </resources>

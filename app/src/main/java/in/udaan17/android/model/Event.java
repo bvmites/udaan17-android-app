@@ -21,15 +21,6 @@ public class Event {
     @SerializedName("participants")
     private String participants;
 
-//    @SerializedName("round1Description")
-//    private String round1Description;
-//
-//    @SerializedName("round2Description")
-//    private String round2Description;
-//
-//    @SerializedName("round3Description")
-//    private String round3Description;
-
     @SerializedName("rounds")
     private List<String> rounds;
 
@@ -84,7 +75,11 @@ public class Event {
     public void setParticipants(String participants) {
         this.participants = participants;
     }
-
+    
+    public List<String> getRounds() {
+        return rounds;
+    }
+    
     public void setRounds(List<String> rounds) {
         this.rounds = rounds;
     }
@@ -103,5 +98,11 @@ public class Event {
 
     public void setEventManagers(List<Manager> eventManagers) {
         this.eventManagers = eventManagers;
+    }
+    
+    @Override
+    public String toString() {
+        Gson gson = new Gson();
+        return gson.toJson(this);
     }
 }

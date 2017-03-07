@@ -60,9 +60,9 @@ public class EventFragment extends Fragment implements ListItemClickCallBack {
 
     @Override
     public void onItemClick(int position, int viewId) {
-        Intent i = new Intent(this.getActivity(), EventDetailsActivity.class);
-        i.putExtra(getString(R.string.activity_key_position), position);
-        i.putExtra(getString(R.string.activity_key_title_name), eventList.get(position).getEventName());
-        startActivity(i);
+        Intent intent = new Intent(this.getActivity(), EventDetailsActivity.class);
+        intent.putExtra(getString(R.string.activity_key_position), position);
+        intent.putExtra(getString(R.string.activity_key_event_data), eventList.get(position).toString());
+        this.startActivity(intent);
     }
 }
