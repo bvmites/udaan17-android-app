@@ -1,7 +1,6 @@
 package in.udaan17.android.adapter;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -14,42 +13,42 @@ import android.view.animation.AnimationUtils;
 import java.util.List;
 
 import in.udaan17.android.R;
-import in.udaan17.android.model.Event;
-import in.udaan17.android.util.Helper;
+import in.udaan17.android.model.Manager;
 import in.udaan17.android.util.listeners.ListItemClickCallBack;
 
 /**
- * Created by pranshu on 6/3/17.
+ * Created by pranshu on 7/3/17.
  */
 
-public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> {
+public class HeadsAdapter extends RecyclerView.Adapter<HeadsAdapter.ViewHolder> {
 
     private Context context;
     private ListItemClickCallBack itemClickCallBack;
-    private List<Event> eventList;
+    private List<Manager> headList;
 
-    public EventAdapter(List<Event> eventList, Context context) {
+    public HeadsAdapter(List<Manager> headList, Context context) {
         this.context = context;
-        this.eventList = eventList;
+        this.headList = headList;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        CardView c = (CardView) LayoutInflater.from(context).inflate(R.layout.event_list_item, parent, false);
+        CardView c = (CardView) LayoutInflater.from(context).inflate(R.layout.heads_list_item, parent, false);
         return new ViewHolder(c);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        int colorPosition = position % Helper.colors.length;
 
-        holder.container.setCardBackgroundColor(ContextCompat.getColor(context, Helper.colors[colorPosition]));
-        holder.eventTitle.setText(eventList.get(position).getEventName());
+        holder.headsTitle.setText(headList.get(position).getName());
+        holder.headsMobile.setText(headList.get(position).getContactInfo());
     }
 
     @Override
     public int getItemCount() {
-        return eventList.size();
+        if (headList == null)
+            return 0;
+        return headList.size();
     }
 
     public void setItemClickCallBack(ListItemClickCallBack itemClickCallBack) {
@@ -59,12 +58,14 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public CardView container;
-        public AppCompatTextView eventTitle;
+        public AppCompatTextView headsTitle;
+        public AppCompatTextView headsMobile;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            container = (CardView) itemView.findViewById(R.id.event_list_item_card);
-            eventTitle = (AppCompatTextView) itemView.findViewById(R.id.event_list_view_title);
+            container = (CardView) itemView.findViewById(R.id.heads_list_item_card);
+            headsTitle = (AppCompatTextView) itemView.findViewById(R.id.heads_list_item_title);
+            headsMobile = (AppCompatTextView) itemView.findViewById(R.id.heads_list_item_mobile);
 
             container.setOnClickListener(this);
 

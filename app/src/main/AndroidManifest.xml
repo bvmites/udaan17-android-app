@@ -34,7 +34,9 @@
         <activity android:name=".activity.DepartmentActivity" />
         <activity android:name=".activity.NonTechActivity" />
         <activity android:name=".activity.CulturalActivity" />
-        <activity android:name=".activity.TechEventsActivity"></activity>
+        <activity android:name=".activity.TechEventsActivity" />
+        <activity android:name=".activity.EventDetailsActivity" />
+        <activity android:name=".activity.EventActivity"></activity>
     </application>
 
 </manifest>

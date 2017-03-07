@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Event {
 
-    @SerializedName("eventName")
+    @SerializedName("name")
     private String eventName;
 
     @SerializedName("eventDescription")
