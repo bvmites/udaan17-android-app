@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.ProgressBar;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -17,6 +16,7 @@ import org.json.JSONObject;
 import in.udaan17.android.R;
 import in.udaan17.android.util.APIHelper;
 import in.udaan17.android.util.Helper;
+import me.wangyuwei.particleview.ParticleView;
 
 public class SplashActivity extends AppCompatActivity implements Response.Listener<JSONArray>, Response.ErrorListener {
 
@@ -37,32 +37,6 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
         super.onStart();
 
         if (Helper.hasNetworkConnection(this)) {
-            //String timeStampUrl = this.getString(R.string.api_endpoint_timestamp);
-            /*JsonObjectRequest timeStampRequest = new JsonObjectRequest(Request.Method.GET, timeStampUrl, new Response.Listener<JSONObject>() {
-                @Override
-                public void onResponse(JSONObject response) {
-                    try {
-                        float lastModified = Float.parseFloat(response.getString("message"));
-                        SharedPreferences sharedPreferences = SplashActivity.this.getSharedPreferences(SplashActivity.this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
-
-                        if (sharedPreferences.getFloat(SplashActivity.this.getString(R.string.prefs_last_modified), 0) < lastModified) {
-                            sharedPreferences.edit().putFloat(SplashActivity.this.getString(R.string.prefs_last_modified), lastModified).apply();
-    */
-//                            String dataUrl = APIHelper.api_endpoint_info;
-//                            String developerUrl = APIHelper.api_endpoint_developers;
-//                            JsonObjectRequest dataRequest = new JsonObjectRequest(Request.Method.GET, dataUrl, new Response.Listener<JSONObject>() {
-//                                @Override
-//                                public void onResponse(JSONObject response) {
-//                                    SplashActivity.this.successfulDataResponse(response);
-//                                }
-//                            }, new Response.ErrorListener() {
-//                                @Override
-//                                public void onErrorResponse(VolleyError error) {
-//                                    Log.e("Data Request Error", String.valueOf(error.networkResponse));
-//                                }
-//                            });
-//
-//                            VolleySingleton.getinstance(SplashActivity.this).addToRequestQueue(dataRequest);
 
             APIHelper.fetchData(this, new Response.Listener<JSONObject>() {
                 @Override
@@ -107,7 +81,9 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
     }
 
     private void initializeElements() {
-        ProgressBar progressBar = (ProgressBar) findViewById(R.id.progress_bar_splash_screen);
+        ParticleView particleView = (ParticleView) this.findViewById(R.id.activity_splash_particle_view);
+        particleView.startAnim();
+
     }
 
     @Override
@@ -119,6 +95,7 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
     public void onResponse(JSONArray response) {
         SharedPreferences sharedPreferences = this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
         sharedPreferences.edit().putString(this.getString(R.string.prefs_developer_data_json), response.toString()).apply();
+
         MainActivity.startActivity(this);
     }
 }

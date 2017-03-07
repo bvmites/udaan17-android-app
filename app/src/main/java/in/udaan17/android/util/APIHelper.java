@@ -26,7 +26,7 @@ public final class APIHelper {
 
         String dataUrl = APIHelper.baseUrl + APIHelper.api_endpoint_info;
 
-        JsonObjectRequest dataRequest = new JsonObjectRequest(Request.Method.GET, dataUrl, responseListener, errorListener);
+        JsonObjectRequest dataRequest = new JsonObjectRequest(Request.Method.GET, dataUrl, new JSONObject(), responseListener, errorListener);
 
         VolleySingleton.getinstance(context).addToRequestQueue(dataRequest);
 
@@ -35,7 +35,7 @@ public final class APIHelper {
     public static void fetchDeveloperData(Context context, Response.Listener<JSONArray> responseListener, Response.ErrorListener errorListener) {
 
         String developerUrl = APIHelper.baseUrl + APIHelper.api_endpoint_developers;
-        JsonArrayRequest developerDataRequest = new JsonArrayRequest(Request.Method.GET, developerUrl, responseListener, errorListener);
+        JsonArrayRequest developerDataRequest = new JsonArrayRequest(Request.Method.GET, developerUrl, new JSONArray(), responseListener, errorListener);
 
         VolleySingleton.getinstance(context).addToRequestQueue(developerDataRequest);
     }
