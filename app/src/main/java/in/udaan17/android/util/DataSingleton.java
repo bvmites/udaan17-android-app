@@ -52,16 +52,18 @@ public class DataSingleton {
          */
         SharedPreferences sharedPreferences = activity.getSharedPreferences(activity.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
         String stringData = sharedPreferences.getString(activity.getString(R.string.prefs_data_json), "");
+        String developersData = sharedPreferences.getString(activity.getString(R.string.prefs_developer_data_json), "");
 
         JSONObject data = new JSONObject(stringData);
-        JSONArray developers = new JSONArray(activity.getString(R.string.developers_json));
+        JSONArray developers = new JSONArray(developersData);
 
         this.parseAndLoadData(data, developers);
     }
 
     public static DataSingleton getInstance(Activity activity) throws JSONException {
-        if (DataSingleton.instance == null)
+        if (DataSingleton.instance == null) {
             DataSingleton.instance = new DataSingleton(activity);
+        }
         return DataSingleton.instance;
 
     }
@@ -70,14 +72,12 @@ public class DataSingleton {
     private void parseAndLoadData(JSONObject data, JSONArray developers) throws JSONException {
         Gson gson = new Gson();
 
-        this.categoryList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("categories").toString(), Category[].class)));
-        this.departmentsList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("departments").toString(), Department[].class)));
-        this.nonTechList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("non-tech").toString(), Event[].class)));
+        //this.categoryList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("categories").toString(), Category[].class)));
+        this.departmentsList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("tech").toString(), Department[].class)));
+        this.nonTechList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("nonTech").toString(), Event[].class)));
         this.culturalList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("cultural").toString(), Event[].class)));
         this.developersList = new ArrayList<>(Arrays.asList(gson.fromJson(developers.toString(), Developer[].class)));
 
-        //Add category to download schedule
-        //this.categoryList.add(new Category("Download\nSchedule", "schedule"));
     }
 
     public List<Category> getCategoryList() {

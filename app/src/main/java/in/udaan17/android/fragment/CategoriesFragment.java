@@ -11,17 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.json.JSONException;
-
-import java.util.List;
-
 import in.udaan17.android.R;
 import in.udaan17.android.activity.CulturalActivity;
 import in.udaan17.android.activity.DepartmentActivity;
 import in.udaan17.android.activity.NonTechActivity;
 import in.udaan17.android.adapter.CategoriesAdapter;
-import in.udaan17.android.model.Category;
-import in.udaan17.android.util.DataSingleton;
 import in.udaan17.android.util.listeners.ListItemClickCallBack;
 
 /**
@@ -33,48 +27,45 @@ public class CategoriesFragment extends Fragment implements ListItemClickCallBac
     private View rootView;
     private RecyclerView categoriesRecyclerView;
     private CategoriesAdapter categoriesAdapter;
-    private List<Category> categoriesList;
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         rootView = inflater.inflate(R.layout.categories_fragment, container, false);
-        try {
-
-            categoriesList = DataSingleton.getInstance(getActivity()).getCategoryList();
 
             categoriesRecyclerView = (RecyclerView) rootView.findViewById(R.id.categories_recylerView);
-            categoriesAdapter = new CategoriesAdapter(categoriesList, getContext());
+        categoriesAdapter = new CategoriesAdapter(getContext());
 
             categoriesRecyclerView.setAdapter(categoriesAdapter);
             categoriesRecyclerView.setLayoutManager(new GridLayoutManager(this.rootView.getContext(), 2, LinearLayoutManager.VERTICAL, false));
 
             categoriesAdapter.setItemClickCallBack(this);
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
 
         return rootView;
     }
 
     @Override
     public void onItemClick(int position, int viewId) {
-        String alias = categoriesList.get(position).getAlias();
         Intent i = null;
-        switch (alias) {
-            case "tech":
+        switch (position) {
+            case 0:
                 i = new Intent(this.getActivity(), DepartmentActivity.class);
                 break;
-            case "non-tech":
+        }
+        switch (position) {
+            case 0:
+                i = new Intent(this.getActivity(), DepartmentActivity.class);
+                break;
+            case 1:
                 i = new Intent(this.getActivity(), NonTechActivity.class);
                 break;
-            case "cultural":
+            case 2:
                 i = new Intent(this.getActivity(), CulturalActivity.class);
                 break;
         }
         startActivity(i);
-
     }
 }

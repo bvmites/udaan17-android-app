@@ -14,6 +14,7 @@
     <string name="prefs_version_code" translatable="false">version_code</string>
     <string name="prefs_last_modified" translatable="false">last_modified</string>
     <string name="prefs_data_json" translatable="false">data_json</string>
+    <string name="prefs_developer_data_json" translatable="false">developer_data_json</string>
 
     <!-- API KEYS -->
 

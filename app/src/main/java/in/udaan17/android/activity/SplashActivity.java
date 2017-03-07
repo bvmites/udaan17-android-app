@@ -1,7 +1,6 @@
 package in.udaan17.android.activity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -9,19 +8,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ProgressBar;
 
-import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 
-import org.json.JSONException;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import in.udaan17.android.R;
+import in.udaan17.android.util.APIHelper;
 import in.udaan17.android.util.Helper;
-import in.udaan17.android.util.VolleySingleton;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity implements Response.Listener<JSONArray>, Response.ErrorListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,20 +48,41 @@ public class SplashActivity extends AppCompatActivity {
                         if (sharedPreferences.getFloat(SplashActivity.this.getString(R.string.prefs_last_modified), 0) < lastModified) {
                             sharedPreferences.edit().putFloat(SplashActivity.this.getString(R.string.prefs_last_modified), lastModified).apply();
     */
-                            String dataUrl = SplashActivity.this.getString(R.string.api_endpoint_info);
+//                            String dataUrl = APIHelper.api_endpoint_info;
+//                            String developerUrl = APIHelper.api_endpoint_developers;
+//                            JsonObjectRequest dataRequest = new JsonObjectRequest(Request.Method.GET, dataUrl, new Response.Listener<JSONObject>() {
+//                                @Override
+//                                public void onResponse(JSONObject response) {
+//                                    SplashActivity.this.successfulDataResponse(response);
+//                                }
+//                            }, new Response.ErrorListener() {
+//                                @Override
+//                                public void onErrorResponse(VolleyError error) {
+//                                    Log.e("Data Request Error", String.valueOf(error.networkResponse));
+//                                }
+//                            });
+//
+//                            VolleySingleton.getinstance(SplashActivity.this).addToRequestQueue(dataRequest);
 
-                            JsonObjectRequest dataRequest = new JsonObjectRequest(Request.Method.GET, dataUrl, new Response.Listener<JSONObject>() {
-                                @Override
-                                public void onResponse(JSONObject response) {
-                                    SplashActivity.this.successfulDataResponse(response);
-                                }
-                            }, new Response.ErrorListener() {
-                                @Override
-                                public void onErrorResponse(VolleyError error) {
-                                    Log.e("Data Request Error", String.valueOf(error.networkResponse));
-                                }
-                            });
-                            VolleySingleton.getinstance(SplashActivity.this).addToRequestQueue(dataRequest);
+            APIHelper.fetchData(this, new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+                    try {
+                        SharedPreferences sharedPreferences = SplashActivity.this.getSharedPreferences(SplashActivity.this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
+                        sharedPreferences.edit().putString(SplashActivity.this.getString(R.string.prefs_data_json), response.toString()).apply();
+                        APIHelper.fetchDeveloperData(SplashActivity.this, SplashActivity.this, SplashActivity.this);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+
+                }
+            });
+
+
             //                   } else {
             //                       SplashActivity.this.startMainActivity();
             //                   }
@@ -83,7 +101,7 @@ public class SplashActivity extends AppCompatActivity {
         } else if (!this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE).contains("data_json")) {
             Helper.showNetworkAlertPopup(this);
         } else {
-            this.startMainActivity();
+            MainActivity.startActivity(this);
         }
 
     }
@@ -92,18 +110,15 @@ public class SplashActivity extends AppCompatActivity {
         ProgressBar progressBar = (ProgressBar) findViewById(R.id.progress_bar_splash_screen);
     }
 
-    private void startMainActivity() {
-        Intent i = new Intent(this, MainActivity.class);
-        this.startActivity(i);
+    @Override
+    public void onErrorResponse(VolleyError error) {
+        Log.e("DEVELOPER_FETCH_ERROR", error.networkResponse.toString());
     }
 
-    private void successfulDataResponse(JSONObject response) {
-        try {
-            SharedPreferences sharedPreferances = this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
-            sharedPreferances.edit().putString(this.getString(R.string.prefs_data_json), response.getJSONObject("message").toString()).apply();
-            this.startMainActivity();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+    @Override
+    public void onResponse(JSONArray response) {
+        SharedPreferences sharedPreferences = this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
+        sharedPreferences.edit().putString(this.getString(R.string.prefs_developer_data_json), response.toString()).apply();
+        MainActivity.startActivity(this);
     }
 }

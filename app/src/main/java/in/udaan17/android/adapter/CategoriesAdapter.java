@@ -11,10 +11,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-import java.util.List;
-
 import in.udaan17.android.R;
-import in.udaan17.android.model.Category;
 import in.udaan17.android.util.Helper;
 import in.udaan17.android.util.listeners.ListItemClickCallBack;
 
@@ -24,13 +21,12 @@ import in.udaan17.android.util.listeners.ListItemClickCallBack;
 
 public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.ViewHolder> {
 
-    List<Category> categoryArrayList;
     private Context context;
     private ListItemClickCallBack itemClickCallBack;
 
-    public CategoriesAdapter(List<Category> categoryArrayList, Context context) {
+    public CategoriesAdapter(Context context) {
         this.context = context;
-        this.categoryArrayList = categoryArrayList;
+
     }
 
     @Override
@@ -42,14 +38,25 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         int colorPosition = position % Helper.colors.length;
-
+        String categoryName = null;
+        switch (position) {
+            case 0:
+                categoryName = "Tech";
+                break;
+            case 1:
+                categoryName = "Non-Tech";
+                break;
+            case 2:
+                categoryName = "Cultural";
+                break;
+        }
         holder.container.setCardBackgroundColor(ContextCompat.getColor(context, Helper.colors[colorPosition]));
-        holder.categoryTitle.setText(categoryArrayList.get(position).getName());
+        holder.categoryTitle.setText(categoryName);
     }
 
     @Override
     public int getItemCount() {
-        return categoryArrayList.size();
+        return 3;
     }
 
     public void setItemClickCallBack(ListItemClickCallBack itemClickCallBack) {

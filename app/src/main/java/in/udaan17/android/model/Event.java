@@ -15,39 +15,36 @@ public class Event {
     @SerializedName("name")
     private String eventName;
 
-    @SerializedName("eventDescription")
+    @SerializedName("description")
     private String eventDescription;
 
     @SerializedName("participants")
     private String participants;
 
-    @SerializedName("round1Description")
-    private String round1Description;
+//    @SerializedName("round1Description")
+//    private String round1Description;
+//
+//    @SerializedName("round2Description")
+//    private String round2Description;
+//
+//    @SerializedName("round3Description")
+//    private String round3Description;
 
-    @SerializedName("round2Description")
-    private String round2Description;
-
-    @SerializedName("round3Description")
-    private String round3Description;
-
-    @SerializedName("email")
-    private String email;
+    @SerializedName("rounds")
+    private List<String> rounds;
 
     @SerializedName("fees")
     private String fees;
 
-    @SerializedName("eventMangers")
+    @SerializedName("managers")
     private List<Manager> eventManagers;
 
 
-    public Event(String eventName, String eventDescription, String participants, String round1Description, String round2Description, String round3Description, String email, String fees, List<Manager> eventManagers) {
+    public Event(String eventName, String eventDescription, String participants, List<String> rounds, String fees, List<Manager> eventManagers) {
         this.eventName = eventName;
         this.eventDescription = eventDescription;
         this.participants = participants;
-        this.round1Description = round1Description;
-        this.round2Description = round2Description;
-        this.round3Description = round3Description;
-        this.email = email;
+        this.rounds = rounds;
         this.fees = fees;
         this.eventManagers = eventManagers;
     }
@@ -88,36 +85,8 @@ public class Event {
         this.participants = participants;
     }
 
-    public String getRound1Description() {
-        return round1Description;
-    }
-
-    public void setRound1Description(String round1Description) {
-        this.round1Description = round1Description;
-    }
-
-    public String getRound2Description() {
-        return round2Description;
-    }
-
-    public void setRound2Description(String round2Description) {
-        this.round2Description = round2Description;
-    }
-
-    public String getRound3Description() {
-        return round3Description;
-    }
-
-    public void setRound3Description(String round3Description) {
-        this.round3Description = round3Description;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setRounds(List<String> rounds) {
+        this.rounds = rounds;
     }
 
     public String getFees() {
