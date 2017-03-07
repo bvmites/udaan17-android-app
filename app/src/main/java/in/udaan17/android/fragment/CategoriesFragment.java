@@ -39,7 +39,7 @@ public class CategoriesFragment extends Fragment implements ListItemClickCallBac
         categoriesAdapter = new CategoriesAdapter(getContext());
 
             categoriesRecyclerView.setAdapter(categoriesAdapter);
-            categoriesRecyclerView.setLayoutManager(new GridLayoutManager(this.rootView.getContext(), 2, LinearLayoutManager.VERTICAL, false));
+        categoriesRecyclerView.setLayoutManager(new GridLayoutManager(this.rootView.getContext(), 1, LinearLayoutManager.VERTICAL, false));
 
             categoriesAdapter.setItemClickCallBack(this);
 
