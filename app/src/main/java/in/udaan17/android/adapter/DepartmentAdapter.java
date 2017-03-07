@@ -27,6 +27,7 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
     private Context context;
     private ListItemClickCallBack itemClickCallBack;
     private List<Department> departmentList;
+    private int lastPosition = -1;
 
     public DepartmentAdapter(List<Department> departmentList, Context context) {
         this.context = context;
@@ -45,6 +46,7 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
 
         holder.container.setCardBackgroundColor(ContextCompat.getColor(context, Helper.colors[colorPosition]));
         holder.departmentTitle.setText(departmentList.get(position).getName());
+        setAnimation(holder.container, position);
     }
 
     @Override
@@ -56,6 +58,19 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
         this.itemClickCallBack = itemClickCallBack;
     }
 
+    public void setAnimation(View viewToAnimate, int position) {
+
+        if (position > lastPosition) {
+            Animation animation = AnimationUtils.loadAnimation(context, R.anim.swing_up_left);
+            viewToAnimate.startAnimation(animation);
+            lastPosition = position;
+        }
+    }
+
+    @Override
+    public void onViewDetachedFromWindow(ViewHolder holder) {
+        holder.clearAnimation();
+    }
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private CardView container;
@@ -77,6 +92,10 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
         @Override
         public void onClick(View v) {
             itemClickCallBack.onItemClick(getAdapterPosition(), v.getId());
+        }
+
+        public void clearAnimation() {
+            container.clearAnimation();
         }
     }
 }

@@ -27,6 +27,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     private Context context;
     private ListItemClickCallBack itemClickCallBack;
     private List<Event> eventList;
+    private int lastPosition = -1;
 
     public EventAdapter(List<Event> eventList, Context context) {
         this.context = context;
@@ -45,6 +46,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
 
         holder.container.setCardBackgroundColor(ContextCompat.getColor(context, Helper.colors[colorPosition]));
         holder.eventTitle.setText(eventList.get(position).getEventName());
+        setAnimation(holder.container, position);
     }
 
     @Override
@@ -56,6 +58,18 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         this.itemClickCallBack = itemClickCallBack;
     }
 
+    public void onViewDetachedFromWindow(ViewHolder holder) {
+        holder.clearAnimation();
+    }
+
+    public void setAnimation(View viewToAnimate, int position) {
+
+        if (position > lastPosition) {
+            Animation animation = AnimationUtils.loadAnimation(context, R.anim.swing_up_left);
+            viewToAnimate.startAnimation(animation);
+            lastPosition = position;
+        }
+    }
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public CardView container;
@@ -77,6 +91,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         @Override
         public void onClick(View v) {
             itemClickCallBack.onItemClick(getAdapterPosition(), v.getId());
+        }
+
+        public void clearAnimation() {
+            container.clearAnimation();
         }
     }
 }

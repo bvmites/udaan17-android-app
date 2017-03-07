@@ -21,9 +21,9 @@ import in.udaan17.android.util.listeners.ListItemClickCallBack;
 
 public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.ViewHolder> {
 
+    int lastPosition = -1;
     private Context context;
     private ListItemClickCallBack itemClickCallBack;
-
     public CategoriesAdapter(Context context) {
         this.context = context;
 
@@ -52,6 +52,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
         }
         holder.container.setCardBackgroundColor(ContextCompat.getColor(context, Helper.colors[colorPosition]));
         holder.categoryTitle.setText(categoryName);
+        setAnimation(holder.container, position);
     }
 
     @Override
@@ -63,6 +64,19 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
         this.itemClickCallBack = itemClickCallBack;
     }
 
+    public void setAnimation(View viewToAnimate, int position) {
+
+        if (position > lastPosition) {
+            Animation animation = AnimationUtils.loadAnimation(context, R.anim.swing_up_left);
+            viewToAnimate.startAnimation(animation);
+            lastPosition = position;
+        }
+    }
+
+    @Override
+    public void onViewDetachedFromWindow(ViewHolder holder) {
+        holder.clearAnimation();
+    }
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private CardView container;
@@ -74,14 +88,18 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
             categoryTitle = (AppCompatTextView) itemView.findViewById(R.id.category_list_view_title);
 
             container.setOnClickListener(this);
-            Animation cardAnimation;
-            cardAnimation = AnimationUtils.loadAnimation(context, R.anim.swing_up_left);
-            container.startAnimation(cardAnimation);
+//            Animation cardAnimation;
+//            cardAnimation = AnimationUtils.loadAnimation(context, R.anim.swing_up_left);
+//            container.startAnimation(cardAnimation);
         }
 
         @Override
         public void onClick(View v) {
             itemClickCallBack.onItemClick(getAdapterPosition(), v.getId());
+        }
+
+        public void clearAnimation() {
+            container.clearAnimation();
         }
     }
 

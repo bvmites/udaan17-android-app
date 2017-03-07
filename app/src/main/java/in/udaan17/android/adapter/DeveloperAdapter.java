@@ -29,6 +29,7 @@ public class DeveloperAdapter extends RecyclerView.
     private List<in.udaan17.android.model.Developer> developerList;
     private Context context;
     private ListItemClickCallBack itemClickCallBack;
+    private int lastPosition = -1;
 
     public DeveloperAdapter(List<Developer> developerList, Context context) {
         this.developerList = developerList;
@@ -73,11 +74,27 @@ public class DeveloperAdapter extends RecyclerView.
         }
 
         holder.container.setCardBackgroundColor(ContextCompat.getColor(context, colorID));
+
+        setAnimation(holder.container, position);
+    }
+
+    public void setAnimation(View viewToAnimate, int position) {
+
+        if (position > lastPosition) {
+            Animation animation = AnimationUtils.loadAnimation(context, R.anim.swing_up_left);
+            viewToAnimate.startAnimation(animation);
+            lastPosition = position;
+        }
     }
 
     @Override
     public int getItemCount() {
         return this.developerList.size();
+    }
+
+    @Override
+    public void onViewDetachedFromWindow(ViewHolder holder) {
+        holder.clearAnimation();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -102,9 +119,9 @@ public class DeveloperAdapter extends RecyclerView.
             developerGithub.setOnClickListener(this);
             developerMobile.setOnClickListener(this);
 
-            Animation cardAnimation;
-            cardAnimation = AnimationUtils.loadAnimation(context, R.anim.swing_up_right);
-            container.startAnimation(cardAnimation);
+//            Animation cardAnimation;
+//            cardAnimation = AnimationUtils.loadAnimation(context, R.anim.swing_up_right);
+//            container.startAnimation(cardAnimation);
 
 
         }
@@ -113,6 +130,11 @@ public class DeveloperAdapter extends RecyclerView.
         public void onClick(View v) {
             itemClickCallBack.onItemClick(getAdapterPosition(), v.getId());
         }
+
+        public void clearAnimation() {
+            container.clearAnimation();
+        }
     }
+
 
 }
