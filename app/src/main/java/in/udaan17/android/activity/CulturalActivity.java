@@ -1,5 +1,6 @@
 package in.udaan17.android.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -54,6 +55,9 @@ public class CulturalActivity extends AppCompatActivity implements ListItemClick
 
     @Override
     public void onItemClick(int position, int viewId) {
-
+        Intent intent = new Intent(this, EventDetailsActivity.class);
+        intent.putExtra(getString(R.string.activity_key_position), position);
+        intent.putExtra(getString(R.string.activity_key_event_data), culturalList.get(position).toString());
+        this.startActivity(intent);
     }
 }
