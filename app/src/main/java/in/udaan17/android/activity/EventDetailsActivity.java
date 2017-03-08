@@ -4,15 +4,22 @@ import android.os.Bundle;
 import android.support.v4.widget.Space;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
-import in.udaan17.android.R;
-import in.udaan17.android.model.Event;
+import com.afollestad.materialdialogs.MaterialDialog;
 
-public class EventDetailsActivity extends AppCompatActivity {
+import in.udaan17.android.R;
+import in.udaan17.android.adapter.ManagerAdapter;
+import in.udaan17.android.model.Event;
+import in.udaan17.android.util.Helper;
+import in.udaan17.android.util.listeners.ListItemClickCallBack;
+
+public class EventDetailsActivity extends AppCompatActivity implements View.OnClickListener {
   
   private Event event;
   
@@ -24,17 +31,8 @@ public class EventDetailsActivity extends AppCompatActivity {
   private Space spaceParticipantsFees;
   private AppCompatTextView textViewFeesLabel;
   private AppCompatTextView textViewFees;
-  private Space spaceFeesRoundsInfo;
-  private AppCompatTextView textViewRoundsInfoLabel;
-  private Space spaceRoundsInfoRound1;
-  private AppCompatTextView textViewRound1Label;
-  private AppCompatTextView textViewRound1;
-  private Space spaceRound1Round2;
-  private AppCompatTextView textViewRound2Label;
-  private AppCompatTextView textViewRound2;
-  private Space spaceRound2Round3;
-  private AppCompatTextView textViewRound3Label;
-  private AppCompatTextView textViewRound3;
+  private Space spaceFeesContact;
+  private AppCompatButton buttonContact;
   
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -65,17 +63,10 @@ public class EventDetailsActivity extends AppCompatActivity {
     this.spaceParticipantsFees = (Space) this.findViewById(R.id.space_event_details_participants_fees);
     this.textViewFeesLabel = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_fees_label);
     this.textViewFees = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_fees);
-    this.spaceFeesRoundsInfo = (Space) this.findViewById(R.id.space_event_details_fees_round_info);
-    this.textViewRoundsInfoLabel = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_round_info_label);
-//        this.spaceRoundsInfoRound1 = (Space) this.findViewById(R.id.space_event_details_round_info_round_1);
-//        this.textViewRound1Label = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_round_1_label);
-//        this.textViewRound1 = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_round_1);
-//        this.spaceRound1Round2 = (Space) this.findViewById(R.id.space_event_details_round_1_round_2);
-//        this.textViewRound2Label = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_round_2_label);
-//        this.textViewRound2 = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_round_2);
-//        this.spaceRound2Round3 = (Space) this.findViewById(R.id.space_event_details_round_2_round_3);
-//        this.textViewRound3Label = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_round_3_label);
-//        this.textViewRound3 = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_round_3);
+    this.spaceFeesContact = (Space) this.findViewById(R.id.space_event_details_fees_contact);
+    this.buttonContact = (AppCompatButton) this.findViewById(R.id.button_event_details_contact);
+  
+    this.buttonContact.setOnClickListener(this);
   }
   
   private void populateUI() {
@@ -101,6 +92,12 @@ public class EventDetailsActivity extends AppCompatActivity {
       this.textViewFeesLabel.setVisibility(View.GONE);
       this.textViewFees.setVisibility(View.GONE);
     }
+  
+    if (this.event.getEventManagers() != null && this.event.getEventManagers().size() > 0) {
+    
+    } else {
+    
+    }
   }
   
   @Override
@@ -112,5 +109,39 @@ public class EventDetailsActivity extends AppCompatActivity {
     }
     
     return super.onOptionsItemSelected(item);
+  }
+  
+  @Override
+  public void onClick(View view) {
+    int id = view.getId();
+    switch (id) {
+      case R.id.button_event_details_contact:
+        this.showManagersDialog();
+        break;
+    }
+  }
+  
+  private void showManagersDialog() {
+    ManagerAdapter adapter = new ManagerAdapter(this.event.getEventManagers(),
+        this,
+        new ListItemClickCallBack() {
+          @Override
+          public void onItemClick(int position, int viewId) {
+            Helper.makeCall(
+                EventDetailsActivity.this.event.getEventManagers().get(position).getContactInfo(),
+                EventDetailsActivity.this
+            );
+          }
+        }
+    );
+    
+    MaterialDialog dialog =
+        new MaterialDialog.Builder(this)
+            .title("Event Managers")
+            .adapter(adapter, new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false))
+            .cancelable(true)
+            .build();
+    
+    dialog.show();
   }
 }

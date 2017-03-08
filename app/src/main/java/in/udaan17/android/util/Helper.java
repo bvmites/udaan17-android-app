@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.provider.Settings;
 
 import in.udaan17.android.R;
@@ -61,5 +62,10 @@ public class Helper {
         AlertDialog alert = builder.create();
         alert.show();
     }
-
+  
+  public static void makeCall(String mobile, Context context) {
+    Intent callIntent = new Intent(Intent.ACTION_DIAL);
+    callIntent.setData(Uri.parse("tel:" + mobile));
+    context.startActivity(callIntent);
+  }
 }

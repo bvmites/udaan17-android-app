@@ -134,24 +134,12 @@
                 tools:text="\u20b9 20" />
 
             <android.support.v4.widget.Space
-                android:id="@+id/space_event_details_fees_round_info"
-                android:layout_width="match_parent"
-                android:layout_height="5dp" />
-
-            <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/text_view_event_details_round_info_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Rounds Info"
-                android:textColor="@color/colorTextSecondary"
-                android:textSize="20sp" />
-
-            <android.support.v4.widget.Space
-                android:id="@+id/space_event_details_round_info_contact"
+                android:id="@+id/space_event_details_fees_contact"
                 android:layout_width="match_parent"
                 android:layout_height="5dp" />
 
             <android.support.v7.widget.AppCompatButton
+                android:id="@+id/button_event_details_contact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Contact Managers"

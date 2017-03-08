@@ -1,7 +1,5 @@
 package in.udaan17.android.fragment;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -20,6 +18,7 @@ import in.udaan17.android.R;
 import in.udaan17.android.adapter.HeadsAdapter;
 import in.udaan17.android.model.Manager;
 import in.udaan17.android.util.DataSingleton;
+import in.udaan17.android.util.Helper;
 import in.udaan17.android.util.listeners.ListItemClickCallBack;
 
 /**
@@ -64,17 +63,19 @@ public class ManagerFragment extends Fragment implements ListItemClickCallBack {
             headsAdapter.setItemClickCallBack(new ListItemClickCallBack() {
                 @Override
                 public void onItemClick(int position, int viewId) {
-                    Intent callIntent = new Intent(Intent.ACTION_DIAL);
-                    callIntent.setData(Uri.parse("tel:" + ManagerFragment.this.headsList.get(position).getContactInfo()));
-                    ManagerFragment.this.startActivity(callIntent);
+                    Helper.makeCall(
+                        ManagerFragment.this.headsList.get(position).getContactInfo(),
+                        ManagerFragment.this.getContext()
+                    );
                 }
             });
             coHeadsAdapter.setItemClickCallBack(new ListItemClickCallBack() {
                 @Override
                 public void onItemClick(int position, int viewId) {
-                    Intent callIntent = new Intent(Intent.ACTION_DIAL);
-                    callIntent.setData(Uri.parse("tel:" + ManagerFragment.this.coHeadsList.get(position).getContactInfo()));
-                    ManagerFragment.this.startActivity(callIntent);
+                    Helper.makeCall(
+                        ManagerFragment.this.coHeadsList.get(position).getContactInfo(),
+                        ManagerFragment.this.getContext()
+                    );
                 }
             });
 
