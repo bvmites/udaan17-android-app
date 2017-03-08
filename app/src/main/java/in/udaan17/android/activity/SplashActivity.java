@@ -34,9 +34,18 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
     ActionBar actionBar = this.getSupportActionBar();
     if (actionBar != null) {
       actionBar.setTitle(this.getString(R.string.title_activity_splash));
+      actionBar.hide();
     }
+
+    //setupWindowAnimation();
   }
-  
+//
+//  private void setupWindowAnimation() {
+//    Slide fade = new Slide();
+//    fade.setDuration(1000);
+//
+//  }
+
   @Override
   protected void onStart() {
     super.onStart();
