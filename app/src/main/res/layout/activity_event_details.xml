@@ -21,8 +21,8 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="@color/colorPrimary"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="0dp"
+            app:expandedTitleMarginStart="32dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <android.support.v7.widget.AppCompatImageView
@@ -62,19 +62,6 @@
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:paddingTop="5dp">
-
-            <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/text_view_event_details_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorTextPrimary"
-                android:textSize="30sp"
-                tools:text="Vallar Morghulis" />
-
-            <android.support.v4.widget.Space
-                android:id="@+id/space_event_details_name_description"
-                android:layout_width="match_parent"
-                android:layout_height="5dp" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/text_view_event_details_description_label"
