@@ -1,7 +1,7 @@
 package in.udaan17.android.adapter;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -43,9 +45,22 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         int colorPosition = position % Helper.colors.length;
-
-        holder.container.setCardBackgroundColor(ContextCompat.getColor(context, Helper.colors[colorPosition]));
-        holder.eventTitle.setText(eventList.get(position).getEventName());
+    
+        Event event = eventList.get(position);
+    
+        int drawableId = this
+            .context
+            .getResources()
+            .getIdentifier(Helper.getResourceNameFromTitle(event.getEventName()), "drawable", context.getPackageName());
+    
+        Picasso
+            .with(this.context)
+            .load(drawableId != 0 ? drawableId : R.drawable.github)
+            .placeholder(R.drawable.mail_icon_gray)
+            .error(R.drawable.call_icon_gray)
+            .into(holder.eventIcon);
+        holder.eventTitle.setText(event.getEventName());
+        holder.eventShortDescription.setText(event.getShortDescription());
         setAnimation(holder.container, position);
     }
 
@@ -73,12 +88,16 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public CardView container;
-        public AppCompatTextView eventTitle;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-            container = (CardView) itemView.findViewById(R.id.event_list_item_card);
-            eventTitle = (AppCompatTextView) itemView.findViewById(R.id.event_list_view_title);
+        private AppCompatImageView eventIcon;
+        private AppCompatTextView eventTitle;
+        private AppCompatTextView eventShortDescription;
+    
+        public ViewHolder(CardView card) {
+            super(card);
+            this.container = card;
+            this.eventIcon = (AppCompatImageView) this.container.findViewById(R.id.event_list_view_icon);
+            this.eventTitle = (AppCompatTextView) this.container.findViewById(R.id.event_list_view_title);
+            this.eventShortDescription = (AppCompatTextView) this.container.findViewById(R.id.event_list_view_short_description);
 
             container.setOnClickListener(this);
 

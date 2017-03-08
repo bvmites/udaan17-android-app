@@ -5,7 +5,6 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -39,7 +38,7 @@ public class CulturalActivity extends AppCompatActivity implements ListItemClick
             culturalAdapter = new EventAdapter(culturalList, this);
 
             culturalRecyclerView.setAdapter(culturalAdapter);
-            culturalRecyclerView.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.VERTICAL, false));
+            culturalRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
             culturalAdapter.setItemClickCallBack(this);
 
