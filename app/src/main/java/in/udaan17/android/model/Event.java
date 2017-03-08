@@ -61,7 +61,7 @@ public class Event {
     }
 
     public String getEventDescription() {
-        return eventDescription;
+        return eventDescription.trim();
     }
 
     public void setEventDescription(String eventDescription) {
@@ -98,6 +98,18 @@ public class Event {
 
     public void setEventManagers(List<Manager> eventManagers) {
         this.eventManagers = eventManagers;
+    }
+    
+    public String getShortDescription() {
+        String shortDescription;
+        
+        if (this.getEventDescription().length() <= 50) {
+            shortDescription = this.getEventDescription().trim();
+        } else {
+            shortDescription = this.getEventDescription().trim().substring(0, 47) + "...";
+        }
+        
+        return shortDescription;
     }
     
     @Override

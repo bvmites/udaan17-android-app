@@ -6,7 +6,6 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -40,7 +39,7 @@ public class NonTechActivity extends AppCompatActivity implements ListItemClickC
             nonTechAdapter = new EventAdapter(nonTechEventList, this);
 
             nonTechRecyclerView.setAdapter(nonTechAdapter);
-            nonTechRecyclerView.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.VERTICAL, false));
+            nonTechRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
             nonTechAdapter.setItemClickCallBack(this);
 

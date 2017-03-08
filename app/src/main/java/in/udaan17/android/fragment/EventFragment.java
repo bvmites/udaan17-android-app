@@ -3,7 +3,6 @@ package in.udaan17.android.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -50,7 +49,7 @@ public class EventFragment extends Fragment implements ListItemClickCallBack {
             this.eventAdapter = new EventAdapter(eventList, this.getContext());
 
             eventRecyclerView.setAdapter(eventAdapter);
-            eventRecyclerView.setLayoutManager(new GridLayoutManager(this.rootView.getContext(), 2, LinearLayoutManager.VERTICAL, false));
+            eventRecyclerView.setLayoutManager(new LinearLayoutManager(this.rootView.getContext(), LinearLayoutManager.VERTICAL, false));
 
             eventAdapter.setItemClickCallBack(this);
 
