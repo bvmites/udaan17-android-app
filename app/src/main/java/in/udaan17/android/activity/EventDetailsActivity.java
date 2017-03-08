@@ -16,8 +16,6 @@ public class EventDetailsActivity extends AppCompatActivity {
   
   private Event event;
   
-  private AppCompatTextView textViewName;
-  private Space spaceNameDescription;
   private AppCompatTextView textViewDescriptionLabel;
   private AppCompatTextView textViewDescription;
   private Space spaceDescriptionParticipants;
@@ -55,12 +53,10 @@ public class EventDetailsActivity extends AppCompatActivity {
     this.setSupportActionBar(toolbar);
     if (this.getSupportActionBar() != null) {
       ActionBar actionBar = this.getSupportActionBar();
-      actionBar.setTitle(R.string.app_name);
+      actionBar.setTitle(this.event.getEventName());
       actionBar.setDisplayHomeAsUpEnabled(true);
     }
   
-    this.textViewName = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_name);
-    this.spaceNameDescription = (Space) this.findViewById(R.id.space_event_details_name_description);
     this.textViewDescriptionLabel = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_description_label);
     this.textViewDescription = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_description);
     this.spaceDescriptionParticipants = (Space) this.findViewById(R.id.space_event_details_description_participants);
@@ -83,17 +79,9 @@ public class EventDetailsActivity extends AppCompatActivity {
   }
   
   private void populateUI() {
-    if (this.event.getEventName() != null && this.event.getEventName().length() > 0) {
-      this.textViewName.setText(this.event.getEventName());
-    } else {
-      this.textViewName.setVisibility(View.GONE);
-      this.spaceNameDescription.setVisibility(View.GONE);
-    }
-    
     if (this.event.getEventDescription() != null && this.event.getEventDescription().length() > 0) {
       this.textViewDescription.setText(this.event.getEventDescription());
     } else {
-      this.spaceNameDescription.setVisibility(View.GONE);
       this.textViewDescriptionLabel.setVisibility(View.GONE);
       this.textViewDescription.setVisibility(View.GONE);
     }
