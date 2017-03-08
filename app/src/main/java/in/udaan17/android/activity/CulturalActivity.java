@@ -2,11 +2,14 @@ package in.udaan17.android.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 
 import org.json.JSONException;
 
@@ -22,7 +25,7 @@ public class CulturalActivity extends AppCompatActivity implements ListItemClick
 
     private RecyclerView culturalRecyclerView;
     private EventAdapter culturalAdapter;
-
+    private Toolbar toolbar;
     private List<Event> culturalList;
 
     @Override
@@ -41,6 +44,12 @@ public class CulturalActivity extends AppCompatActivity implements ListItemClick
 
             culturalAdapter.setItemClickCallBack(this);
 
+            ConstraintLayout linearLayout = (ConstraintLayout) findViewById(R.id.event_fragment_linear_layout);
+            linearLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.cultural));
+
+            toolbar = (Toolbar) findViewById(R.id.event_fragment_toolbar);
+            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
+            this.setSupportActionBar(toolbar);
             ActionBar actionBar = this.getSupportActionBar();
 
             if (actionBar != null) {

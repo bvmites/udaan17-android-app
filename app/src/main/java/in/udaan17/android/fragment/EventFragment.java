@@ -37,14 +37,14 @@ public class EventFragment extends Fragment implements ListItemClickCallBack {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        rootView = inflater.from(getContext()).inflate(R.layout.event_fragment, container, false);
+        rootView = inflater.from(getContext()).inflate(R.layout.tech_event_fragment, container, false);
 
         int position = this.getArguments().getInt(getString(R.string.activity_key_position), 0);
         try {
 
             eventList = DataSingleton.getInstance(getActivity()).getDepartmentsList().get(position).getEvents();
 
-            eventRecyclerView = (RecyclerView) rootView.findViewById(R.id.event_recycler_view);
+            eventRecyclerView = (RecyclerView) rootView.findViewById(R.id.tech_event_recycler_view);
             this.eventAdapter = new EventAdapter(eventList, this.getContext());
 
             eventRecyclerView.setAdapter(eventAdapter);

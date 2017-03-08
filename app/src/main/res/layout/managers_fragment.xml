@@ -7,6 +7,7 @@
     <android.support.v7.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
         android:text="Heads"
         android:textSize="30sp" />
 
@@ -23,6 +24,7 @@
     <android.support.v7.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
         android:text="CoHeads"
         android:textSize="30sp" />
 
