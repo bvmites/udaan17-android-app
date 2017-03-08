@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout android:id="@+id/tech_events_constraint_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tech_events_constraint_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="in.udaan17.android.activity.TechEventsActivity">
@@ -26,7 +26,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tech_events_toolbar"
         app:layout_constraintVertical_bias="0.0"
-        app:tabSelectedTextColor="@color/white"
+        app:tabSelectedTextColor="@color/colorWhite"
         app:tabTextColor="@android:color/darker_gray" />
 
     <android.support.v4.view.ViewPager

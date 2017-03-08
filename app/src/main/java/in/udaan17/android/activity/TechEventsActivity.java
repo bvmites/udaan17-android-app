@@ -76,8 +76,8 @@ public class TechEventsActivity extends AppCompatActivity {
 
             TabLayout tabLayout = (TabLayout) findViewById(R.id.tech_events_tabLayout);
             tabLayout.setupWithViewPager(techEventsViewPager);
-
-            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
+  
+          toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorWhite));
             this.setSupportActionBar(toolbar);
             ActionBar actionBar = this.getSupportActionBar();
 

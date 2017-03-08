@@ -9,16 +9,19 @@
     <color name="colorTextSecondary">#ff727272</color>
     <color name="colorDivider">#ffb6b6b6</color>
 
+    <color name="colorGrayPrimary">#ff333333</color>
+    <color name="colorGrayPrimaryDark">#ff212121</color>
+
     <color name="colorDeepOrange">#ffff5722</color>
     <color name="colorBlueGrey">#ff607d8b</color>
     <color name="colorDeepPurple">#ff673ab7</color>
     <color name="colorBlue">#ff2196f3</color>
     <color name="colorTeal">#ff009688</color>
+    <color name="colorWhite">#FFFF</color>
 
     <color name="colorAndroid">#ff4caf50</color>
     <color name="colorWindows">#ff607d8b</color>
     <color name="colorWeb">#ff2196f3</color>
     <color name="colorUI">#ff673ab7</color>
     <color name="colorBackend">#ff3f51b5</color>
-    <color name="white">#FFFF</color>
 </resources>

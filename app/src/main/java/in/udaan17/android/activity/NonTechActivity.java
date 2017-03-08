@@ -48,7 +48,7 @@ public class NonTechActivity extends AppCompatActivity implements ListItemClickC
 
 
             toolbar = (Toolbar) findViewById(R.id.event_fragment_toolbar);
-            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
+          toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorWhite));
             this.setSupportActionBar(toolbar);
             ActionBar actionBar = this.getSupportActionBar();
 

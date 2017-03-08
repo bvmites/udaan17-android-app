@@ -47,7 +47,7 @@ public class CulturalActivity extends AppCompatActivity implements ListItemClick
             linearLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.cultural));
 
             toolbar = (Toolbar) findViewById(R.id.event_fragment_toolbar);
-            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
+          toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorWhite));
             this.setSupportActionBar(toolbar);
             ActionBar actionBar = this.getSupportActionBar();
 
