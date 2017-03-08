@@ -9,8 +9,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import org.json.JSONException;
+
 import in.udaan17.android.R;
 import in.udaan17.android.adapter.TechEventsViewPagerAdapter;
+import in.udaan17.android.model.Department;
+import in.udaan17.android.util.DataSingleton;
 
 public class TechEventsActivity extends AppCompatActivity {
 
@@ -19,6 +23,7 @@ public class TechEventsActivity extends AppCompatActivity {
     Toolbar toolbar;
 
     int position;
+    private Department department;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,52 +34,59 @@ public class TechEventsActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.tech_events_toolbar);
 
         position = this.getIntent().getExtras().getInt(getString(R.string.activity_key_position), 0);
-        String activityTitle = getIntent().getExtras().getString(getString(R.string.activity_key_title_name), getString(R.string.activity_key_title_name));
+        try {
 
-        int drawableId = -1;
-        switch (activityTitle) {
-            case "Mech":
-                drawableId = R.drawable.machinists;
-                activityTitle = "Machinists";
-                break;
-            case "Civil":
-                drawableId = R.drawable.skyscrapers;
-                activityTitle = "Skyscrapers";
-                break;
-            case "CPIT":
-                drawableId = R.drawable.keycoders;
-                activityTitle = "KeyCoders";
-                break;
-            case "ETEL":
-                drawableId = R.drawable.embeddrones;
-                activityTitle = "Embeddrones";
-                break;
-            case "Prod":
-                drawableId = R.drawable.fabfacturers;
-                activityTitle = "FabFacturers";
-                break;
-            case "EE":
-                drawableId = R.drawable.resonizers;
-                activityTitle = "Resonizers";
-                break;
-        }
-        constraintLayout.setBackground(ContextCompat.getDrawable(this, drawableId));
 
-        techEventsViewPager = (ViewPager) findViewById(R.id.tech_events_viewPager);
-        techEventsAdapter = new TechEventsViewPagerAdapter(this.getSupportFragmentManager(), this, position, activityTitle);
+            department = DataSingleton.getInstance(this).getDepartmentsList().get(position);
+            String activityTitle = getIntent().getExtras().getString(getString(R.string.activity_key_title_name), getString(R.string.activity_key_title_name));
 
-        techEventsViewPager.setAdapter(techEventsAdapter);
+            int drawableId = -1;
+            switch (activityTitle) {
+                case "Mech":
+                    drawableId = R.drawable.machinists;
+                    activityTitle = "Machinists";
+                    break;
+                case "Civil":
+                    drawableId = R.drawable.skyscrapers;
+                    activityTitle = "Skyscrapers";
+                    break;
+                case "CPIT":
+                    drawableId = R.drawable.keycoders;
+                    activityTitle = "KeyCoders";
+                    break;
+                case "ETEL":
+                    drawableId = R.drawable.embeddrones;
+                    activityTitle = "Embeddrones";
+                    break;
+                case "Prod":
+                    drawableId = R.drawable.fabfacturers;
+                    activityTitle = "FabFacturers";
+                    break;
+                case "EE":
+                    drawableId = R.drawable.resonizers;
+                    activityTitle = "Resonizers";
+                    break;
+            }
+            constraintLayout.setBackground(ContextCompat.getDrawable(this, drawableId));
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tech_events_tabLayout);
-        tabLayout.setupWithViewPager(techEventsViewPager);
+            techEventsViewPager = (ViewPager) findViewById(R.id.tech_events_viewPager);
+            techEventsAdapter = new TechEventsViewPagerAdapter(this.getSupportFragmentManager(), this, department, position);
 
-        toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
-        this.setSupportActionBar(toolbar);
-        ActionBar actionBar = this.getSupportActionBar();
+            techEventsViewPager.setAdapter(techEventsAdapter);
 
-        if (actionBar != null) {
-            actionBar.setTitle(activityTitle);
-            actionBar.setDisplayHomeAsUpEnabled(true);
+            TabLayout tabLayout = (TabLayout) findViewById(R.id.tech_events_tabLayout);
+            tabLayout.setupWithViewPager(techEventsViewPager);
+
+            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
+            this.setSupportActionBar(toolbar);
+            ActionBar actionBar = this.getSupportActionBar();
+
+            if (actionBar != null) {
+                actionBar.setTitle(activityTitle);
+                actionBar.setDisplayHomeAsUpEnabled(true);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 }

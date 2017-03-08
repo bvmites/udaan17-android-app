@@ -1,6 +1,5 @@
 package in.udaan17.android.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -34,12 +33,15 @@ public class EventFragment extends Fragment implements ListItemClickCallBack {
 
     List<Event> eventList;
 
+    String activityTitle;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.from(getContext()).inflate(R.layout.tech_event_fragment, container, false);
 
         int position = this.getArguments().getInt(getString(R.string.activity_key_position), 0);
+        activityTitle = this.getArguments().getString(getString(R.string.activity_key_title_name), "");
         try {
 
             eventList = DataSingleton.getInstance(getActivity()).getDepartmentsList().get(position).getEvents();
@@ -60,9 +62,16 @@ public class EventFragment extends Fragment implements ListItemClickCallBack {
 
     @Override
     public void onItemClick(int position, int viewId) {
-        Intent intent = new Intent(this.getActivity(), EventDetailsActivity.class);
-        intent.putExtra(getString(R.string.activity_key_position), position);
-        intent.putExtra(getString(R.string.activity_key_event_data), eventList.get(position).toString());
-        this.startActivity(intent);
+        EventDetailsActivity.startActivity(
+                this.getActivity(),
+                activityTitle,
+                eventList.get(position)
+        );
+//        Intent intent = new Intent(this.getActivity(), EventDetailsActivity.class);
+//        intent.putExtra(getString(R.string.activity_key_position), position);
+//        intent.putExtra(getString(R.string.activity_key_event_data), eventList.get(position).toString());
+//        intent.putExtra(getString(R.string.activity_key_title_name), activityTitle);    //pass activityTitle to EventDetailsActivity
+//        // to help recognise from where exactly the fragment has been called.
+//        this.startActivity(intent);
     }
 }

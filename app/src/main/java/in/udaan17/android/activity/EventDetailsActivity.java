@@ -1,10 +1,13 @@
 package in.udaan17.android.activity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.Space;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
@@ -33,19 +36,29 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
   private AppCompatTextView textViewFees;
   private Space spaceFeesContact;
   private AppCompatButton buttonContact;
-  
+  private AppCompatImageView departmentImageView;
+
+  public static void startActivity(Activity activity, String fileName, Event event) {
+    Intent intent = new Intent(activity, EventDetailsActivity.class);
+    intent.putExtra(activity.getString(R.string.activity_key_event_data), event.toString());
+    intent.putExtra(activity.getString(R.string.activity_key_title_name), fileName);
+    activity.startActivity(intent);
+  }
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     this.setContentView(R.layout.activity_event_details);
-    
+
+    departmentImageView = (AppCompatImageView) findViewById(R.id.appbar_image_view_main);
     event = Event.parseJson(this.getIntent().getStringExtra(this.getString(R.string.activity_key_event_data)));
-    
+
+
     this.initializeElements();
-  
+
     this.populateUI();
   }
-  
+
   private void initializeElements() {
     Toolbar toolbar = (Toolbar) this.findViewById(R.id.appbar_toolbar);
     this.setSupportActionBar(toolbar);

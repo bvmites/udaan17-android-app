@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import in.udaan17.android.R;
 import in.udaan17.android.fragment.EventFragment;
 import in.udaan17.android.fragment.ManagerFragment;
+import in.udaan17.android.model.Department;
 
 /**
  * Created by pranshu on 6/3/17.
@@ -16,16 +17,16 @@ import in.udaan17.android.fragment.ManagerFragment;
 
 public class TechEventsViewPagerAdapter extends FragmentStatePagerAdapter {
 
-    int position;
+    Department department;
     private String tabName[] = {"Events", "Managers"};
     private Context context;
-    private String activityTitle;
+    private int position;
 
-    public TechEventsViewPagerAdapter(FragmentManager fm, Context context, int position, String activityTitle) {
+    public TechEventsViewPagerAdapter(FragmentManager fm, Context context, Department department, int position) {
         super(fm);
         this.context = context;
+        this.department = department;
         this.position = position;
-        this.activityTitle = activityTitle;
     }
 
     @Override
@@ -34,7 +35,7 @@ public class TechEventsViewPagerAdapter extends FragmentStatePagerAdapter {
         Fragment fragment = null;
         Bundle bundle = new Bundle();
         bundle.putInt(this.context.getString(R.string.activity_key_position), this.position);
-        bundle.putString("title", this.activityTitle);
+        bundle.putString("title", department.getName());
         switch (position) {
             case 0:
                 fragment = new EventFragment();
