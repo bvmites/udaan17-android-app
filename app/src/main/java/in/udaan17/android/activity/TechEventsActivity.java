@@ -35,21 +35,27 @@ public class TechEventsActivity extends AppCompatActivity {
         switch (activityTitle) {
             case "Mech":
                 drawableId = R.drawable.machinists;
+                activityTitle = "Machinists";
                 break;
             case "Civil":
                 drawableId = R.drawable.skyscrapers;
+                activityTitle = "Skyscrapers";
                 break;
             case "CPIT":
                 drawableId = R.drawable.keycoders;
+                activityTitle = "KeyCoders";
                 break;
             case "ETEL":
                 drawableId = R.drawable.embeddrones;
+                activityTitle = "Embeddrones";
                 break;
             case "Prod":
                 drawableId = R.drawable.fabfacturers;
+                activityTitle = "FabFacturers";
                 break;
             case "EE":
                 drawableId = R.drawable.resonizers;
+                activityTitle = "Resonizers";
                 break;
         }
         constraintLayout.setBackground(ContextCompat.getDrawable(this, drawableId));
@@ -69,7 +75,6 @@ public class TechEventsActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle(activityTitle);
             actionBar.setDisplayHomeAsUpEnabled(true);
-
         }
     }
 }

@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
         android:text="Heads"
+        android:textColor="@color/white"
         android:textSize="30sp" />
 
     <android.support.v7.widget.RecyclerView
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
         android:text="CoHeads"
+        android:textColor="@color/white"
         android:textSize="30sp" />
 
     <android.support.v7.widget.RecyclerView
