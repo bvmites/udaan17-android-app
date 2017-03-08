@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by pranshu on 5/3/17.
@@ -110,6 +111,24 @@ public class Event {
         }
         
         return shortDescription;
+    }
+    
+    public String getRoundsDescription() {
+        String roundsDescription = "";
+        
+        if (this.rounds != null) {
+            for (int i = 0; i < this.rounds.size(); i++) {
+                String roundInfo = this.rounds.get(i);
+                if (roundInfo != null && roundInfo.length() > 0) {
+                    if (i > 0) {
+                        roundsDescription += "\n\n";
+                    }
+                    roundsDescription += String.format(Locale.getDefault(), "Round %d:\n%s", (i + 1), roundInfo);
+                }
+            }
+        }
+        
+        return roundsDescription;
     }
     
     @Override

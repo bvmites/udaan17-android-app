@@ -32,7 +32,10 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
     private Space spaceDescriptionParticipants;
     private AppCompatTextView textViewParticipantsLabel;
     private AppCompatTextView textViewParticipants;
-    private Space spaceParticipantsFees;
+    private Space spaceParticipantsRounds;
+    private AppCompatTextView textViewRoundsLabel;
+    private AppCompatTextView textViewRounds;
+    private Space spaceRoundsFees;
     private AppCompatTextView textViewFeesLabel;
     private AppCompatTextView textViewFees;
     private Space spaceFeesContact;
@@ -77,7 +80,10 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
         this.spaceDescriptionParticipants = (Space) this.findViewById(R.id.space_event_details_description_participants);
         this.textViewParticipantsLabel = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_participants_label);
         this.textViewParticipants = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_participants);
-        this.spaceParticipantsFees = (Space) this.findViewById(R.id.space_event_details_participants_fees);
+        this.spaceParticipantsRounds = (Space) this.findViewById(R.id.space_event_details_participants_rounds);
+        this.textViewRoundsLabel = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_rounds_label);
+        this.textViewRounds = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_rounds);
+        this.spaceRoundsFees = (Space) this.findViewById(R.id.space_event_details_rounds_fees);
         this.textViewFeesLabel = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_fees_label);
         this.textViewFees = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_fees);
         this.spaceFeesContact = (Space) this.findViewById(R.id.space_event_details_fees_contact);
@@ -101,19 +107,26 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
             this.textViewParticipantsLabel.setVisibility(View.GONE);
             this.textViewParticipants.setVisibility(View.GONE);
         }
+    
+        if (this.event.getRoundsDescription().length() > 0) {
+            this.textViewRounds.setText(this.event.getRoundsDescription());
+        } else {
+            this.spaceParticipantsRounds.setVisibility(View.GONE);
+            this.textViewRoundsLabel.setVisibility(View.GONE);
+            this.textViewRounds.setVisibility(View.GONE);
+        }
 
         if (this.event.getFees() != null && this.event.getFees().length() > 0) {
             this.textViewFees.setText(this.getString(R.string.symbol_rupee) + " " + this.event.getFees());
         } else {
-            this.spaceParticipantsFees.setVisibility(View.GONE);
+            this.spaceRoundsFees.setVisibility(View.GONE);
             this.textViewFeesLabel.setVisibility(View.GONE);
             this.textViewFees.setVisibility(View.GONE);
         }
-
-        if (this.event.getEventManagers() != null && this.event.getEventManagers().size() > 0) {
-
-        } else {
-
+    
+        if (!(this.event.getEventManagers() != null && this.event.getEventManagers().size() > 0)) {
+            this.spaceFeesContact.setVisibility(View.GONE);
+            this.buttonContact.setVisibility(View.GONE);
         }
     }
 
