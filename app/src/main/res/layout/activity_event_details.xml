@@ -36,7 +36,6 @@
                 android:background="@color/colorPrimary"
                 android:fitsSystemWindows="true"
                 android:scaleType="center"
-                android:src="@drawable/udaan_wing"
                 app:layout_collapseMode="parallax" />
 
             <android.support.v7.widget.Toolbar

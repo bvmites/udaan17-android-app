@@ -41,30 +41,30 @@ public class TechEventsActivity extends AppCompatActivity {
             String activityTitle = getIntent().getExtras().getString(getString(R.string.activity_key_title_name), "");
 
             int drawableId = -1;
-            switch (activityTitle) {
-                case "Mech":
+            switch (activityTitle.toLowerCase()) {
+                case "mech":
                     drawableId = R.drawable.machinists;
                     activityTitle = "Machinists";
                     break;
-                case "Civil":
+                case "civil":
                     drawableId = R.drawable.skyscrapers;
                     activityTitle = "Skyscrapers";
                     break;
-                case "CPIT":
+                case "cpit":
                     drawableId = R.drawable.keycoders;
                     activityTitle = "KeyCoders";
                     break;
-                case "ETEL":
+                case "etel":
                     drawableId = R.drawable.embeddrones;
                     activityTitle = "Embeddrones";
                     break;
-                case "Prod":
+                case "prod":
                     drawableId = R.drawable.fabfacturers;
                     activityTitle = "FabFacturers";
                     break;
-                case "EE":
-                    drawableId = R.drawable.resonizers;
-                    activityTitle = "Resonizers";
+                case "ee":
+                    drawableId = R.drawable.rezonizers;
+                    activityTitle = "Rezonizers";
                     break;
             }
             constraintLayout.setBackground(ContextCompat.getDrawable(this, drawableId));

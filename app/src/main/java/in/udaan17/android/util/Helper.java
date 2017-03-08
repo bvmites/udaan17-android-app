@@ -72,7 +72,7 @@ public class Helper {
   public static String getResourceNameFromTitle(String title) {
     return
         title.toLowerCase()
-            .replaceAll("\\s", "_")
-            .replaceAll("-", "_");
+            .replaceAll("[\\s-]+", "_")
+            .replaceAll("[^\\w_]", "");
   }
 }

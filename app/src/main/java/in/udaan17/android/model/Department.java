@@ -15,10 +15,10 @@ public class Department {
     // with the provided name value as its field name.
     // Helps gson detect by what name is the object referred to in json
     // and to use that while filling in values.
-    @SerializedName("alias")
-    private String alias;
-
     @SerializedName("name")
+    private String alias;
+    
+    @SerializedName("alias")
     private String name;
 
     @SerializedName("events")
@@ -28,14 +28,14 @@ public class Department {
     private List<Manager> branchHeads;
 
     @SerializedName("coHeads")
-    private List<Manager> coheads;
-
-    public Department(String alias, String name, List<Event> events, List<Manager> branchHeads, List<Manager> coheads) {
+    private List<Manager> coHeads;
+    
+    public Department(String alias, String name, List<Event> events, List<Manager> branchHeads, List<Manager> coHeads) {
         this.alias = alias;
         this.name = name;
         this.events = events;
         this.branchHeads = branchHeads;
-        this.coheads = coheads;
+        this.coHeads = coHeads;
     }
 
     public String getAlias() {
@@ -69,12 +69,12 @@ public class Department {
     public void setBranchHeads(List<Manager> branchHeads) {
         this.branchHeads = branchHeads;
     }
-
-    public List<Manager> getCoheads() {
-        return coheads;
+    
+    public List<Manager> getCoHeads() {
+        return coHeads;
     }
-
-    public void setCoheads(List<Manager> coheads) {
-        this.coheads = coheads;
+    
+    public void setCoHeads(List<Manager> coHeads) {
+        this.coHeads = coHeads;
     }
 }

@@ -119,7 +119,7 @@ public class Event {
         if (this.rounds != null) {
             for (int i = 0; i < this.rounds.size(); i++) {
                 String roundInfo = this.rounds.get(i);
-                if (roundInfo != null && roundInfo.length() > 0) {
+                if (roundInfo != null && roundInfo.trim().length() > 0) {
                     if (i > 0) {
                         roundsDescription += "\n\n";
                     }

@@ -46,8 +46,8 @@ public class ManagerFragment extends Fragment implements ListItemClickCallBack {
         try {
 
             headsList = DataSingleton.getInstance(this.getActivity()).getDepartmentsList().get(position).getBranchHeads();
-
-            coHeadsList = DataSingleton.getInstance(this.getActivity()).getDepartmentsList().get(position).getCoheads();
+  
+          coHeadsList = DataSingleton.getInstance(this.getActivity()).getDepartmentsList().get(position).getCoHeads();
 
             headsRecyclerView = (RecyclerView) rootView.findViewById(R.id.manager_heads_recycler_view);
             headsAdapter = new HeadsAdapter(headsList, this.getContext());

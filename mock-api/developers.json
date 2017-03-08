@@ -24,32 +24,16 @@
     "color": "windows-phone"
   },
   {
-    "name": "Alay Patel",
-    "mobile": "+917600647682",
-    "email": "alay1431@gmail.com",
+    "name": "Divyesh Peshavaria",
+    "mobile": "+917778047471",
+    "email": "divyeshpeshavaria@gmail.com",
     "github": "https://github.com/alaypatel07",
     "title": "Backend Developer",
     "color": "backend"
   },
   {
-    "name": "Sandeep Anjara",
-    "mobile": "+919586229921",
-    "email": "anjaras473@gmail.com",
-    "github": "https://github.com/sandeepanjara",
-    "title": "Backend Developer",
-    "color": "backend"
-  },
-  {
-    "name": "Kunal Thanki",
-    "mobile": "+919510104059",
-    "email": "kthanky@gmail.com",
-    "github": "https://github.com/kthanky",
-    "title": "Backend Developer",
-    "color": "backend"
-  },
-  {
     "name": "Dixita Ganatra",
-    "mobile": "+919429765756",
+    "mobile": "+919638626684",
     "email": "ganatradixita@gmail.com",
     "github": "https://github.com/dixita0607",
     "title": "UI Designer",
@@ -64,34 +48,10 @@
     "color": "web"
   },
   {
-    "name": "Arvind Iyer",
-    "mobile": "+919687181987",
-    "email": "ayalurarvind@gmail.com",
-    "github": "https://github.com/Arvindiyer",
-    "title": "Web Developer",
-    "color": "web"
-  },
-  {
     "name": "Maunil Swadas",
     "mobile": "+919427592587",
     "email": "swadasmaunil@gmail.com",
     "github": "https://github.com/maunilswadas",
-    "title": "Web Developer",
-    "color": "web"
-  },
-  {
-    "name": "Binny Gandhi",
-    "mobile": "+917359482112",
-    "email": "bkgandhi27296@gmail.com",
-    "github": "https://github.com/BinnyGandhi",
-    "title": "Web Developer",
-    "color": "web"
-  },
-  {
-    "name": "Apurva Luhar",
-    "mobile": "+919409516217",
-    "email": "apurvaluhar@gmail.com",
-    "github": "https://github.com/ApurvaLuhar",
     "title": "Web Developer",
     "color": "web"
   },
@@ -104,10 +64,10 @@
     "color": "web"
   },
   {
-    "name": "Rohit Patel",
-    "mobile": "+919426210564",
-    "email": "rvprvprvp7824@gmail.com",
-    "github": "https://github.com/Rohitpa7824",
+    "name": "Chintan Acharya",
+    "mobile": "+917600635053",
+    "email": "acharya.chintan96@gmail.com",
+    "github": "https://github.com/ChintanAcharya",
     "title": "Web Developer",
     "color": "web"
   }
