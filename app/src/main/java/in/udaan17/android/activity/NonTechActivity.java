@@ -1,6 +1,5 @@
 package in.udaan17.android.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
@@ -65,9 +64,10 @@ public class NonTechActivity extends AppCompatActivity implements ListItemClickC
 
     @Override
     public void onItemClick(int position, int viewId) {
-        Intent intent = new Intent(this, EventDetailsActivity.class);
-        intent.putExtra(getString(R.string.activity_key_position), position);
-        intent.putExtra(getString(R.string.activity_key_event_data), nonTechEventList.get(position).toString());
-        this.startActivity(intent);
+        EventDetailsActivity.startActivity(this, "nontech", nonTechEventList.get(position));
+//        Intent intent = new Intent(this, EventDetailsActivity.class);
+//        intent.putExtra(getString(R.string.activity_key_position), position);
+//        intent.putExtra(getString(R.string.activity_key_event_data), nonTechEventList.get(position).toString());
+//        this.startActivity(intent);
     }
 }

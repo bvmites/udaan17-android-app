@@ -38,7 +38,7 @@ public class TechEventsActivity extends AppCompatActivity {
 
 
             department = DataSingleton.getInstance(this).getDepartmentsList().get(position);
-            String activityTitle = getIntent().getExtras().getString(getString(R.string.activity_key_title_name), getString(R.string.activity_key_title_name));
+            String activityTitle = getIntent().getExtras().getString(getString(R.string.activity_key_title_name), "");
 
             int drawableId = -1;
             switch (activityTitle) {

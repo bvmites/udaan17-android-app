@@ -35,7 +35,7 @@ public class TechEventsViewPagerAdapter extends FragmentStatePagerAdapter {
         Fragment fragment = null;
         Bundle bundle = new Bundle();
         bundle.putInt(this.context.getString(R.string.activity_key_position), this.position);
-        bundle.putString("title", department.getName());
+        bundle.putString(context.getString(R.string.activity_key_title_name), department.getName());
         switch (position) {
             case 0:
                 fragment = new EventFragment();
