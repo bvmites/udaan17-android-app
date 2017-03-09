@@ -65,7 +65,7 @@ public class CategoriesFragment extends Fragment {
         cardView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CategoriesFragment.this.getActivity(), NonTechActivity.class);
+                Intent i = new Intent(CategoriesFragment.this.getActivity(), CulturalActivity.class);
                 startActivity(i);
             }
         });
@@ -73,7 +73,7 @@ public class CategoriesFragment extends Fragment {
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CategoriesFragment.this.getActivity(), CulturalActivity.class);
+                Intent i = new Intent(CategoriesFragment.this.getActivity(), NonTechActivity.class);
                 startActivity(i);
             }
         });
