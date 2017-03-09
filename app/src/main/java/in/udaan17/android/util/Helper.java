@@ -73,6 +73,6 @@ public class Helper {
     return
         title.toLowerCase()
             .replaceAll("[\\s-]+", "_")
-            .replaceAll("[^\\w_]", "");
+            .replaceAll("[^a-zA-Z0-9_]", "");
   }
 }
