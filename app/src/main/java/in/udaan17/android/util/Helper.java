@@ -69,7 +69,22 @@ public class Helper {
     context.startActivity(callIntent);
   }
   
+  public static void sendEmail(String emailAddress, Context context) {
+    Uri emailUri = Uri.parse("mailto:" + emailAddress);
+    Intent emailIntent = new Intent(Intent.ACTION_SENDTO, emailUri);
+    emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{emailAddress});
+    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Review regarding work done in Udaan17");
+    context.startActivity(Intent.createChooser(emailIntent, "Send mail"));
+  }
+  
+  public static void openUrlInBrowser(String url, Context context) {
+    Uri githubUri = Uri.parse(url);
+    Intent githubIntent = new Intent(Intent.ACTION_VIEW, githubUri);
+    context.startActivity(githubIntent);
+  }
+  
   public static String getResourceNameFromTitle(String title) {
+    title = (title != null) ? title : "";
     return
         title.toLowerCase()
             .replaceAll("[\\s-]+", "_")

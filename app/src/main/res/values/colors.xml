@@ -16,9 +16,9 @@
     <color name="colorTeal">#ff009688</color>
     <color name="colorWhite">#FFFF</color>
 
-    <color name="colorAndroid">#ff4caf50</color>
-    <color name="colorWindows">#ff607d8b</color>
-    <color name="colorWeb">#ff2196f3</color>
-    <color name="colorUI">#ff673ab7</color>
-    <color name="colorBackend">#ff3f51b5</color>
+    <color name="color_android">#ff4caf50</color>
+    <color name="color_windows">#ff607d8b</color>
+    <color name="color_web">#ff2196f3</color>
+    <color name="color_graphics">#ff673ab7</color>
+    <color name="color_backend">#ff3f51b5</color>
 </resources>

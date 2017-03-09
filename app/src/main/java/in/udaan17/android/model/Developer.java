@@ -26,14 +26,18 @@ public class Developer {
 
     @SerializedName("color")
     private String color;
-
-    public Developer(String name, String mobile, String email, String github, String title, String color) {
+  
+  @SerializedName("category")
+  private String category;
+  
+  public Developer(String name, String mobile, String email, String github, String title, String color, String category) {
         this.name = name;
         this.mobile = mobile;
         this.email = email;
         this.github = github;
         this.title = title;
         this.color = color;
+    this.category = category;
     }
 
     public String getName() {
@@ -82,5 +86,9 @@ public class Developer {
 
     public void setColor(String color) {
         this.color = color;
+    }
+  
+  public String getCategory() {
+    return category;
     }
 }

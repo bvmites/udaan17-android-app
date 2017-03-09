@@ -1,7 +1,5 @@
 package in.udaan17.android.fragment;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -20,6 +18,7 @@ import in.udaan17.android.R;
 import in.udaan17.android.adapter.DeveloperAdapter;
 import in.udaan17.android.model.Developer;
 import in.udaan17.android.util.DataSingleton;
+import in.udaan17.android.util.Helper;
 import in.udaan17.android.util.listeners.ListItemClickCallBack;
 
 /**
@@ -61,35 +60,15 @@ public class DeveloperFragment extends Fragment implements ListItemClickCallBack
     @Override
     public void onItemClick(int position, int viewId) {
         switch (viewId) {
-            case R.id.developer_list_item_mobile:
-                this.makeCall(position);
+            case R.id.developer_mobile:
+                Helper.makeCall(this.developersArrayList.get(position).getMobile(), this.getContext());
                 break;
-            case R.id.developer_list_item_email:
-                this.sendEmail(position);
+            case R.id.developer_email:
+                Helper.sendEmail(this.developersArrayList.get(position).getEmail(), this.getContext());
                 break;
-            case R.id.developer_list_item_github:
-                this.openGithub(position);
+            case R.id.developer_github:
+                Helper.openUrlInBrowser(this.developersArrayList.get(position).getGithub(), this.getContext());
                 break;
         }
-    }
-
-    void makeCall(int position) {
-        Intent i = new Intent(Intent.ACTION_DIAL);
-        i.setData(Uri.parse("tel:" + this.developersArrayList.get(position).getMobile()));
-        startActivity(i);
-    }
-
-    void sendEmail(int position) {
-        Uri emailUri = Uri.parse("mailto:" + this.developersArrayList.get(position).getEmail());
-        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, emailUri);
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{this.developersArrayList.get(position).getEmail()});
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Review regarding work done in Udaan17");
-        startActivity(Intent.createChooser(emailIntent, "Send mail"));
-    }
-
-    void openGithub(int position) {
-        Uri githubUri = Uri.parse(this.developersArrayList.get(position).getGithub());
-        Intent githubIntent = new Intent(Intent.ACTION_VIEW, githubUri);
-        startActivity(githubIntent);
     }
 }
