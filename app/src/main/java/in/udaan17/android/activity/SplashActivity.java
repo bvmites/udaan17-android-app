@@ -28,22 +28,15 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_splash);
-
-    //setupWindowAnimation();
+    this.setContentView(R.layout.activity_splash);
   }
-//
-//  private void setupWindowAnimation() {
-//    Slide fade = new Slide();
-//    fade.setDuration(1000);
-//
-//  }
 
   @Override
   protected void onStart() {
     super.onStart();
+  
+    this.initializeElements();
     
-    initializeElements();
     if (Helper.hasNetworkConnection(this)) {
       APIHelper.fetchData(this, new Response.Listener<JSONObject>() {
         @Override
