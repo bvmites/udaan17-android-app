@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 
 import org.json.JSONException;
 
@@ -40,10 +41,11 @@ public class DepartmentActivity extends AppCompatActivity implements ListItemCli
             departmentRecyclerView.setAdapter(departmentAdapter);
             departmentRecyclerView.setLayoutManager(new GridLayoutManager(this, 1, LinearLayoutManager.VERTICAL, false));
             departmentAdapter.setItemClickCallBack(this);
-
-            ActionBar actionBar = this.getSupportActionBar();
-
-            if (actionBar != null) {
+    
+            Toolbar toolbar = (Toolbar) this.findViewById(R.id.appbar_toolbar);
+            this.setSupportActionBar(toolbar);
+            if (this.getSupportActionBar() != null) {
+                ActionBar actionBar = this.getSupportActionBar();
                 actionBar.setTitle("Tech Events: Departments");
                 actionBar.setDisplayHomeAsUpEnabled(true);
             }

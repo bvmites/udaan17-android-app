@@ -31,7 +31,8 @@
         <activity
             android:name=".activity.DepartmentActivity"
             android:parentActivityName=".activity.MainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.NonTechActivity"
             android:parentActivityName=".activity.MainActivity"
