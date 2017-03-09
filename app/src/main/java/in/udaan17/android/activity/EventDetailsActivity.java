@@ -2,6 +2,7 @@ package in.udaan17.android.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.widget.Space;
 import android.support.v7.app.ActionBar;
@@ -90,6 +91,13 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
         this.buttonContact = (AppCompatButton) this.findViewById(R.id.button_event_details_contact);
 
         this.buttonContact.setOnClickListener(this);
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/udaanRegular.ttf");
+
+        textViewDescription.setTypeface(custom_font);
+        textViewParticipants.setTypeface(custom_font);
+        textViewRounds.setTypeface(custom_font);
+        textViewFees.setTypeface(custom_font);
     }
 
     private void populateUI() {
