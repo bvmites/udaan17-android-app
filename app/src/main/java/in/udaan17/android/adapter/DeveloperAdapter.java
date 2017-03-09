@@ -56,13 +56,13 @@ public class DeveloperAdapter extends RecyclerView.
             case "android":
                 colorID = R.color.colorAndroid;
                 break;
-            case "windows-phone":
+            case "windows":
                 colorID = R.color.colorWindows;
                 break;
             case "web":
                 colorID = R.color.colorWeb;
                 break;
-            case "ui":
+            case "graphics":
                 colorID = R.color.colorUI;
                 break;
             case "backend":
