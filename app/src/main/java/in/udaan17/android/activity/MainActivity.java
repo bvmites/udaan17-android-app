@@ -3,9 +3,7 @@ package in.udaan17.android.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
@@ -38,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabs = (TabLayout) findViewById(R.id.tab_activity_main);
         tabs.setupWithViewPager(viewPager);
 
-        ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.activity_main_constrain_layout);
-        constraintLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.udaan_wing_new));
         NestedScrollView nestedScrollView = (NestedScrollView) findViewById(R.id.activity_main_nest_scrollView);
         nestedScrollView.setFillViewport(true);
 
