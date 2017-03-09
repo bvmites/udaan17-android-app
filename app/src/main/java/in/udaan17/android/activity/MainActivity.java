@@ -7,7 +7,10 @@ import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.NestedScrollView;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 import in.udaan17.android.R;
 import in.udaan17.android.adapter.MainActivityPagerAdapter;
@@ -37,5 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
         ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.activity_main_constrain_layout);
         constraintLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.udaan_wing_new));
+        NestedScrollView nestedScrollView = (NestedScrollView) findViewById(R.id.activity_main_nest_scrollView);
+        nestedScrollView.setFillViewport(true);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.activity_main_appbar_toolbar);
+        this.setSupportActionBar(toolbar);
+        ActionBar actionBar = this.getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setTitle("Udaan-17");
+        }
     }
 }
