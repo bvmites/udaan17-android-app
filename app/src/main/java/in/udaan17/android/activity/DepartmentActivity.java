@@ -38,7 +38,7 @@ public class DepartmentActivity extends AppCompatActivity implements ListItemCli
             departmentAdapter = new DepartmentAdapter(departmentList, this);
 
             departmentRecyclerView.setAdapter(departmentAdapter);
-            departmentRecyclerView.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.VERTICAL, false));
+            departmentRecyclerView.setLayoutManager(new GridLayoutManager(this, 1, LinearLayoutManager.VERTICAL, false));
             departmentAdapter.setItemClickCallBack(this);
 
             ActionBar actionBar = this.getSupportActionBar();

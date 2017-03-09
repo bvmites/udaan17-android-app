@@ -2,14 +2,18 @@ package in.udaan17.android.adapter;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -17,6 +21,8 @@ import in.udaan17.android.R;
 import in.udaan17.android.model.Department;
 import in.udaan17.android.util.Helper;
 import in.udaan17.android.util.listeners.ListItemClickCallBack;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by pranshu on 6/3/17.
@@ -46,6 +52,11 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
 
         holder.container.setCardBackgroundColor(ContextCompat.getColor(context, Helper.colors[colorPosition]));
         holder.departmentTitle.setText(departmentList.get(position).getName());
+
+        String resName = Helper.getResourceNameFromTitle(departmentList.get(position).getName());
+        Log.d(TAG, "onBindViewHolder: " + resName);
+        int resourceId = context.getResources().getIdentifier(resName + "land", "drawable", context.getPackageName());
+        Picasso.with(context).load(resourceId).into(holder.departmentImage);
         setAnimation(holder.container, position);
     }
 
@@ -75,12 +86,13 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
 
         private CardView container;
         private AppCompatTextView departmentTitle;
+        private AppCompatImageView departmentImage;
 
         public ViewHolder(View itemView) {
             super(itemView);
             container = (CardView) itemView.findViewById(R.id.department_list_item_card);
             departmentTitle = (AppCompatTextView) itemView.findViewById(R.id.department_list_view_title);
-
+            departmentImage = (AppCompatImageView) itemView.findViewById(R.id.department_list_view_image);
             container.setOnClickListener(this);
 
             Animation cardAnimation;
