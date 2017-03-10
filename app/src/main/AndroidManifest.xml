@@ -51,7 +51,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.YoutubeActivity" />
-        <activity android:name=".activity.DeveloperActivity"></activity>
+        <activity
+            android:name=".activity.DeveloperActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

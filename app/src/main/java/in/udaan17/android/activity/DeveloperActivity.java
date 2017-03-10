@@ -2,10 +2,12 @@ package in.udaan17.android.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 
 import org.json.JSONException;
 
@@ -24,13 +26,13 @@ public class DeveloperActivity extends AppCompatActivity implements ListItemClic
   private DeveloperAdapter developerAdapter;
   
   private List<Developer> developersArrayList;
-  
+  private Toolbar toolbar;
   @Nullable
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.developer_fragment);
+    setContentView(R.layout.activity_developer);
     
     try {
       this.developersArrayList = DataSingleton.getInstance(this).getDevelopersList();
@@ -42,6 +44,17 @@ public class DeveloperActivity extends AppCompatActivity implements ListItemClic
       this.developerRecyclerView.setAdapter(developerAdapter);
       
       developerAdapter.setItemClickCallBack(this);
+  
+      toolbar = (Toolbar) findViewById(R.id.activity_developer_appbar_toolbar);
+      this.setSupportActionBar(toolbar);
+      ActionBar actionBar = getSupportActionBar();
+  
+      if (actionBar != null) {
+        actionBar.setTitle("Developers");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+      }
+  
+      developerRecyclerView.setNestedScrollingEnabled(false);
       
     } catch (JSONException e) {
       e.printStackTrace();
