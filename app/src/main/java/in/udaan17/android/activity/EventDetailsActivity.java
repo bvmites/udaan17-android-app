@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.Space;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -98,6 +99,8 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
 
 
         this.buttonContact.setOnClickListener(this);
+
+        this.buttonContact.setBackgroundColor(ContextCompat.getColor(this, this.getResources().getIdentifier("color_" + this.resourceName, "color", this.getPackageName())));
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/udaanRegular.ttf");
 
