@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.squareup.picasso.Picasso;
 
 import in.udaan17.android.R;
 import in.udaan17.android.adapter.ManagerAdapter;
@@ -45,7 +44,7 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
     private AppCompatTextView textViewPrize;
     private AppCompatTextView textViewPrizeLabel;
     private Space spacePrize;
-    private String fileName;
+    private String resourceName;
 
     public static void startActivity(Activity activity, String fileName, Event event) {
         Intent intent = new Intent(activity, EventDetailsActivity.class);
@@ -61,16 +60,16 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
 
         departmentImageView = (AppCompatImageView) findViewById(R.id.appbar_image_view_main);
         event = Event.parseJson(this.getIntent().getStringExtra(this.getString(R.string.activity_key_event_data)));
-        fileName = this.getIntent().getStringExtra(this.getString(R.string.activity_key_title_name));
+        resourceName = Helper.getResourceNameFromTitle(this.getIntent().getStringExtra(this.getString(R.string.activity_key_title_name)));
 
         this.initializeElements();
         this.populateUI();
     }
 
     private void initializeElements() {
-        String resName = Helper.getResourceNameFromTitle(fileName);
-        int resourceId = getResources().getIdentifier(resName + "land", "drawable", getPackageName());
-        Picasso.with(this).load(resourceId).into(departmentImageView);
+        int resourceId = getResources().getIdentifier(this.resourceName + "land", "drawable", getPackageName());
+        departmentImageView.setImageResource(resourceId);
+
         Toolbar toolbar = (Toolbar) this.findViewById(R.id.appbar_toolbar);
         this.setSupportActionBar(toolbar);
         if (this.getSupportActionBar() != null) {
@@ -178,6 +177,7 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
 
     private void showManagersDialog() {
         ManagerAdapter adapter = new ManagerAdapter(this.event.getEventManagers(),
+                this.resourceName,
                 this,
                 new ListItemClickCallBack() {
                     @Override
