@@ -8,7 +8,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import in.udaan17.android.R;
 import in.udaan17.android.adapter.MainActivityPagerAdapter;
@@ -16,6 +18,7 @@ import in.udaan17.android.adapter.MainActivityPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
+    AppCompatImageButton imageButton;
     private MainActivityPagerAdapter viewPagerAdapter;
     private ViewPager viewPager;
 
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         this.viewPager = (ViewPager) findViewById(R.id.viewpager_activity_main);
         this.viewPagerAdapter = new MainActivityPagerAdapter(this.getSupportFragmentManager());
         this.viewPager.setAdapter(viewPagerAdapter);
+        this.imageButton = (AppCompatImageButton) findViewById(R.id.activity_main_image_button);
 
         TabLayout tabs = (TabLayout) findViewById(R.id.tab_activity_main);
         tabs.setupWithViewPager(viewPager);
@@ -45,5 +49,13 @@ public class MainActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setTitle("Udaan-17");
         }
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, YoutubeActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

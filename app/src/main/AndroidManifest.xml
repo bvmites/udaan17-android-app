@@ -50,6 +50,7 @@
             android:name=".activity.EventDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.YoutubeActivity"></activity>
     </application>
 
 </manifest>

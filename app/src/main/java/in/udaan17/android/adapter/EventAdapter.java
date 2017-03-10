@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-import com.squareup.picasso.Picasso;
-
 import java.util.List;
 
 import in.udaan17.android.R;
@@ -52,13 +50,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
             .context
             .getResources()
             .getIdentifier(Helper.getResourceNameFromTitle(event.getEventName()), "drawable", context.getPackageName());
-    
-        Picasso
-            .with(this.context)
-            .load(drawableId != 0 ? drawableId : R.drawable.github)
-            .placeholder(R.drawable.mail_icon_gray)
-            .error(R.drawable.call_icon_gray)
-            .into(holder.eventIcon);
+
+        holder.eventIcon.setImageResource(drawableId != 0 ? drawableId : R.drawable.github);
         holder.eventTitle.setText(event.getEventName());
         holder.eventShortDescription.setText(event.getShortDescription());
         setAnimation(holder.container, position);

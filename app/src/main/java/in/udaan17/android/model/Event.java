@@ -153,12 +153,21 @@ public class Event {
 
             for (int i = 0; i < this.prizes.size(); i++) {
 
+                String positionInfo = null;
                 String prizeInfo = this.prizes.get(i);
                 if (prizeInfo != null && prizeInfo.trim().length() > 0) {
                     if (i > 0) {
                         prizeDescription += "\n\n";
                     }
-                    prizeDescription += String.format(Locale.getDefault(), "Prize %dst: \n%s", i + 1, prizeInfo);
+                    if (i == 0) {
+                        positionInfo = "Winner";
+                    } else if (i == 1) {
+                        positionInfo = "Runner's Up";
+                    } else if (i == 2) {
+                        positionInfo = "Second Runner's Up";
+                    }
+                    prizeDescription += String.format(Locale.getDefault(), "%s", prizeInfo);
+
                 }
             }
         }
