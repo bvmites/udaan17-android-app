@@ -17,10 +17,10 @@
     <color name="colorWhite">#FFFF</color>
 
     <color name="color_android">#ff4caf50</color>
-    <color name="color_windows">#ff607d8b</color>
-    <color name="color_web">#ff2196f3</color>
-    <color name="color_graphics">#ff673ab7</color>
-    <color name="color_backend">#ff3f51b5</color>
+    <color name="color_windows">#ff00b8d4</color>
+    <color name="color_web">#ffef5350</color>
+    <color name="color_graphics">#ffff7043</color>
+    <color name="color_backend">#ff5c6bc0</color>
 
     <color name="color_keycoders">#ffd33124</color>
     <color name="color_skyscrapers">#ff189947</color>
@@ -28,6 +28,7 @@
     <color name="color_machinists">#ff0957a1</color>
     <color name="color_fabfacturers">#ff511e3f</color>
     <color name="color_rezonizers">#ffcc435a</color>
+    <color name="color_resonizers">#ffcc435a</color>
     <color name="color_non_tech">#ff002d4a</color>
     <color name="color_cultural">#ff404445</color>
 </resources>

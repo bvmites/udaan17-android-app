@@ -1,6 +1,8 @@
 package in.udaan17.android.adapter;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -23,13 +25,15 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.ViewHold
   private Context context;
   private ListItemClickCallBack itemClickCallBack;
   private List<Manager> managers;
-  
-  public ManagerAdapter(List<Manager> managers, Context context, ListItemClickCallBack itemClickCallBack) {
+  private String resourceName;
+
+  public ManagerAdapter(List<Manager> managers, String resourceName, Context context, ListItemClickCallBack itemClickCallBack) {
     if (managers != null) {
       this.managers = managers;
     } else {
       this.managers = new ArrayList<>();
     }
+    this.resourceName = resourceName;
     this.context = context;
     this.itemClickCallBack = itemClickCallBack;
   }
@@ -42,6 +46,12 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.ViewHold
   
   @Override
   public void onBindViewHolder(ViewHolder holder, int position) {
+    int colorId =
+            this
+                    .context
+                    .getResources()
+                    .getIdentifier("color_" + this.resourceName, "color", this.context.getPackageName());
+    holder.managerIcon.setColorFilter(ContextCompat.getColor(this.context, colorId));
     holder.managerName.setText(managers.get(position).getName());
     holder.managerMobile.setText(managers.get(position).getContactInfo());
   }
@@ -54,6 +64,7 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.ViewHold
   public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     
     private View rootView;
+    private AppCompatImageView managerIcon;
     private AppCompatTextView managerName;
     private AppCompatTextView managerMobile;
     private ListItemClickCallBack itemClickCallBack;
@@ -61,6 +72,7 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.ViewHold
     private ViewHolder(View rootView, ListItemClickCallBack itemClickCallBack) {
       super(rootView);
       this.rootView = rootView;
+      this.managerIcon = (AppCompatImageView) rootView.findViewById(R.id.manager_icon);
       managerName = (AppCompatTextView) rootView.findViewById(R.id.textView_name);
       managerMobile = (AppCompatTextView) rootView.findViewById(R.id.textView_mobile);
       this.itemClickCallBack = itemClickCallBack;
