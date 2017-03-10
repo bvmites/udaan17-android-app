@@ -12,8 +12,6 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-import com.squareup.picasso.Picasso;
-
 import java.util.List;
 
 import in.udaan17.android.R;
@@ -66,12 +64,8 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
             .context
             .getResources()
             .getIdentifier(Helper.getResourceNameFromTitle(this.developers.get(position).getCategory()), "drawable", context.getPackageName());
-    
-        Picasso
-            .with(this.context)
-            .load(iconId != 0 ? iconId : R.drawable.github)
-            .error(R.drawable.github)
-            .into(holder.categoryIcon);
+
+        holder.categoryIcon.setImageResource(iconId);
         holder.categoryIcon.setBackgroundColor(ContextCompat.getColor(this.context, colorId));
         holder.title.setText(developers.get(position).getTitle());
         holder.name.setText(developers.get(position).getName());
