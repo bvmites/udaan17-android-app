@@ -22,8 +22,8 @@ import me.wangyuwei.particleview.ParticleView;
 
 public class SplashActivity extends AppCompatActivity implements Response.Listener<JSONArray>, Response.ErrorListener, ParticleView.ParticleAnimListener {
   
-  boolean dataFetched = false;
-  boolean animationComplete = false;
+  private volatile boolean dataFetched = false;
+  private volatile boolean animationComplete = false;
   
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -53,24 +53,23 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
       }, new Response.ErrorListener() {
         @Override
         public void onErrorResponse(VolleyError error) {
-          
+          Log.d("NETWORK", "Error in response");
         }
       });
     } else if (!this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE).contains(this.getString(R.string.prefs_data_json))) {
       Helper.showNetworkAlertPopup(this);
     } else {
+      this.dataFetched = true;
       if (animationComplete) {
         MainActivity.startActivity(this);
       }
     }
-    
   }
   
   private void initializeElements() {
     ParticleView particleView = (ParticleView) this.findViewById(R.id.activity_splash_particle_view);
     particleView.startAnim();
     particleView.setOnParticleAnimListener(this);
-    
   }
   
   @Override
