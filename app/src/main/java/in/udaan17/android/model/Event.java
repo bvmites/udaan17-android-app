@@ -166,7 +166,7 @@ public class Event {
                     } else if (i == 2) {
                         positionInfo = "Second Runner's Up";
                     }
-                    prizeDescription += String.format(Locale.getDefault(), "%s", prizeInfo);
+                    prizeDescription += String.format(Locale.getDefault(), "%s: %s", positionInfo, prizeInfo);
 
                 }
             }
