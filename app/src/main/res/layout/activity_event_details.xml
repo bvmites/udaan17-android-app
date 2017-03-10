@@ -175,6 +175,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="5dp" />
 
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_event_details_prize_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prizes"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="20sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_event_details_prize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:lineSpacingExtra="5dp"
+                android:paddingEnd="0dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="0dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                tools:text="\u20b9 20" />
+
+            <android.support.v4.widget.Space
+                android:id="@+id/space_event_details_fees_contact1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/button_event_details_contact"
                 android:layout_width="match_parent"

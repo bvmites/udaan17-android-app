@@ -31,14 +31,18 @@ public class Event {
     @SerializedName("managers")
     private List<Manager> eventManagers;
 
+    @SerializedName("prizes")
+    private List<String> prizes;
 
-    public Event(String eventName, String eventDescription, String participants, List<String> rounds, String fees, List<Manager> eventManagers) {
+
+    public Event(String eventName, String eventDescription, String participants, List<String> rounds, String fees, List<Manager> eventManagers, List<String> prizes) {
         this.eventName = eventName;
         this.eventDescription = eventDescription;
         this.participants = participants;
         this.rounds = rounds;
         this.fees = fees;
         this.eventManagers = eventManagers;
+        this.prizes = prizes;
     }
 
     /**
@@ -135,5 +139,29 @@ public class Event {
     public String toString() {
         Gson gson = new Gson();
         return gson.toJson(this);
+    }
+
+    public List<String> getPrizes() {
+        return prizes;
+    }
+
+    public String getPrizeDescription() {
+
+        String prizeDescription = "";
+
+        if (this.prizes != null) {
+
+            for (int i = 0; i < this.prizes.size(); i++) {
+
+                String prizeInfo = this.prizes.get(i);
+                if (prizeInfo != null && prizeInfo.trim().length() > 0) {
+                    if (i > 0) {
+                        prizeDescription += "\n\n";
+                    }
+                    prizeDescription += String.format(Locale.getDefault(), "Prize %dst: \n%s", i + 1, prizeInfo);
+                }
+            }
+        }
+        return prizeDescription;
     }
 }
