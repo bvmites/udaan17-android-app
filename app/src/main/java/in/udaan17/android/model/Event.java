@@ -144,16 +144,16 @@ public class Event {
     public List<String> getPrizes() {
         return prizes;
     }
-
-    public String getPrizeDescription() {
+    
+    public String getPrizeDescription(String rupee) {
 
         String prizeDescription = "";
 
         if (this.prizes != null) {
 
             for (int i = 0; i < this.prizes.size(); i++) {
-
-                String positionInfo = null;
+    
+                String positionInfo = "";
                 String prizeInfo = this.prizes.get(i);
                 if (prizeInfo != null && prizeInfo.trim().length() > 0) {
                     if (i > 0) {
@@ -166,7 +166,7 @@ public class Event {
                     } else if (i == 2) {
                         positionInfo = "Second Runner's Up";
                     }
-                    prizeDescription += String.format(Locale.getDefault(), "%s: %s", positionInfo, prizeInfo);
+                    prizeDescription += String.format(Locale.getDefault(), "%s: " + rupee + "%s", positionInfo, prizeInfo);
 
                 }
             }

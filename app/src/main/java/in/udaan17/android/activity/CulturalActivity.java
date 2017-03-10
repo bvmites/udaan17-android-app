@@ -60,9 +60,5 @@ public class CulturalActivity extends AppCompatActivity implements ListItemClick
   @Override
   public void onItemClick(int position, int viewId) {
     EventDetailsActivity.startActivity(this, "cultural", culturalList.get(position));
-//        Intent intent = new Intent(this, EventDetailsActivity.class);
-//        intent.putExtra(getString(R.string.activity_key_position), position);
-//        intent.putExtra(getString(R.string.activity_key_event_data), culturalList.get(position).toString());
-//        this.startActivity(intent);
   }
 }

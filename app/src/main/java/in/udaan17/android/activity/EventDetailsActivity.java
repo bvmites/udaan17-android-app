@@ -145,9 +145,9 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
             this.spaceFeesContact.setVisibility(View.GONE);
             this.buttonContact.setVisibility(View.GONE);
         }
-
-        if (this.event.getPrizeDescription().length() > 0) {
-            this.textViewPrize.setText(this.event.getPrizeDescription());
+    
+        if (this.event.getPrizeDescription(this.getString(R.string.symbol_rupee)).length() > 0) {
+            this.textViewPrize.setText(this.event.getPrizeDescription(this.getString(R.string.symbol_rupee)));
         } else {
             this.spacePrize.setVisibility(View.GONE);
             this.textViewPrizeLabel.setVisibility(View.GONE);
