@@ -38,8 +38,8 @@ public class Helper {
   }
   
   public static void showNetworkAlertPopup(final Activity activity) {
-    
-    AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+
+    AlertDialog.Builder builder = new AlertDialog.Builder(activity, R.style.AlertTheme);
     
     builder.setMessage("Network connection is required when you first connect to the internet. Please turn on mobile network or Wi-Fi in Settings")
         .setTitle("Unable to connect")
