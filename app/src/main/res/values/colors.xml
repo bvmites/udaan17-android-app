@@ -21,4 +21,13 @@
     <color name="color_web">#ff2196f3</color>
     <color name="color_graphics">#ff673ab7</color>
     <color name="color_backend">#ff3f51b5</color>
+
+    <color name="color_keycoders">#ffd33124</color>
+    <color name="color_skyscrapers">#ff189947</color>
+    <color name="color_embeddrones">#ffc1333f</color>
+    <color name="color_machinists">#ff0957a1</color>
+    <color name="color_fabfacturers">#ff511e3f</color>
+    <color name="color_rezonizers">#ffcc435a</color>
+    <color name="color_non_tech">#ff002d4a</color>
+    <color name="color_cultural">#ff404445</color>
 </resources>

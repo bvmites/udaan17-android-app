@@ -61,7 +61,7 @@
                     android:layout_height="match_parent"
                     android:adjustViewBounds="true"
                     android:scaleType="fitXY"
-                    android:src="@drawable/nontechland" />
+                    android:src="@drawable/non_techland" />
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/categories_fragment_textView2"
