@@ -10,6 +10,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import in.udaan17.android.R;
@@ -57,5 +60,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.main_activity_options_menu, menu);
+        return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.developer:
+                startActivity(new Intent(MainActivity.this, DeveloperActivity.class));
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
