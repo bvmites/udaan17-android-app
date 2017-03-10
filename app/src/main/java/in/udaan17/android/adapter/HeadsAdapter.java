@@ -1,6 +1,7 @@
 package in.udaan17.android.adapter;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -60,13 +61,14 @@ public class HeadsAdapter extends RecyclerView.Adapter<HeadsAdapter.ViewHolder> 
         public CardView container;
         public AppCompatTextView headsTitle;
         public AppCompatTextView headsMobile;
-
-        public ViewHolder(View itemView) {
+    
+        public ViewHolder(CardView itemView) {
             super(itemView);
-            container = (CardView) itemView.findViewById(R.id.heads_list_item_card);
+            container = itemView;
             headsTitle = (AppCompatTextView) itemView.findViewById(R.id.heads_list_item_title);
             headsMobile = (AppCompatTextView) itemView.findViewById(R.id.heads_list_item_mobile);
-
+        
+            this.container.setCardBackgroundColor(ContextCompat.getColor(this.container.getContext(), R.color.colorCardBackground));
             container.setOnClickListener(this);
 
             Animation cardAnimation;
