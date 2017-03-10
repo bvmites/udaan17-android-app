@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView android:id="@+id/heads_list_item_card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/heads_list_item_card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="5dp"
@@ -25,6 +25,7 @@
             android:id="@+id/heads_list_item_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
             android:textSize="25sp"
             tools:text="Pranshu Dave" />
 
@@ -32,6 +33,7 @@
             android:id="@+id/heads_list_item_mobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
             android:textSize="18sp"
             tools:text="+918238330100" />
     </android.support.v7.widget.LinearLayoutCompat>

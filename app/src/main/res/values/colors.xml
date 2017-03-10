@@ -8,6 +8,7 @@
     <color name="colorTextPrimary">#ff212121</color>
     <color name="colorTextSecondary">#ff727272</color>
     <color name="colorDivider">#ffb6b6b6</color>
+    <color name="colorCardBackground">#88000000</color>
 
     <color name="colorDeepOrange">#ffff5722</color>
     <color name="colorBlueGrey">#ff607d8b</color>
