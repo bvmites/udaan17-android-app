@@ -29,13 +29,15 @@ public class Department {
 
     @SerializedName("coHeads")
     private List<Manager> coHeads;
-    
+
+
     public Department(String alias, String name, List<Event> events, List<Manager> branchHeads, List<Manager> coHeads) {
         this.alias = alias;
         this.name = name;
         this.events = events;
         this.branchHeads = branchHeads;
         this.coHeads = coHeads;
+
     }
 
     public String getAlias() {
@@ -77,4 +79,5 @@ public class Department {
     public void setCoHeads(List<Manager> coHeads) {
         this.coHeads = coHeads;
     }
+
 }

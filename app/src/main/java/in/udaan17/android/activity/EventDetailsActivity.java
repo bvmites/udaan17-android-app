@@ -42,6 +42,9 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
     private Space spaceFeesContact;
     private AppCompatButton buttonContact;
     private AppCompatImageView departmentImageView;
+    private AppCompatTextView textViewPrize;
+    private AppCompatTextView textViewPrizeLabel;
+    private Space spacePrize;
     private String fileName;
 
     public static void startActivity(Activity activity, String fileName, Event event) {
@@ -90,6 +93,11 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
         this.spaceFeesContact = (Space) this.findViewById(R.id.space_event_details_fees_contact);
         this.buttonContact = (AppCompatButton) this.findViewById(R.id.button_event_details_contact);
 
+        this.textViewPrizeLabel = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_prize_label);
+        this.textViewPrize = (AppCompatTextView) this.findViewById(R.id.text_view_event_details_prize);
+        this.spacePrize = (Space) this.findViewById(R.id.space_event_details_fees_contact1);
+
+
         this.buttonContact.setOnClickListener(this);
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/udaanRegular.ttf");
@@ -98,6 +106,7 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
         textViewParticipants.setTypeface(custom_font);
         textViewRounds.setTypeface(custom_font);
         textViewFees.setTypeface(custom_font);
+        textViewPrize.setTypeface(custom_font);
     }
 
     private void populateUI() {
@@ -135,6 +144,14 @@ public class EventDetailsActivity extends AppCompatActivity implements View.OnCl
         if (!(this.event.getEventManagers() != null && this.event.getEventManagers().size() > 0)) {
             this.spaceFeesContact.setVisibility(View.GONE);
             this.buttonContact.setVisibility(View.GONE);
+        }
+
+        if (this.event.getPrizeDescription().length() > 0) {
+            this.textViewPrize.setText(this.event.getPrizeDescription());
+        } else {
+            this.spacePrize.setVisibility(View.GONE);
+            this.textViewPrizeLabel.setVisibility(View.GONE);
+            this.textViewPrize.setVisibility(View.GONE);
         }
     }
 
