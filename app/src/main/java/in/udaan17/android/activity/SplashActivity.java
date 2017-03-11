@@ -44,8 +44,15 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
           try {
             
             SharedPreferences sharedPreferences = SplashActivity.this.getSharedPreferences(SplashActivity.this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
-            sharedPreferences.edit().putString(SplashActivity.this.getString(R.string.prefs_data_json), response.toString()).apply();
-            APIHelper.fetchDeveloperData(SplashActivity.this, SplashActivity.this, SplashActivity.this);
+            sharedPreferences.edit().putString(SplashActivity.this.getString(R.string.prefs_event_data_json), response.toString()).apply();
+            APIHelper.fetchDeveloperData(SplashActivity.this, new Response.Listener<JSONArray>() {
+              @Override
+              public void onResponse(JSONArray response) {
+                SharedPreferences sharedPreferences = SplashActivity.this.getSharedPreferences(SplashActivity.this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
+                sharedPreferences.edit().putString(SplashActivity.this.getString(R.string.prefs_developer_data_json), response.toString()).apply();
+                APIHelper.fetchTeamUdaanData(SplashActivity.this, SplashActivity.this, SplashActivity.this);
+              }
+            }, SplashActivity.this);
           } catch (Exception e) {
             e.printStackTrace();
           }
@@ -56,7 +63,7 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
           Log.d("NETWORK", "Error in response");
         }
       });
-    } else if (!this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE).contains(this.getString(R.string.prefs_data_json))) {
+    } else if (!this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE).contains(this.getString(R.string.prefs_event_data_json))) {
       Helper.showNetworkAlertPopup(this);
     } else {
       this.dataFetched = true;
@@ -82,7 +89,7 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
   public void onResponse(JSONArray response) {
     dataFetched = true;
     SharedPreferences sharedPreferences = this.getSharedPreferences(this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
-    sharedPreferences.edit().putString(this.getString(R.string.prefs_developer_data_json), response.toString()).apply();
+    sharedPreferences.edit().putString(this.getString(R.string.prefs_team_udaan_data_json), response.toString()).apply();
     if (animationComplete) {
       MainActivity.startActivity(this);
       overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

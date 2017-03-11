@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import in.udaan17.android.R;
+import in.udaan17.android.model.Category;
 import in.udaan17.android.model.Department;
 import in.udaan17.android.model.Developer;
 import in.udaan17.android.model.Event;
@@ -30,32 +31,35 @@ import in.udaan17.android.model.Event;
 public class DataSingleton {
 
     private static DataSingleton instance;
-
-    private List<Department> departmentsList;
-    private List<Developer> developersList;
+    
+    private List<Department> departments;
+    private List<Developer> developers;
     private List<Event> nonTechList;
     private List<Event> culturalList;
+    private List<Category> teamUdaan;
 
 
     /**
      * constructor for data singleton
      *
-     * @param activity
+     * @param context
      * @throws JSONException
      */
-    private DataSingleton(Activity activity) throws JSONException {
+    private DataSingleton(Context context) throws JSONException {
 
         /**
          * Open shared preferences and get the json data
          */
-        SharedPreferences sharedPreferences = activity.getSharedPreferences(activity.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
-        String stringData = sharedPreferences.getString(activity.getString(R.string.prefs_data_json), "");
-        String developersData = sharedPreferences.getString(activity.getString(R.string.prefs_developer_data_json), "");
+        SharedPreferences sharedPreferences = context.getSharedPreferences(context.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
+        String stringData = sharedPreferences.getString(context.getString(R.string.prefs_event_data_json), "");
+        String developersData = sharedPreferences.getString(context.getString(R.string.prefs_developer_data_json), "");
+        String teamUdaanData = sharedPreferences.getString(context.getString(R.string.prefs_team_udaan_data_json), "");
 
         JSONObject data = new JSONObject(stringData);
         JSONArray developers = new JSONArray(developersData);
-
-        this.parseAndLoadData(data, developers);
+        JSONArray teamUdaan = new JSONArray(teamUdaanData);
+    
+        this.parseAndLoadData(data, developers, teamUdaan);
     }
 
     public static DataSingleton getInstance(Activity activity) throws JSONException {
@@ -65,24 +69,24 @@ public class DataSingleton {
         return DataSingleton.instance;
 
     }
-
-
-    private void parseAndLoadData(JSONObject data, JSONArray developers) throws JSONException {
+    
+    
+    private void parseAndLoadData(JSONObject data, JSONArray developers, JSONArray teamUdaan) throws JSONException {
         Gson gson = new Gson();
-
-        this.departmentsList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("tech").toString(), Department[].class)));
+        
+        this.departments = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("tech").toString(), Department[].class)));
         this.nonTechList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("nonTech").toString(), Event[].class)));
         this.culturalList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("cultural").toString(), Event[].class)));
-        this.developersList = new ArrayList<>(Arrays.asList(gson.fromJson(developers.toString(), Developer[].class)));
-
+        this.developers = new ArrayList<>(Arrays.asList(gson.fromJson(developers.toString(), Developer[].class)));
+        this.teamUdaan = new ArrayList<>(Arrays.asList(gson.fromJson(teamUdaan.toString(), Category[].class)));
     }
 
     public List<Department> getDepartmentsList() {
-        return departmentsList;
+        return departments;
     }
 
     public List<Developer> getDevelopersList() {
-        return developersList;
+        return developers;
     }
 
     public List<Event> getNonTechList() {
@@ -91,5 +95,9 @@ public class DataSingleton {
 
     public List<Event> getCulturalList() {
         return culturalList;
+    }
+    
+    public List<Category> getTeamUdaan() {
+        return teamUdaan;
     }
 }

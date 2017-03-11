@@ -10,8 +10,8 @@ public class Member {
 
     @SerializedName("name")
     private String name;
-
-    @SerializedName("name")
+    
+    @SerializedName("title")
     private String title;
 
     public Member(String name, String title) {

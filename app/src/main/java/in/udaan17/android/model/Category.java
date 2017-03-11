@@ -11,21 +11,21 @@ import java.util.List;
 public class Category {
 
     @SerializedName("category")
-    private String Categoryname;
+    private String category;
 
     @SerializedName("members")
     private List<Member> members;
-
-    public Category(String categoryname, List<Member> members) {
-        Categoryname = categoryname;
+    
+    public Category(String category, List<Member> members) {
+        this.category = category;
         this.members = members;
     }
-
-    public String getCategoryname() {
-        return Categoryname;
+    
+    public String getCategory() {
+        return this.category;
     }
 
     public List<Member> getMembers() {
-        return members;
+        return this.members;
     }
 }

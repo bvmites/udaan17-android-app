@@ -118,11 +118,15 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.developer:
-                startActivity(new Intent(MainActivity.this, DeveloperActivity.class));
+                startActivity(new Intent(this, DeveloperActivity.class));
                 break;
 
             case R.id.aboutUs:
-                startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
+                startActivity(new Intent(this, AboutUsActivity.class));
+                break;
+    
+            case R.id.teamUdaan:
+                TeamUdaanActivity.startActivity(this);
                 break;
         }
         return super.onOptionsItemSelected(item);

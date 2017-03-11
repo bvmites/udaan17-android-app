@@ -16,10 +16,11 @@ import org.json.JSONObject;
 
 public final class APIHelper {
     
-    public static final String baseUrl = "https://raw.githubusercontent.com/Team-Udaan";
+    public static final String baseUrl = "https://raw.githubusercontent.com/Team-Udaan/udaan17-android-app/master";
     
-    public static final String api_endpoint_info = "/udaan17-android-app/master/mock-api/event-data.json";
-    public static final String api_endpoint_developers = "/udaan17-android-app/master/mock-api/developers.json";
+    public static final String api_endpoint_info = "/mock-api/event-data.json";
+    public static final String api_endpoint_developers = "/mock-api/developers.json";
+    public static final String api_endpoint_team_udaan = "/mock-api/team-udaan.json";
 
 
     public static void fetchData(Context context, Response.Listener<JSONObject> responseListener, Response.ErrorListener errorListener) {
@@ -38,5 +39,12 @@ public final class APIHelper {
         JsonArrayRequest developerDataRequest = new JsonArrayRequest(Request.Method.GET, developerUrl, new JSONArray(), responseListener, errorListener);
 
         VolleySingleton.getinstance(context).addToRequestQueue(developerDataRequest);
+    }
+    
+    public static void fetchTeamUdaanData(Context context, Response.Listener<JSONArray> responseListener, Response.ErrorListener errorListener) {
+        String teamUdaanUrl = APIHelper.baseUrl + APIHelper.api_endpoint_team_udaan;
+        JsonArrayRequest teamUdaanDataRequest = new JsonArrayRequest(Request.Method.GET, teamUdaanUrl, new JSONArray(), responseListener, errorListener);
+        
+        VolleySingleton.getinstance(context).addToRequestQueue(teamUdaanDataRequest);
     }
 }

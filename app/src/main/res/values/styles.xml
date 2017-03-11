@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorWhite</item>
+        <item name="buttonBackgroundColor">@color/colorPrimary</item>
+        <item name="separatorColor">@color/colorTeal</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="AppTheme">
