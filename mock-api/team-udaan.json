@@ -11,5 +11,32 @@
         "title": "Android Co-Head"
       }
     ]
+  },
+  {
+    "category": "Web Team",
+    "members": [
+      {
+        "name": "Dhruvin Gandhi",
+        "title": "Web Head"
+      },
+      {
+        "name": "Maunil Swadas",
+        "title": "Web Co-Head"
+      }
+    ]
+  },
+  {
+    "category": "Graphics Team",
+    "members": [
+      {
+        "name": "Dixita Ganatra",
+        "title": "Graphics Head"
+      },
+      {
+        "name": "Vatsal Trivedi",
+        "title": "Graphics Co-Head"
+      }
+    ]
   }
 ]
+
