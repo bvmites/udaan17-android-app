@@ -19,8 +19,8 @@ import in.udaan17.android.R;
 public class FirstRunActivity extends AppCompatActivity {
 
 
-    private static int SPLASH_TIME_OUT = 3500;
-    private static int ANIMATE_IMAGE = 1500;
+    private static int SPLASH_TIME_OUT = 4000;
+    private static int ANIMATE_IMAGE = 2000;
 
     AppCompatTextView textViewCompat;
     AppCompatImageView appCompatImageView;
