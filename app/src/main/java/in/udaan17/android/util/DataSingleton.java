@@ -15,7 +15,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import in.udaan17.android.R;
-import in.udaan17.android.model.Category;
 import in.udaan17.android.model.Department;
 import in.udaan17.android.model.Developer;
 import in.udaan17.android.model.Event;
@@ -32,7 +31,6 @@ public class DataSingleton {
 
     private static DataSingleton instance;
 
-    private List<Category> categoryList;
     private List<Department> departmentsList;
     private List<Developer> developersList;
     private List<Event> nonTechList;
@@ -72,16 +70,11 @@ public class DataSingleton {
     private void parseAndLoadData(JSONObject data, JSONArray developers) throws JSONException {
         Gson gson = new Gson();
 
-        //this.categoryList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("categories").toString(), Category[].class)));
         this.departmentsList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("tech").toString(), Department[].class)));
         this.nonTechList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("nonTech").toString(), Event[].class)));
         this.culturalList = new ArrayList<>(Arrays.asList(gson.fromJson(data.getJSONArray("cultural").toString(), Event[].class)));
         this.developersList = new ArrayList<>(Arrays.asList(gson.fromJson(developers.toString(), Developer[].class)));
 
-    }
-
-    public List<Category> getCategoryList() {
-        return categoryList;
     }
 
     public List<Department> getDepartmentsList() {
