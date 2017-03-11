@@ -120,6 +120,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.developer:
                 startActivity(new Intent(MainActivity.this, DeveloperActivity.class));
                 break;
+
+            case R.id.aboutUs:
+                startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
