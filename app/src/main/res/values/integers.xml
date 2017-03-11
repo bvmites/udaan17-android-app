@@ -2,4 +2,5 @@
 <resources>
     <!-- Animation Keys -->
     <integer name="swing_anim_time">600</integer>
+    <integer name="first_run">3000</integer>
 </resources>
