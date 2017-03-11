@@ -57,10 +57,10 @@
                     android:id="@+id/activity_main_image_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:backgroundTint="@android:color/transparent"
                     android:clickable="true"
                     android:scaleType="fitCenter"
                     android:tint="@color/colorWhite"
+                    app:backgroundTint="@android:color/transparent"
                     app:srcCompat="@drawable/ic_play_circle_filled" />
 
             </android.support.v7.widget.Toolbar>
