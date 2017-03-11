@@ -2,37 +2,30 @@ package in.udaan17.android.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 /**
- * Created by pranshu on 5/3/17.
- * For: udaan17-android-app
+ * Created by pranshu on 11/3/17.
  */
 
 public class Category {
 
-    @SerializedName("name")
-    private String name;
+    @SerializedName("category")
+    private String Categoryname;
 
-    @SerializedName("alias")
-    private String alias;
+    @SerializedName("members")
+    private List<Member> members;
 
-    public Category(String name, String alias) {
-        this.name = name;
-        this.alias = alias;
+    public Category(String categoryname, List<Member> members) {
+        Categoryname = categoryname;
+        this.members = members;
     }
 
-    public String getName() {
-        return name;
+    public String getCategoryname() {
+        return Categoryname;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAlias() {
-        return alias;
-    }
-
-    public void setAlias(String alias) {
-        this.alias = alias;
+    public List<Member> getMembers() {
+        return members;
     }
 }

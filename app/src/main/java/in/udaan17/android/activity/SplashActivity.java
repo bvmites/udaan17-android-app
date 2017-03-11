@@ -62,6 +62,7 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
       this.dataFetched = true;
       if (animationComplete) {
         MainActivity.startActivity(this);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
       }
     }
   }
@@ -84,6 +85,7 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
     sharedPreferences.edit().putString(this.getString(R.string.prefs_developer_data_json), response.toString()).apply();
     if (animationComplete) {
       MainActivity.startActivity(this);
+      overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
   }
   
@@ -92,6 +94,7 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
     animationComplete = true;
     if (dataFetched) {
       MainActivity.startActivity(this);
+      overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     } else {
       TransitionManager.beginDelayedTransition((ViewGroup) this.findViewById(R.id.root_view));
       this.findViewById(R.id.splash_progress_container).setVisibility(View.VISIBLE);

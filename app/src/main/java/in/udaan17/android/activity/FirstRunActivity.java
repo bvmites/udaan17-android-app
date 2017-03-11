@@ -19,8 +19,8 @@ import in.udaan17.android.R;
 public class FirstRunActivity extends AppCompatActivity {
 
 
-    private static int SPLASH_TIME_OUT = 3500;
-    private static int ANIMATE_IMAGE = 1500;
+    private static int SPLASH_TIME_OUT = 4000;
+    private static int ANIMATE_IMAGE = 2000;
 
     AppCompatTextView textViewCompat;
     AppCompatImageView appCompatImageView;
@@ -31,68 +31,66 @@ public class FirstRunActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(FirstRunActivity.this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
 
         boolean firstTime = sharedPreferences.getBoolean("first", true);
-//        if (!firstTime) {
-//            Intent intent = new Intent(FirstRunActivity.this, SplashActivity.class);
-//            startActivity(intent);
-//            finish();
-//        } else {
-        setContentView(R.layout.activity_first_run);
-        sharedPreferences.edit().putBoolean("first", false).apply();
+        if (!firstTime) {
+            Intent intent = new Intent(FirstRunActivity.this, SplashActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            setContentView(R.layout.activity_first_run);
+            sharedPreferences.edit().putBoolean("first", false).apply();
 
 
-        textViewCompat = (AppCompatTextView) findViewById(R.id.first_run_textView);
-        appCompatImageView = (AppCompatImageView) findViewById(R.id.first_run_imageView);
+            textViewCompat = (AppCompatTextView) findViewById(R.id.first_run_textView);
+            appCompatImageView = (AppCompatImageView) findViewById(R.id.first_run_imageView);
 
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Cookie.ttf");
-        textViewCompat.setTypeface(custom_font);
+            Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Cookie.ttf");
+            textViewCompat.setTypeface(custom_font);
 
-        final Animation animation = AnimationUtils.loadAnimation(this, R.anim.swing_up_right);
-        textViewCompat.startAnimation(animation);
-        appCompatImageView.startAnimation(animation);
+            final Animation animation = AnimationUtils.loadAnimation(this, R.anim.swing_up_right);
+            textViewCompat.startAnimation(animation);
+            appCompatImageView.startAnimation(animation);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                ObjectAnimator scaleDown = ObjectAnimator.ofPropertyValuesHolder(appCompatImageView,
-                        PropertyValuesHolder.ofFloat("scaleX", 1.2f),
-                        PropertyValuesHolder.ofFloat("scaleY", 1.2f));
-                scaleDown.setDuration(100);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    ObjectAnimator scaleDown = ObjectAnimator.ofPropertyValuesHolder(appCompatImageView,
+                            PropertyValuesHolder.ofFloat("scaleX", 1.2f),
+                            PropertyValuesHolder.ofFloat("scaleY", 1.2f));
+                    scaleDown.setDuration(100);
 
-                scaleDown.setRepeatCount(3);
-                scaleDown.setRepeatMode(ObjectAnimator.REVERSE);
+                    scaleDown.setRepeatCount(3);
+                    scaleDown.setRepeatMode(ObjectAnimator.REVERSE);
 
-                scaleDown.start();
-            }
-        }, ANIMATE_IMAGE);
+                    scaleDown.start();
+                }
+            }, ANIMATE_IMAGE);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                ObjectAnimator scaleDown = ObjectAnimator.ofPropertyValuesHolder(appCompatImageView,
-                        PropertyValuesHolder.ofFloat("scaleX", 1.2f),
-                        PropertyValuesHolder.ofFloat("scaleY", 1.2f));
-                scaleDown.setDuration(100);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    ObjectAnimator scaleDown = ObjectAnimator.ofPropertyValuesHolder(appCompatImageView,
+                            PropertyValuesHolder.ofFloat("scaleX", 1.2f),
+                            PropertyValuesHolder.ofFloat("scaleY", 1.2f));
+                    scaleDown.setDuration(100);
 
-                scaleDown.setRepeatCount(3);
-                scaleDown.setRepeatMode(ObjectAnimator.REVERSE);
+                    scaleDown.setRepeatCount(3);
+                    scaleDown.setRepeatMode(ObjectAnimator.REVERSE);
 
-                scaleDown.start();
-            }
-        }, ANIMATE_IMAGE + 700);
+                    scaleDown.start();
+                }
+            }, ANIMATE_IMAGE + 700);
 
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(FirstRunActivity.this, SplashActivity.class);
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                finish();
-            }
-        }, SPLASH_TIME_OUT);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(FirstRunActivity.this, SplashActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    finish();
+                }
+            }, SPLASH_TIME_OUT);
 
+        }
     }
 }
-
-
-//}
