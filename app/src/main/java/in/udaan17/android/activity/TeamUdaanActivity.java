@@ -3,7 +3,6 @@ package in.udaan17.android.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -47,10 +46,9 @@ public class TeamUdaanActivity extends AppCompatActivity {
       e.printStackTrace();
       this.teamUdaan = new ArrayList<>();
     }
-    
-    Toolbar toolbar = (Toolbar) this.findViewById(R.id.toolbar);
-    toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorWhite));
-    toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
+  
+    Toolbar toolbar = (Toolbar) this.findViewById(R.id.appbar_toolbar);
+//    toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.color_team_udaan));
     this.setSupportActionBar(toolbar);
     if (this.getSupportActionBar() != null) {
       ActionBar actionBar = this.getSupportActionBar();
