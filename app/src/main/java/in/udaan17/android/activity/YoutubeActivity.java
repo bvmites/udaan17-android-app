@@ -15,8 +15,7 @@ import in.udaan17.android.R;
 public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     public static final String TAG = "YoutubeActivity";
-    static final String YOUTUBE_VIDEO_ID = "XkcP5Fc8QGY";
-    static final String YOUTUBE_PLAYLIST = "RDJznXx1Ns374#t=0";
+    static final String YOUTUBE_VIDEO_ID = "7hVvV4gX-Vg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,7 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
         ConstraintLayout constraintLayout = (ConstraintLayout) getLayoutInflater().inflate(R.layout.activity_youtube, null);
         setContentView(constraintLayout);
 
-        YouTubePlayerView youTubePlayerView = new YouTubePlayerView(this);
+        YouTubePlayerView youTubePlayerView;
         youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_activity_player);
         youTubePlayerView.initialize(BuildConfig.GOOGLE_API_KEY, this);
 

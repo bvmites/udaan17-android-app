@@ -27,7 +27,7 @@ import in.udaan17.android.util.Helper;
 
 public class AboutUsActivity extends AppCompatActivity {
 
-    private final String EMAIL_ADDRESS = "developer.udaan.2017@gmail.com";
+    private final String EMAIL_ADDRESS = "developer.team.udaan@gmail.com";
     private final String YOUTUBE_LINK = "UCnqRgS6O0MGF8sTYb_fHjWA";
     private final String FACEBOOK_LINK = "https://www.facebook.com/teamudaan17/";
     private final String PLAY_STORE = "";
