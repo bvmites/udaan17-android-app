@@ -1,9 +1,11 @@
 package in.udaan17.android.adapter;
 
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import in.udaan17.android.R;
+import in.udaan17.android.model.Department;
 import in.udaan17.android.model.Manager;
 import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection;
 
@@ -14,25 +16,95 @@ import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection;
 public class ManagerSection extends StatelessSection {
 
 
-    private Manager manager;
+    private Department department;
+    private ManagerCallItemClick listItemClickCallBack;
+    private int sectionId;  //1 for Heads and 2 for coHeads
 
-    public ManagerSection(Manager manager) {
+
+    public ManagerSection(Department department, int sectionId, ManagerCallItemClick listItemClickCallBack) {
         super(R.layout.header_section_team, R.layout.item_section_team);
-        this.manager = manager;
+        this.department = department;
+        this.sectionId = sectionId;
+        this.listItemClickCallBack = listItemClickCallBack;
     }
 
     @Override
     public int getContentItemsTotal() {
-        return 0;
+        if (sectionId == 1) {
+            return department.getBranchHeads().size();
+        } else {
+            return department.getCoHeads().size();
+        }
     }
 
     @Override
     public RecyclerView.ViewHolder getItemViewHolder(View view) {
-        return null;
+        return new ItemViewHolder(view);
     }
 
     @Override
     public void onBindItemViewHolder(RecyclerView.ViewHolder holder, int position) {
+        Manager manager;
+        if (sectionId == 1) {
+            manager = department.getBranchHeads().get(position);
+        } else {
+            manager = department.getCoHeads().get(position);
+        }
 
+        ((ItemViewHolder) holder).textViewName.setText(manager.getName());
+        ((ItemViewHolder) holder).textViewTitle.setText(manager.getContactInfo());
+    }
+
+    @Override
+    public void onBindHeaderViewHolder(RecyclerView.ViewHolder holder) {
+        super.onBindHeaderViewHolder(holder);
+        String headerText;
+        if (sectionId == 1) {
+            headerText = "Heads";
+        } else {
+            headerText = "CoHeads";
+        }
+        ((HeaderViewHolder) holder).textViewTitle.setText(headerText);
+    }
+
+    @Override
+    public RecyclerView.ViewHolder getHeaderViewHolder(View view) {
+        return new HeaderViewHolder(view);
+    }
+
+    public interface ManagerCallItemClick {
+        public void onItemClick(int position, int sectionId);
+    }
+
+    private class HeaderViewHolder extends RecyclerView.ViewHolder {
+        private View rootView;
+        private AppCompatTextView textViewTitle;
+
+        public HeaderViewHolder(View headerView) {
+            super(headerView);
+            this.rootView = headerView;
+            this.textViewTitle = (AppCompatTextView) this.rootView.findViewById(R.id.header_section_team_title);
+        }
+    }
+
+    private class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        private View rootView;
+        private AppCompatTextView textViewName;
+        private AppCompatTextView textViewTitle;
+
+        public ItemViewHolder(View itemView) {
+            super(itemView);
+
+            this.rootView = itemView;
+            this.textViewName = (AppCompatTextView) this.rootView.findViewById(R.id.item_section_team_name);
+            this.textViewTitle = (AppCompatTextView) this.rootView.findViewById(R.id.item_section_team_title);
+
+            rootView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            listItemClickCallBack.onItemClick(getAdapterPosition(), sectionId);
+        }
     }
 }

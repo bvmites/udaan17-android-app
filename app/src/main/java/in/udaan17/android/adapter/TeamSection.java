@@ -7,7 +7,6 @@ import android.view.View;
 import in.udaan17.android.R;
 import in.udaan17.android.model.Category;
 import in.udaan17.android.model.Member;
-import in.udaan17.android.util.listeners.ListItemClickCallBack;
 import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection;
 
 /**
@@ -18,17 +17,12 @@ import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection;
 
 public class TeamSection extends StatelessSection {
 
-  ListItemClickCallBack listItemClickCallBack;
 
   private Category category;
   
   public TeamSection(Category category) {
     super(R.layout.header_section_team, R.layout.item_section_team);
     this.category = category;
-  }
-
-  public void setListItemClickCallBack(ListItemClickCallBack listItemClickCallBack) {
-    this.listItemClickCallBack = listItemClickCallBack;
   }
 
   @Override

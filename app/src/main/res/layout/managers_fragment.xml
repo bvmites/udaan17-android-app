@@ -4,36 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="8dp"
-        android:text="Heads"
-        android:textColor="@color/colorWhite"
-        android:textSize="30sp" />
-
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/manager_heads_recycler_view"
+        android:id="@+id/new_manager_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <android.support.v4.widget.Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp" />
-
-    <android.support.v7.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="8dp"
-        android:text="CoHeads"
-        android:textColor="@color/colorWhite"
-        android:textSize="30sp" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/manager_coheads_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
+        android:layout_height="match_parent" />
 </LinearLayout>
