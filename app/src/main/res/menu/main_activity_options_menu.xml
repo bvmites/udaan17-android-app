@@ -9,5 +9,8 @@
         android:title="Team Udaan" />
     <item
         android:id="@+id/aboutUs"
-        android:title="About Us" />
+        android:title="About us" />
+    <item
+        android:id="@+id/rateUs"
+        android:title="Rate us!" />
 </menu>

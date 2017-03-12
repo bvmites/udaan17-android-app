@@ -3,6 +3,7 @@ package in.udaan17.android.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -128,6 +129,16 @@ public class MainActivity extends AppCompatActivity {
             case R.id.teamUdaan:
                 TeamUdaanActivity.startActivity(this);
                 break;
+
+            case R.id.rateUs:
+                String appPackageName = getPackageName();
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                } catch (android.content.ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                }
+                break;
+
         }
         return super.onOptionsItemSelected(item);
     }
