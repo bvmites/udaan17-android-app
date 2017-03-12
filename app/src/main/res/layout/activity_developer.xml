@@ -41,7 +41,7 @@
                     android:background="@color/colorPrimary"
                     android:fitsSystemWindows="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/feature_graphic" />
+                    android:src="@drawable/deadpool_love" />
 
             </RelativeLayout>
 
