@@ -13,7 +13,10 @@ import android.view.View;
 
 import com.google.android.youtube.player.YouTubeIntents;
 
+import java.util.List;
+
 import in.udaan17.android.R;
+import in.udaan17.android.model.Manager;
 import in.udaan17.android.util.Helper;
 
 /**
@@ -24,7 +27,7 @@ import in.udaan17.android.util.Helper;
 
 public class AboutUsActivity extends AppCompatActivity {
 
-    private final String EMAIL_ADDRESS = "";
+    private final String EMAIL_ADDRESS = "developer.udaan.2017@gmail.com";
     private final String YOUTUBE_LINK = "UCnqRgS6O0MGF8sTYb_fHjWA";
     private final String FACEBOOK_LINK = "https://www.facebook.com/teamudaan17/";
     private final String PLAY_STORE = "";
@@ -34,6 +37,8 @@ public class AboutUsActivity extends AppCompatActivity {
     private final String lon = "72.9240181";
     private final String mapTitle = "BVM Engineering College";
 
+    private List<Manager> techHeadsList;
+
     private AppCompatImageButton mail;
     private AppCompatImageButton youtube;
     private AppCompatImageButton facebook;
@@ -41,6 +46,7 @@ public class AboutUsActivity extends AppCompatActivity {
     private AppCompatImageButton weblink;
     private Toolbar toolbar;
     private AppCompatImageButton maps;
+    private AppCompatImageButton phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +110,13 @@ public class AboutUsActivity extends AppCompatActivity {
                 String geoUri = "http://maps.google.com/maps?q=loc:" + lat + "," + lon + " (" + mapTitle + ")";
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(geoUri));
                 startActivity(intent);
+            }
+        });
+
+        phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
         this.setSupportActionBar(toolbar);

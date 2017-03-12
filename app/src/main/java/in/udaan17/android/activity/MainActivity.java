@@ -138,9 +138,9 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
                 }
                 break;
-
         }
         return super.onOptionsItemSelected(item);
+
     }
     
     

@@ -35,7 +35,7 @@ public class ManagerFragment extends Fragment implements ManagerSection.ManagerC
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        rootView = inflater.from(getContext()).inflate(R.layout.managers_fragment, container, false);
+        rootView = inflater.inflate(R.layout.managers_fragment, container, false);
 
         int position = this.getArguments().getInt(getString(R.string.activity_key_position), 0);
         try {

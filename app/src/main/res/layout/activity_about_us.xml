@@ -22,6 +22,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/about_us_toolbar"
@@ -48,7 +49,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="About Us"
+                android:text="Udaan"
                 android:textAlignment="center"
                 android:textColor="@color/colorWhite"
                 android:textSize="32sp"
@@ -131,8 +132,8 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:backgroundTint="@color/colorPrimary"
                 android:scaleType="fitCenter"
+                app:backgroundTint="@color/colorPrimary"
                 app:layout_constraintLeft_toRightOf="@+id/mail"
                 app:layout_constraintTop_toTopOf="@+id/mail"
                 app:srcCompat="@drawable/facebook_box" />
@@ -155,14 +156,14 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:scaleType="fitCenter"
                 app:backgroundTint="@color/colorPrimary"
-                app:layout_constraintLeft_toRightOf="@+id/mail"
-                app:layout_constraintRight_toLeftOf="@+id/facebook"
+                app:layout_constraintLeft_toLeftOf="@+id/mail"
+                app:layout_constraintRight_toRightOf="@+id/mail"
                 app:layout_constraintTop_toBottomOf="@+id/mail"
                 app:srcCompat="@drawable/googleplay" />
 
@@ -172,25 +173,32 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:scaleType="fitCenter"
                 app:backgroundTint="@color/colorPrimary"
                 app:layout_constraintBottom_toBottomOf="@+id/playstore"
-                app:layout_constraintLeft_toRightOf="@+id/facebook"
-                app:layout_constraintRight_toLeftOf="@+id/youtube"
+                app:layout_constraintLeft_toLeftOf="@+id/facebook"
+                app:layout_constraintRight_toRightOf="@+id/facebook"
                 app:layout_constraintTop_toTopOf="@+id/playstore"
                 app:srcCompat="@drawable/web_link" />
 
-            <!--<android.support.v7.widget.AppCompatImageButton-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:src="@drawable/directions"-->
-            <!--android:tint="@color/colorWhite"-->
-            <!--tools:layout_editor_absoluteX="0dp"-->
-            <!--tools:layout_editor_absoluteY="26dp" />-->
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/phone"
+                app:backgroundTint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/website"
+                app:layout_constraintLeft_toLeftOf="@+id/youtube"
+                app:layout_constraintRight_toRightOf="@+id/youtube"
+                app:layout_constraintTop_toTopOf="@+id/website" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/about_us_reach"
@@ -236,15 +244,14 @@
                 android:scaleType="fitCenter"
                 app:backgroundTint="@color/colorPrimary"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintLeft_toRightOf="parent"
                 app:layout_constraintRight_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/view_reach"
-                app:layout_constraintVertical_bias="0"
+                app:layout_constraintTop_toBottomOf="@+id/view_reach"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/google_maps" />
 
             <android.support.v7.widget.AppCompatTextView
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="BVM Engineering College, Opp, Shastri Maidan, Mota Bazaar, Vallabh Vidhyanagar, Anand, Gujarat 388120, India"
@@ -256,5 +263,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/map_view"
                 app:layout_constraintVertical_bias="0.0" />
         </android.support.constraint.ConstraintLayout>
+
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
