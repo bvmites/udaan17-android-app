@@ -60,6 +60,7 @@ public class AboutUsActivity extends AppCompatActivity {
         weblink = (AppCompatImageButton) findViewById(R.id.website);
         toolbar = (Toolbar) findViewById(R.id.about_us_toolbar);
         maps = (AppCompatImageButton) findViewById(R.id.map_view);
+        phone = (AppCompatImageButton) findViewById(R.id.phone);
 
 
         mail.setOnClickListener(new View.OnClickListener() {
