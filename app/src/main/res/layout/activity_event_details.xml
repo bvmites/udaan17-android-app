@@ -206,7 +206,7 @@
                 android:id="@+id/button_event_details_contact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Contact Managers"
+                android:text="Contact Event Managers"
                 android:textAllCaps="false"
                 android:textColor="@color/colorWhite" />
         </android.support.v7.widget.LinearLayoutCompat>
