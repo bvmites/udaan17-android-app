@@ -1,6 +1,8 @@
 package in.udaan17.android.adapter;
 
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
@@ -88,17 +90,20 @@ public class ManagerSection extends StatelessSection {
     }
 
     private class ItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private View rootView;
+        private CardView rootView;
         private AppCompatTextView textViewName;
         private AppCompatTextView textViewTitle;
 
         public ItemViewHolder(View itemView) {
             super(itemView);
 
-            this.rootView = itemView;
+            this.rootView = (CardView) itemView;
             this.textViewName = (AppCompatTextView) this.rootView.findViewById(R.id.item_section_team_name);
             this.textViewTitle = (AppCompatTextView) this.rootView.findViewById(R.id.item_section_team_title);
 
+            this.rootView.setCardBackgroundColor(ContextCompat.getColor(this.rootView.getContext(), R.color.colorCardBackground));
+            this.textViewName.setTextColor(ContextCompat.getColor(rootView.getContext(), R.color.colorWhite));
+            this.textViewTitle.setTextColor(ContextCompat.getColor(rootView.getContext(), R.color.colorWhite));
             rootView.setOnClickListener(this);
         }
 
