@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, DepartmentActivity.class);
                 startActivity(i);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
     
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, CulturalActivity.class);
                 startActivity(i);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
     
@@ -88,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, NonTechActivity.class);
                 startActivity(i);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
     
@@ -120,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.developer:
                 startActivity(new Intent(this, DeveloperActivity.class));
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 break;
 
 //            case R.id.aboutUs:
@@ -128,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
     
             case R.id.teamUdaan:
                 TeamUdaanActivity.startActivity(this);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 break;
 
             case R.id.rateUs:
