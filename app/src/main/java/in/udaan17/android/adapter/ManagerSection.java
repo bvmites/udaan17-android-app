@@ -86,6 +86,8 @@ public class ManagerSection extends StatelessSection {
             super(headerView);
             this.rootView = headerView;
             this.textViewTitle = (AppCompatTextView) this.rootView.findViewById(R.id.header_section_team_title);
+
+            textViewTitle.setTextColor(ContextCompat.getColor(rootView.getContext(), R.color.colorWhite));
         }
     }
 
