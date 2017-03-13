@@ -16,9 +16,9 @@ import in.udaan17.android.model.Department;
  */
 
 public class TechEventsViewPagerAdapter extends FragmentStatePagerAdapter {
-
-    Department department;
-    private String tabName[] = {"Events", "Managers"};
+    
+    private Department department;
+    private String tabName[] = {"Events", "Heads"};
     private Context context;
     private int position;
 
