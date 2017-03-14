@@ -125,10 +125,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, DeveloperActivity.class));
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 break;
-
-//            case R.id.aboutUs:
-//                startActivity(new Intent(this, AboutUsActivity.class));
-//                break;
+    
+            case R.id.aboutUs:
+                startActivity(new Intent(this, AboutUsActivity.class));
+                break;
     
             case R.id.teamUdaan:
                 TeamUdaanActivity.startActivity(this);
