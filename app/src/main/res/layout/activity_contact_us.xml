@@ -83,7 +83,7 @@
                     android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     app:backgroundTint="@color/colorPrimary"
-                    app:srcCompat="@drawable/email" />
+                    app:srcCompat="@drawable/ic_mail" />
 
                 <android.support.v4.widget.Space
                     android:layout_width="5dp"
@@ -99,7 +99,7 @@
                     android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     app:backgroundTint="@color/colorPrimary"
-                    app:srcCompat="@drawable/facebook_box" />
+                    app:srcCompat="@drawable/ic_facebook" />
 
                 <android.support.v4.widget.Space
                     android:layout_width="5dp"
@@ -115,7 +115,7 @@
                     android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     app:backgroundTint="@color/colorPrimary"
-                    app:srcCompat="@drawable/youtube_play" />
+                    app:srcCompat="@drawable/ic_youtube" />
 
                 <android.support.v4.widget.Space
                     android:layout_width="0dp"
@@ -143,7 +143,7 @@
                     android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     app:backgroundTint="@color/colorPrimary"
-                    app:srcCompat="@drawable/googleplay" />
+                    app:srcCompat="@drawable/ic_play" />
 
                 <android.support.v4.widget.Space
                     android:layout_width="5dp"
@@ -159,7 +159,7 @@
                     android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     app:backgroundTint="@color/colorPrimary"
-                    app:srcCompat="@drawable/web_link" />
+                    app:srcCompat="@drawable/ic_web" />
 
                 <android.support.v4.widget.Space
                     android:layout_width="5dp"
@@ -175,7 +175,7 @@
                     android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     app:backgroundTint="@color/colorPrimary"
-                    app:srcCompat="@drawable/phone" />
+                    app:srcCompat="@drawable/ic_call" />
 
                 <android.support.v4.widget.Space
                     android:layout_width="0dp"
@@ -222,7 +222,7 @@
                     android:layout_height="match_parent"
                     android:scaleType="fitCenter"
                     app:backgroundTint="@color/colorPrimary"
-                    app:srcCompat="@drawable/google_maps" />
+                    app:srcCompat="@drawable/ic_place" />
 
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="match_parent"
