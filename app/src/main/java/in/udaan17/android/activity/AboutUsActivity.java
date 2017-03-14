@@ -51,7 +51,7 @@ public class AboutUsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
+      setContentView(R.layout.activity_contact_us);
 
         mail = (AppCompatImageButton) findViewById(R.id.mail);
         youtube = (AppCompatImageButton) findViewById(R.id.youtube);
