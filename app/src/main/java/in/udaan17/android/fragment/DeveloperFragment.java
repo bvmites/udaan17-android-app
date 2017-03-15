@@ -46,7 +46,6 @@ public class DeveloperFragment extends Fragment implements ListItemClickCallBack
       
       developerAdapter.setItemClickCallBack(this);
 
-
 //      developerRecyclerView.setNestedScrollingEnabled(false);
       
     } catch (JSONException e) {

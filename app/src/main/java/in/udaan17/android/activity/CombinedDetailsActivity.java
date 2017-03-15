@@ -2,6 +2,7 @@ package in.udaan17.android.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
@@ -38,11 +39,12 @@ public class CombinedDetailsActivity extends AppCompatActivity {
         tabs.setupWithViewPager(detailsViewPager);
         nestedScrollView.setFillViewport(true);
 
+        tabs.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
 
         this.setSupportActionBar(toolbar);
         ActionBar actionBar = this.getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setTitle("Details Page");
+            actionBar.setTitle("About Us");
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 

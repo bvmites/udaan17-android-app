@@ -8,13 +8,6 @@
     android:orientation="vertical"
     android:scrollbars="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/about_us_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
-
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/contact_us_nestedScrollView"
         android:layout_width="match_parent"
@@ -177,7 +170,7 @@
                     android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     app:backgroundTint="@color/colorPrimary"
-                    app:srcCompat="@drawable/ic_call" />
+                    app:srcCompat="@drawable/ic_windows" />
 
                 <android.support.v4.widget.Space
                     android:layout_width="0dp"
@@ -194,6 +187,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="8dp"
                 android:background="@color/colorPrimaryDark" />
+
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
@@ -235,6 +229,37 @@
                     android:textColor="@color/colorWhite"
                     android:textSize="16sp" />
             </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pop Heads"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/contact_us_attribution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="24dp"
+                android:paddingTop="8dp"
+                android:text="Attribution to Kode Logic"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
         </android.support.v7.widget.LinearLayoutCompat>
     </android.support.v4.widget.NestedScrollView>
 </android.support.v7.widget.LinearLayoutCompat>

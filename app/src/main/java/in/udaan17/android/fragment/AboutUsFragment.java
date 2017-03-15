@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.AppCompatImageButton;
+import android.support.v7.widget.AppCompatTextView;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +48,8 @@ public class AboutUsFragment extends Fragment {
     private AppCompatImageButton playStore;
     private AppCompatImageButton weblink;
     private AppCompatImageButton maps;
-    private AppCompatImageButton phone;
+    private AppCompatImageButton windows;
+    private AppCompatTextView attribution;
 
     @Nullable
     @Override
@@ -59,8 +63,12 @@ public class AboutUsFragment extends Fragment {
         playStore = (AppCompatImageButton) rootView.findViewById(R.id.playstore);
         weblink = (AppCompatImageButton) rootView.findViewById(R.id.website);
         maps = (AppCompatImageButton) rootView.findViewById(R.id.map_view);
-        phone = (AppCompatImageButton) rootView.findViewById(R.id.phone);
+        windows = (AppCompatImageButton) rootView.findViewById(R.id.phone);
+        attribution = (AppCompatTextView) rootView.findViewById(R.id.contact_us_attribution);
 
+        final SpannableStringBuilder str = new SpannableStringBuilder("Attribution by Kode Logic");
+        str.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.BOLD), 15, 25, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        attribution.setText(str);
 
         mail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,13 +121,20 @@ public class AboutUsFragment extends Fragment {
             }
         });
 
-        phone.setOnClickListener(new View.OnClickListener() {
+        windows.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.microsoft.com/en-us/store/p/udaan-17/9p55q9j2bkq7"));
+                startActivity(intent);
             }
         });
 
+        attribution.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.behance.net/bosslogic")));
+            }
+        });
 //        NestedScrollView nestedScrollView = (NestedScrollView) rootView.findViewById(R.id.contact_us_nestedScrollView);
 //        nestedScrollView.setNestedScrollingEnabled(false);
 
