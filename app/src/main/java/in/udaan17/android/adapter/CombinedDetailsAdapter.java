@@ -48,4 +48,5 @@ public class CombinedDetailsAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position) {
         return title[position];
     }
+
 }
