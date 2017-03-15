@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, DepartmentActivity.class);
                 startActivity(i);
-                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
         });
     
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, CulturalActivity.class);
                 startActivity(i);
-                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
         });
     
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, NonTechActivity.class);
                 startActivity(i);
-                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
         });
     
