@@ -66,7 +66,7 @@ public class AboutUsFragment extends Fragment {
         windows = (AppCompatImageButton) rootView.findViewById(R.id.phone);
         attribution = (AppCompatTextView) rootView.findViewById(R.id.contact_us_attribution);
 
-        final SpannableStringBuilder str = new SpannableStringBuilder("Attribution by Kode Logic");
+        final SpannableStringBuilder str = new SpannableStringBuilder("Attribution to Kode Logic");
         str.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.BOLD), 15, 25, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         attribution.setText(str);
 
