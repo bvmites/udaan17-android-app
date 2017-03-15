@@ -17,10 +17,7 @@ import android.view.ViewGroup;
 
 import com.google.android.youtube.player.YouTubeIntents;
 
-import java.util.List;
-
 import in.udaan17.android.R;
-import in.udaan17.android.model.Manager;
 import in.udaan17.android.util.Helper;
 
 /**
@@ -40,7 +37,6 @@ public class AboutUsFragment extends Fragment {
     private final String lon = "72.9240181";
     private final String mapTitle = "BVM Engineering College";
     View rootView;
-    private List<Manager> techHeadsList;
 
     private AppCompatImageButton mail;
     private AppCompatImageButton youtube;
