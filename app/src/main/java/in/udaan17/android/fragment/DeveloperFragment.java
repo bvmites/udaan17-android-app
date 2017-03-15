@@ -21,54 +21,52 @@ import in.udaan17.android.util.DataSingleton;
 import in.udaan17.android.util.Helper;
 import in.udaan17.android.util.listeners.ListItemClickCallBack;
 
-/**
- * Created by pranshu on 5/3/17.
- */
-
 public class DeveloperFragment extends Fragment implements ListItemClickCallBack {
 
-    private View rootView;
+  private View rootView;
+  private RecyclerView developerRecyclerView;
+  private DeveloperAdapter developerAdapter;
+  
+  private List<Developer> developersArrayList;
 
-    private RecyclerView developerRecyclerView;
-    private DeveloperAdapter developerAdapter;
+  @Nullable
+  @Override
+  public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-    private List<Developer> developersArrayList;
+    rootView = inflater.inflate(R.layout.activity_developer, container, false);
+    
+    try {
+      this.developersArrayList = DataSingleton.getInstance(this.getActivity()).getDevelopersList();
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+      this.developerRecyclerView = (RecyclerView) rootView.findViewById(R.id.developer_recyclerView);
+      developerAdapter = new DeveloperAdapter(this.developersArrayList, this.getContext());
 
-        this.rootView = inflater.inflate(R.layout.developer_fragment, container, false);
+      this.developerRecyclerView.setLayoutManager(new GridLayoutManager(this.getContext(), 1, LinearLayoutManager.VERTICAL, false));
+      this.developerRecyclerView.setAdapter(developerAdapter);
+      
+      developerAdapter.setItemClickCallBack(this);
 
-        try {
-            this.developersArrayList = DataSingleton.getInstance(this.getActivity()).getDevelopersList();
 
-            this.developerRecyclerView = (RecyclerView) rootView.findViewById(R.id.developer_recyclerView);
-            developerAdapter = new DeveloperAdapter(this.developersArrayList, getContext());
-
-            this.developerRecyclerView.setLayoutManager(new GridLayoutManager(this.rootView.getContext(), 1, LinearLayoutManager.VERTICAL, false));
-            this.developerRecyclerView.setAdapter(developerAdapter);
-
-            developerAdapter.setItemClickCallBack(this);
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return rootView;
+//      developerRecyclerView.setNestedScrollingEnabled(false);
+      
+    } catch (JSONException e) {
+      e.printStackTrace();
     }
-
-    @Override
-    public void onItemClick(int position, int viewId) {
-        switch (viewId) {
-            case R.id.developer_mobile:
-                Helper.makeCall(this.developersArrayList.get(position).getMobile(), this.getContext());
-                break;
-            case R.id.developer_email:
-                Helper.sendEmail(this.developersArrayList.get(position).getEmail(), this.getContext());
-                break;
-            case R.id.developer_github:
-                Helper.openUrlInBrowser(this.developersArrayList.get(position).getGithub(), this.getContext());
-                break;
-        }
+    return rootView;
+  }
+  
+  @Override
+  public void onItemClick(int position, int viewId) {
+    switch (viewId) {
+      case R.id.developer_mobile:
+        Helper.makeCall(this.developersArrayList.get(position).getMobile(), this.getContext());
+        break;
+      case R.id.developer_email:
+        Helper.sendEmail(this.developersArrayList.get(position).getEmail(), this.getContext());
+        break;
+      case R.id.developer_github:
+        Helper.openUrlInBrowser(this.developersArrayList.get(position).getGithub(), this.getContext());
+        break;
     }
+  }
 }

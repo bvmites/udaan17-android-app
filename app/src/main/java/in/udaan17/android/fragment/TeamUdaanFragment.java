@@ -1,13 +1,15 @@
-package in.udaan17.android.activity;
+package in.udaan17.android.fragment;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import org.json.JSONException;
 
@@ -20,48 +22,44 @@ import in.udaan17.android.model.Category;
 import in.udaan17.android.util.DataSingleton;
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter;
 
-public class TeamUdaanActivity extends AppCompatActivity {
+public class TeamUdaanFragment extends Fragment {
+
+  private View rootView;
   private List<Category> teamUdaan;
   
   private RecyclerView recyclerView;
   private SectionedRecyclerViewAdapter teamUdaanAdapter;
   
   public static void startActivity(Context context) {
-    Intent intent = new Intent(context, TeamUdaanActivity.class);
+    Intent intent = new Intent(context, TeamUdaanFragment.class);
     context.startActivity(intent);
   }
-  
+
+  @Nullable
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    this.setContentView(R.layout.activity_team_udaan);
-    
-    this.initializeElements();
+  public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+    this.rootView = inflater.inflate(R.layout.activity_team_udaan, container, false);
+
+    this.initializeElements(rootView);
+    return rootView;
   }
-  
-  private void initializeElements() {
+
+  private void initializeElements(View rootView) {
     try {
-      this.teamUdaan = DataSingleton.getInstance(this).getTeamUdaan();
+      this.teamUdaan = DataSingleton.getInstance(this.getActivity()).getTeamUdaan();
     } catch (JSONException e) {
       e.printStackTrace();
       this.teamUdaan = new ArrayList<>();
     }
-  
-    Toolbar toolbar = (Toolbar) this.findViewById(R.id.appbar_toolbar);
-//    toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.color_team_udaan));
-    this.setSupportActionBar(toolbar);
-    if (this.getSupportActionBar() != null) {
-      ActionBar actionBar = this.getSupportActionBar();
-      actionBar.setDisplayHomeAsUpEnabled(true);
-      actionBar.setTitle("Team-Udaan");
-    }
-    
-    this.recyclerView = (RecyclerView) this.findViewById(R.id.team_recycler_view);
+
+    this.recyclerView = (RecyclerView) this.rootView.findViewById(R.id.team_recycler_view);
     this.teamUdaanAdapter = new SectionedRecyclerViewAdapter();
     for (int index = 0; index < this.teamUdaan.size(); index++) {
       this.teamUdaanAdapter.addSection(String.valueOf(index), new TeamSection(this.teamUdaan.get(index)));
     }
-    this.recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+    this.recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL, false));
     this.recyclerView.setAdapter(this.teamUdaanAdapter);
+//    this.recyclerView.setNestedScrollingEnabled(false);
   }
 }

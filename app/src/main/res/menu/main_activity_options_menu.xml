@@ -2,12 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/teamUdaan"
-        android:title="Team Udaan" />
-    <item
-        android:id="@+id/developer"
-        android:title="Developers" />
-    <item
         android:id="@+id/aboutUs"
         android:title="About us" />
     <item

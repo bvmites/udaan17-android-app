@@ -1,15 +1,16 @@
-package in.udaan17.android.activity;
+package in.udaan17.android.fragment;
 
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.AppCompatImageButton;
-import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.google.android.youtube.player.YouTubeIntents;
 
@@ -25,18 +26,17 @@ import in.udaan17.android.util.Helper;
  * Project: udaan-17-android-app
  */
 
-public class AboutUsActivity extends AppCompatActivity {
+public class AboutUsFragment extends Fragment {
 
     private final String EMAIL_ADDRESS = "developer.team.udaan@gmail.com";
     private final String YOUTUBE_LINK = "UCnqRgS6O0MGF8sTYb_fHjWA";
     private final String FACEBOOK_LINK = "https://www.facebook.com/teamudaan17/";
     private final String PLAY_STORE = "";
     private final String WEB_LINK = "https://www.udaan17.in";
-
     private final String lat = "22.5525703";
     private final String lon = "72.9240181";
     private final String mapTitle = "BVM Engineering College";
-
+    View rootView;
     private List<Manager> techHeadsList;
 
     private AppCompatImageButton mail;
@@ -44,36 +44,35 @@ public class AboutUsActivity extends AppCompatActivity {
     private AppCompatImageButton facebook;
     private AppCompatImageButton playStore;
     private AppCompatImageButton weblink;
-    private Toolbar toolbar;
     private AppCompatImageButton maps;
     private AppCompatImageButton phone;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_contact_us);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        mail = (AppCompatImageButton) findViewById(R.id.mail);
-        youtube = (AppCompatImageButton) findViewById(R.id.youtube);
-        facebook = (AppCompatImageButton) findViewById(R.id.facebook);
-        playStore = (AppCompatImageButton) findViewById(R.id.playstore);
-        weblink = (AppCompatImageButton) findViewById(R.id.website);
-        toolbar = (Toolbar) findViewById(R.id.about_us_toolbar);
-        maps = (AppCompatImageButton) findViewById(R.id.map_view);
-        phone = (AppCompatImageButton) findViewById(R.id.phone);
+        rootView = inflater.inflate(R.layout.activity_contact_us, container, false);
+
+        mail = (AppCompatImageButton) rootView.findViewById(R.id.mail);
+        youtube = (AppCompatImageButton) rootView.findViewById(R.id.youtube);
+        facebook = (AppCompatImageButton) rootView.findViewById(R.id.facebook);
+        playStore = (AppCompatImageButton) rootView.findViewById(R.id.playstore);
+        weblink = (AppCompatImageButton) rootView.findViewById(R.id.website);
+        maps = (AppCompatImageButton) rootView.findViewById(R.id.map_view);
+        phone = (AppCompatImageButton) rootView.findViewById(R.id.phone);
 
 
         mail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Helper.sendEmail(EMAIL_ADDRESS, AboutUsActivity.this);
+                Helper.sendEmail(EMAIL_ADDRESS, AboutUsFragment.this.getContext());
             }
         });
 
         youtube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = YouTubeIntents.createChannelIntent(AboutUsActivity.this, YOUTUBE_LINK);
+                Intent intent = YouTubeIntents.createChannelIntent(AboutUsFragment.this.getContext(), YOUTUBE_LINK);
                 startActivity(intent);
             }
         });
@@ -81,7 +80,7 @@ public class AboutUsActivity extends AppCompatActivity {
         facebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = getFacebookIntent(AboutUsActivity.this.getPackageManager(), FACEBOOK_LINK);
+                Intent intent = getFacebookIntent(AboutUsFragment.this.getActivity().getPackageManager(), FACEBOOK_LINK);
                 startActivity(intent);
             }
         });
@@ -89,14 +88,14 @@ public class AboutUsActivity extends AppCompatActivity {
         weblink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Helper.openUrlInBrowser(WEB_LINK, AboutUsActivity.this);
+                Helper.openUrlInBrowser(WEB_LINK, AboutUsFragment.this.getContext());
             }
         });
 
         playStore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String appPackageName = getPackageName();
+                String appPackageName = AboutUsFragment.this.getActivity().getPackageName();
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
                 } catch (android.content.ActivityNotFoundException e) {
@@ -120,13 +119,11 @@ public class AboutUsActivity extends AppCompatActivity {
 
             }
         });
-        this.setSupportActionBar(toolbar);
-        ActionBar actionBar = this.getSupportActionBar();
 
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle("About Us");
-        }
+//        NestedScrollView nestedScrollView = (NestedScrollView) rootView.findViewById(R.id.contact_us_nestedScrollView);
+//        nestedScrollView.setNestedScrollingEnabled(false);
+
+        return rootView;
 
     }
 
