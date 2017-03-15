@@ -16,7 +16,7 @@ import org.json.JSONObject;
 
 public final class APIHelper {
     
-    public static final String baseUrl = "http://udaan17.in:8080";
+    public static final String baseUrl = "https://udaan17.in";
     
     public static final String api_endpoint_info = "/api/data.json";
     public static final String api_endpoint_developers = "/api/developers.json";
