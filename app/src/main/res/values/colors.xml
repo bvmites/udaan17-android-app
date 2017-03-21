@@ -21,7 +21,8 @@
     <color name="color_windows">#ff00b8d4</color>
     <color name="color_web">#ffef5350</color>
     <color name="color_graphics">#ffff7043</color>
-    <color name="color_backend">#ff5c6bc0</color>
+    <color name="color_backend">#fffbc02d</color>
+    <color name="color_analytics">#ff5c6bc0</color>
 
     <color name="color_keycoders">#ffd33124</color>
     <color name="color_skyscrapers">#ff189947</color>
