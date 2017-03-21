@@ -134,10 +134,13 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
                 }
                 break;
+            case R.id.schedule:
+                startActivity(new Intent(MainActivity.this, ScheduleActivity.class));
+                break;
         }
-        return super.onOptionsItemSelected(item);
 
+        return super.onOptionsItemSelected(item);
     }
-    
-    
+
+
 }

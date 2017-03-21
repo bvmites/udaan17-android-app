@@ -5,6 +5,9 @@
         android:id="@+id/aboutUs"
         android:title="About us" />
     <item
+        android:id="@+id/schedule"
+        android:title="Schedule" />
+    <item
         android:id="@+id/rateUs"
         android:title="Rate us!" />
 </menu>
