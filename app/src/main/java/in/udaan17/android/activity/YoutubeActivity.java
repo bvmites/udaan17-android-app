@@ -15,7 +15,7 @@ import in.udaan17.android.R;
 public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     public static final String TAG = "YoutubeActivity";
-    static final String YOUTUBE_VIDEO_ID = "7hVvV4gX-Vg";
+    static final String YOUTUBE_VIDEO_ID = "kG2lk949rEs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
