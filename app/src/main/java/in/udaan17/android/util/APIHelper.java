@@ -15,12 +15,12 @@ import org.json.JSONObject;
  */
 
 public final class APIHelper {
-    
-    public static final String baseUrl = "https://udaan17.in";
-    
-    public static final String api_endpoint_info = "/api/data.json";
-    public static final String api_endpoint_developers = "/api/developers.json";
-    public static final String api_endpoint_team_udaan = "/api/teamUdaan.json";
+
+    public static final String baseUrl = "https://raw.githubusercontent.com/Team-Udaan/udaan17-android-app/master/mock-api/";
+
+    public static final String api_endpoint_info = "event-data.json";
+    public static final String api_endpoint_developers = "developers.json";
+    public static final String api_endpoint_team_udaan = "team-udaan.json";
 
 
     public static void fetchData(Context context, Response.Listener<JSONObject> responseListener, Response.ErrorListener errorListener) {
