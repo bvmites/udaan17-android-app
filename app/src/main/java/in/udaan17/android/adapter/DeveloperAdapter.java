@@ -39,10 +39,21 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
     private static int getColorId(String category, Context context) {
         int id = context
             .getResources()
-            .getIdentifier("color_" + category, "color", context.getPackageName());
+            .getIdentifier("color_" + Helper.getResourceNameFromTitle(category), "color", context.getPackageName());
         
         if (id == 0) {
             id = R.color.colorTeal;
+        }
+        return id;
+    }
+    
+    private static int getIconId(String category, Context context) {
+        int id = context
+            .getResources()
+            .getIdentifier(Helper.getResourceNameFromTitle(category), "drawable", context.getPackageName());
+    
+        if (id == 0) {
+            id = R.drawable.github;
         }
         return id;
     }
@@ -60,10 +71,7 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.View
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         int colorId = DeveloperAdapter.getColorId(developers.get(position).getCategory(), this.context);
-        int iconId = this
-            .context
-            .getResources()
-            .getIdentifier(Helper.getResourceNameFromTitle(this.developers.get(position).getCategory()), "drawable", context.getPackageName());
+        int iconId = DeveloperAdapter.getIconId(developers.get(position).getCategory(), this.context);
 
         holder.categoryIcon.setImageResource(iconId);
         holder.categoryIcon.setBackgroundColor(ContextCompat.getColor(this.context, colorId));

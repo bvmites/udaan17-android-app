@@ -46,6 +46,8 @@ public class AboutUsFragment extends Fragment {
     private AppCompatImageButton maps;
     private AppCompatImageButton windows;
     private AppCompatTextView attribution;
+    private AppCompatTextView freepikAttribution;
+    private AppCompatTextView flatIconAttribution;
 
     @Nullable
     @Override
@@ -61,6 +63,9 @@ public class AboutUsFragment extends Fragment {
         maps = (AppCompatImageButton) rootView.findViewById(R.id.map_view);
         windows = (AppCompatImageButton) rootView.findViewById(R.id.phone);
         attribution = (AppCompatTextView) rootView.findViewById(R.id.contact_us_attribution);
+        freepikAttribution = (AppCompatTextView) rootView.findViewById(R.id.contact_us_icons_attribution);
+        flatIconAttribution = (AppCompatTextView) rootView.findViewById(R.id.contact_us_icons_attribution1);
+
 
         final SpannableStringBuilder str = new SpannableStringBuilder("Attribution to Kode Logic");
         str.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.BOLD), 15, 25, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -131,6 +136,21 @@ public class AboutUsFragment extends Fragment {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.behance.net/bosslogic")));
             }
         });
+
+        freepikAttribution.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.freepik.com")));
+            }
+        });
+
+        flatIconAttribution.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.flaticon.com")));
+            }
+        });
+
 //        NestedScrollView nestedScrollView = (NestedScrollView) rootView.findViewById(R.id.contact_us_nestedScrollView);
 //        nestedScrollView.setNestedScrollingEnabled(false);
 

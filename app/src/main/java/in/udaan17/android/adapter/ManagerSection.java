@@ -24,7 +24,7 @@ public class ManagerSection extends StatelessSection {
 
 
     public ManagerSection(Department department, int sectionId, ManagerCallItemClick listItemClickCallBack) {
-        super(R.layout.header_section_team, R.layout.item_section_team);
+        super(R.layout.header_section_item_branch_manager, R.layout.item_section_team_branch_heads);
         this.department = department;
         this.sectionId = sectionId;
         this.listItemClickCallBack = listItemClickCallBack;
@@ -85,7 +85,7 @@ public class ManagerSection extends StatelessSection {
         public HeaderViewHolder(View headerView) {
             super(headerView);
             this.rootView = headerView;
-            this.textViewTitle = (AppCompatTextView) this.rootView.findViewById(R.id.header_section_team_title);
+            this.textViewTitle = (AppCompatTextView) this.rootView.findViewById(R.id.header_section_team_title_branch);
 
             textViewTitle.setTextColor(ContextCompat.getColor(rootView.getContext(), R.color.colorWhite));
         }
@@ -100,8 +100,8 @@ public class ManagerSection extends StatelessSection {
             super(itemView);
 
             this.rootView = (CardView) itemView;
-            this.textViewName = (AppCompatTextView) this.rootView.findViewById(R.id.item_section_team_name);
-            this.textViewTitle = (AppCompatTextView) this.rootView.findViewById(R.id.item_section_team_title);
+            this.textViewName = (AppCompatTextView) this.rootView.findViewById(R.id.item_section_team_name_branch);
+            this.textViewTitle = (AppCompatTextView) this.rootView.findViewById(R.id.item_section_team_title_branch);
 
             this.rootView.setCardBackgroundColor(ContextCompat.getColor(this.rootView.getContext(), R.color.colorCardBackground));
             this.textViewName.setTextColor(ContextCompat.getColor(rootView.getContext(), R.color.colorWhite));
