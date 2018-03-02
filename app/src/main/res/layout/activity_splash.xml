@@ -1,56 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.LinearLayoutCompat android:id="@+id/root_view"
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#333333"
-    android:orientation="vertical"
-    android:paddingBottom="10dp"
-    android:paddingEnd="10dp"
-    android:paddingStart="10dp"
-    android:paddingTop="10dp"
-    tools:context="in.udaan17.android.activity.SplashActivity">
-
-    <me.wangyuwei.particleview.ParticleView
-        android:id="@+id/activity_splash_particle_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        app:pv_background_color="@color/colorPrimary"
-        app:pv_host_text="Udaan"
-        app:pv_host_text_anim_time="1000"
-        app:pv_host_text_size="48sp"
-        app:pv_particle_text="17"
-        app:pv_particle_text_size="40sp"
-        app:pv_spread_anim_time="100"
-        app:pv_text_anim_time="1000"
-        app:pv_text_color="@color/colorWhite" />
+    tools:context=".activity.SplashActivity">
 
     <android.support.v7.widget.LinearLayoutCompat
-        android:id="@+id/splash.progress_container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="#333333"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp">
 
-        <android.support.v4.widget.Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2" />
-
-        <ProgressBar
-            android:id="@+id/progress_bar_splash_screen"
+        <me.wangyuwei.particleview.ParticleView
+            android:id="@+id/udaanLogo"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:indeterminate="true" />
+            app:pv_background_color="@color/colorPrimary"
+            app:pv_host_text="Udaan"
+            app:pv_host_text_anim_time="1000"
+            app:pv_host_text_size="48sp"
+            app:pv_particle_text="17"
+            app:pv_particle_text_size="40sp"
+            app:pv_spread_anim_time="100"
+            app:pv_text_anim_time="1000"
+            app:pv_text_color="@color/colorWhite"/>
 
-        <android.support.v4.widget.Space
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/container_progress"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2" />
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:indeterminate="true"/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"/>
+        </android.support.v7.widget.LinearLayoutCompat>
     </android.support.v7.widget.LinearLayoutCompat>
-</android.support.v7.widget.LinearLayoutCompat>
+</layout>

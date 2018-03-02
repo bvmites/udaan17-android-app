@@ -2,6 +2,7 @@ package in.udaan17.android.activity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.transition.TransitionManager;
 import android.support.v7.app.AppCompatActivity;
@@ -16,11 +17,13 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import in.udaan17.android.R;
+import in.udaan17.android.databinding.ActivitySplashBinding;
 import in.udaan17.android.util.APIHelper;
 import in.udaan17.android.util.Helper;
 import me.wangyuwei.particleview.ParticleView;
 
 public class SplashActivity extends AppCompatActivity implements Response.Listener<JSONArray>, Response.ErrorListener, ParticleView.ParticleAnimListener {
+  private ActivitySplashBinding dataBinding;
   
   private volatile boolean dataFetched = false;
   private volatile boolean animationComplete = false;
@@ -28,13 +31,13 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    this.setContentView(R.layout.activity_splash);
+    this.dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
   }
-
+  
   @Override
   protected void onStart() {
     super.onStart();
-  
+    
     this.initializeElements();
     
     if (Helper.hasNetworkConnection(this)) {
@@ -42,7 +45,6 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
         @Override
         public void onResponse(JSONObject response) {
           try {
-            
             SharedPreferences sharedPreferences = SplashActivity.this.getSharedPreferences(SplashActivity.this.getString(R.string.prefs_file_name), Context.MODE_PRIVATE);
             sharedPreferences.edit().putString(SplashActivity.this.getString(R.string.prefs_event_data_json), response.toString()).apply();
             APIHelper.fetchDeveloperData(SplashActivity.this, new Response.Listener<JSONArray>() {
@@ -75,9 +77,12 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
   }
   
   private void initializeElements() {
-    ParticleView particleView = (ParticleView) this.findViewById(R.id.activity_splash_particle_view);
-    particleView.startAnim();
-    particleView.setOnParticleAnimListener(this);
+    this.dataBinding
+        .udaanLogo
+        .startAnim();
+    this.dataBinding
+        .udaanLogo
+        .setOnParticleAnimListener(this);
   }
   
   @Override
@@ -103,8 +108,10 @@ public class SplashActivity extends AppCompatActivity implements Response.Listen
       MainActivity.startActivity(this);
       overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     } else {
-      TransitionManager.beginDelayedTransition((ViewGroup) this.findViewById(R.id.root_view));
-      this.findViewById(R.id.splash_progress_container).setVisibility(View.VISIBLE);
+      TransitionManager.beginDelayedTransition((ViewGroup) this.dataBinding.getRoot());
+      this.dataBinding
+          .containerProgress
+          .setVisibility(View.VISIBLE);
     }
   }
 }

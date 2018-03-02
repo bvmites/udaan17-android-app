@@ -4,6 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "26.0.2"
 
+    dataBinding.enabled = true
     defaultConfig {
         applicationId "in.udaan17.android"
         minSdkVersion 16
